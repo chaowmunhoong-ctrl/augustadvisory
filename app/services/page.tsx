@@ -97,7 +97,7 @@ export default function Services() {
       <section
         className="text-white py-20 px-6 relative"
         style={{
-          backgroundImage: `linear-gradient(rgba(23, 37, 84, 0.75), rgba(23, 37, 84, 0.75)), url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&h=400&fit=crop')`,
+          backgroundImage: `linear-gradient(135deg, rgba(52, 152, 129, 0.85), rgba(41, 128, 185, 0.85)), url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&h=400&fit=crop')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center'
         }}
