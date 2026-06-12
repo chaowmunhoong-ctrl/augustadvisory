@@ -68,7 +68,7 @@ export default function Home() {
             backgroundImage: 'url(/Images/hero-image.png)',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
-            minHeight: '480px',
+            minHeight: '700px',
           }}
         >
           {/* Light overlay */}
