@@ -106,8 +106,8 @@ export default function Home() {
       <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-10 sm:mb-16">
-            <p className="text-sm sm:text-base font-bold tracking-widest uppercase mb-3" style={{ color: '#348981' }}>What We Do</p>
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4" style={{ color: '#2C3E50' }}>Our Services</h2>
+            <p className="text-sm font-bold tracking-widest uppercase mb-3" style={{ color: '#348981' }}>What We Do</p>
+            <h2 className="text-2xl sm:text-3xl font-bold mb-4" style={{ color: '#2C3E50' }}>Our Services</h2>
             <p className="text-base sm:text-lg max-w-2xl mx-auto" style={{ color: '#5A6C7D' }}>
               From day-to-day bookkeeping to strategic CFO advisory, we handle the financial side of your business so you can focus on what matters most.
             </p>
@@ -119,7 +119,7 @@ export default function Home() {
                 style={{ backgroundColor: '#FFFFFF', borderColor: '#E0F2F1' }}
               >
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">{service.icon}</div>
-                <h3 className="text-base sm:text-lg font-bold mb-2" style={{ color: '#348981' }}>{service.title}</h3>
+                <h3 className="text-xl font-bold mb-2" style={{ color: '#348981' }}>{service.title}</h3>
                 <p className="text-gray-600 text-sm">{service.description}</p>
               </div>
             ))}
@@ -139,8 +139,8 @@ export default function Home() {
       <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6" style={{ backgroundColor: '#E8F5F3' }}>
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-10 sm:mb-16">
-            <p className="text-sm sm:text-base font-bold tracking-widest uppercase mb-3" style={{ color: '#348981' }}>Why Choose Us</p>
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4" style={{ color: '#2C3E50' }}>Why August Advisory?</h2>
+            <p className="text-sm font-bold tracking-widest uppercase mb-3" style={{ color: '#348981' }}>Why Choose Us</p>
+            <h2 className="text-2xl sm:text-3xl font-bold mb-4" style={{ color: '#2C3E50' }}>Why August Advisory?</h2>
             <p className="text-base sm:text-lg max-w-2xl mx-auto" style={{ color: '#5A6C7D' }}>
               We don't just crunch numbers. We help you make better decisions, stay compliant, and build a stronger business.
             </p>
@@ -149,8 +149,8 @@ export default function Home() {
             {features.map((feature) => (
               <div key={feature.title} className="text-center bg-white rounded-xl p-8 shadow-sm">
                 <div className="text-4xl mb-4">{feature.icon}</div>
-                <h3 className="text-lg sm:text-xl font-bold mb-3" style={{ color: '#2C3E50' }}>{feature.title}</h3>
-                <p className="text-sm sm:text-base text-gray-600">{feature.description}</p>
+                <h3 className="text-xl font-bold mb-3" style={{ color: '#2C3E50' }}>{feature.title}</h3>
+                <p className="text-base text-gray-600">{feature.description}</p>
               </div>
             ))}
           </div>
@@ -160,7 +160,7 @@ export default function Home() {
       {/* CTA Section */}
       <section className="py-12 sm:py-16 px-4 sm:px-6" style={{ backgroundColor: '#348981' }}>
         <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-white">Ready to Get Started?</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-white">Ready to Get Started?</h2>
           <p className="mb-8 text-base sm:text-lg text-white opacity-90">
             Contact us today for a free consultation and let's explore how August Advisory can support your financial success.
           </p>

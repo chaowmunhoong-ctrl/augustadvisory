@@ -15,7 +15,7 @@ export default function Team() {
       {/* Hero Section */}
       <section style={{ backgroundColor: '#FFFFFF' }} className="pt-8 sm:pt-12 pb-12 sm:pb-16 px-4 sm:px-6 text-center">
         <div className="max-w-5xl mx-auto">
-          <p className="text-base sm:text-lg font-bold tracking-widest mb-4" style={{ color: '#348981' }}>OUR TEAM</p>
+          <p className="text-sm font-bold tracking-widest uppercase mb-4" style={{ color: '#348981' }}>OUR TEAM</p>
           <h1 className="text-4xl sm:text-5xl font-bold mb-6 leading-tight" style={{ color: '#2C3E50' }}>
             The People Behind Your Financial Success
           </h1>
@@ -40,10 +40,10 @@ export default function Team() {
 
             {/* Profile Info */}
             <div>
-              <p className="text-sm sm:text-base font-bold tracking-widest uppercase mb-4" style={{ color: '#348981' }}>
+              <p className="text-sm font-bold tracking-widest uppercase mb-4" style={{ color: '#348981' }}>
                 Meet Our Founder
               </p>
-              <h2 className="text-3xl sm:text-4xl font-bold mb-3" style={{ color: '#2C3E50' }}>
+              <h2 className="text-2xl sm:text-3xl font-bold mb-3" style={{ color: '#2C3E50' }}>
                 {founder.name}
               </h2>
               <p className="text-lg font-semibold mb-6" style={{ color: '#348981' }}>

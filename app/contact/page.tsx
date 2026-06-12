@@ -35,7 +35,7 @@ export default function Contact() {
       {/* Hero Section */}
       <section style={{ backgroundColor: '#FFFFFF' }} className="pt-8 sm:pt-12 pb-12 sm:pb-16 px-4 sm:px-6 text-center">
         <div className="max-w-5xl mx-auto">
-          <p className="text-base sm:text-lg font-bold tracking-widest mb-4" style={{ color: '#348981' }}>GET IN TOUCH</p>
+          <p className="text-sm font-bold tracking-widest uppercase mb-4" style={{ color: '#348981' }}>GET IN TOUCH</p>
           <h1 className="text-4xl sm:text-5xl font-bold mb-6 leading-tight" style={{ color: '#2C3E50' }}>
             Let's Talk About Your Business
           </h1>
@@ -51,7 +51,7 @@ export default function Contact() {
           <div className="grid md:grid-cols-2 gap-12">
             {/* Contact Info */}
             <div>
-              <h2 className="text-3xl font-bold mb-8" style={{ color: '#348981' }}>Get in Touch</h2>
+              <h2 className="text-2xl sm:text-3xl font-bold mb-8" style={{ color: '#348981' }}>Get in Touch</h2>
 
               <div className="space-y-6">
                 <div>
@@ -98,7 +98,7 @@ export default function Contact() {
 
             {/* Contact Form */}
             <div>
-              <h2 className="text-3xl font-bold mb-8" style={{ color: '#348981' }}>Send us a Message</h2>
+              <h2 className="text-2xl sm:text-3xl font-bold mb-8" style={{ color: '#348981' }}>Send us a Message</h2>
 
               {submitted && (
                 <div className="mb-6 p-4 rounded-lg text-green-700" style={{ backgroundColor: '#D4EDDA', borderColor: '#C3E6CB', border: '1px solid' }}>
