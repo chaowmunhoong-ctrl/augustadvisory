@@ -65,7 +65,7 @@ export default function Home() {
         <section
           className="relative w-full flex items-center justify-center"
           style={{
-            backgroundImage: 'url(/images/hero-image.png)',
+            backgroundImage: 'url(/Images/hero-image.png)',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             minHeight: '480px',
