@@ -13,16 +13,24 @@ const services = [
 export default function Home() {
   return (
     <div className="bg-white">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-900 to-blue-800 text-white py-20 px-6">
-        <div className="max-w-6xl mx-auto text-center">
-          <h1 className="text-5xl font-bold mb-4">Professional Accounting & CFO Advisory</h1>
-          <p className="text-xl mb-8 opacity-90">Trusted financial partner for Malaysian businesses</p>
-          <div className="flex gap-4 justify-center">
-            <Link href="/services" className="bg-white text-blue-900 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition">
+      {/* Hero Section with Background Image */}
+      <section
+        className="text-white py-32 px-6 relative overflow-hidden"
+        style={{
+          backgroundImage: `linear-gradient(rgba(23, 37, 84, 0.7), rgba(23, 37, 84, 0.7)), url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&h=600&fit=crop')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundAttachment: 'fixed'
+        }}
+      >
+        <div className="max-w-6xl mx-auto text-center relative z-10">
+          <h1 className="text-6xl font-bold mb-4">Professional Accounting & CFO Advisory</h1>
+          <p className="text-2xl mb-10 opacity-95">Trusted financial partner for Malaysian businesses</p>
+          <div className="flex gap-4 justify-center flex-wrap">
+            <Link href="/services" className="bg-white text-blue-900 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition shadow-lg">
               Explore Services
             </Link>
-            <Link href="/contact" className="bg-blue-700 text-white px-8 py-3 rounded-lg font-bold hover:bg-blue-600 transition border border-white">
+            <Link href="/contact" className="bg-blue-500 text-white px-8 py-3 rounded-lg font-bold hover:bg-blue-600 transition border-2 border-white shadow-lg">
               Get in Touch
             </Link>
           </div>
