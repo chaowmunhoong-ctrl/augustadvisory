@@ -75,7 +75,7 @@ export default function Home() {
         {/* Text block on the right */}
         <div className="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-10 flex justify-end">
           <div className="w-full sm:w-1/2 lg:w-2/5 text-left py-16">
-            <p className="text-sm font-bold tracking-widest uppercase mb-4" style={{ color: '#348981' }}>
+            <p className="text-lg font-bold tracking-widest uppercase mb-4" style={{ color: '#348981' }}>
               Accounting & CFO Advisory
             </p>
             <h1 className="text-4xl sm:text-5xl font-extrabold mb-5 leading-tight uppercase" style={{ color: '#2C3E50' }}>
@@ -106,7 +106,7 @@ export default function Home() {
       <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-10 sm:mb-16">
-            <p className="text-sm font-bold tracking-widest uppercase mb-3" style={{ color: '#348981' }}>What We Do</p>
+            <p className="text-lg font-bold tracking-widest uppercase mb-3" style={{ color: '#348981' }}>What We Do</p>
             <h2 className="text-2xl sm:text-3xl font-bold mb-4" style={{ color: '#2C3E50' }}>Our Services</h2>
             <p className="text-base sm:text-lg max-w-2xl mx-auto" style={{ color: '#5A6C7D' }}>
               From day-to-day bookkeeping to strategic CFO advisory, we handle the financial side of your business so you can focus on what matters most.
@@ -139,7 +139,7 @@ export default function Home() {
       <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6" style={{ backgroundColor: '#E8F5F3' }}>
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-10 sm:mb-16">
-            <p className="text-sm font-bold tracking-widest uppercase mb-3" style={{ color: '#348981' }}>Why Choose Us</p>
+            <p className="text-lg font-bold tracking-widest uppercase mb-3" style={{ color: '#348981' }}>Why Choose Us</p>
             <h2 className="text-2xl sm:text-3xl font-bold mb-4" style={{ color: '#2C3E50' }}>Why August Advisory?</h2>
             <p className="text-base sm:text-lg max-w-2xl mx-auto" style={{ color: '#5A6C7D' }}>
               We don't just crunch numbers. We help you make better decisions, stay compliant, and build a stronger business.

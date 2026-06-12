@@ -92,7 +92,7 @@ export default function Services() {
       {/* Hero Section */}
       <section style={{ backgroundColor: '#FFFFFF' }} className="pt-8 sm:pt-12 pb-12 sm:pb-16 px-4 sm:px-6 text-center">
         <div className="max-w-5xl mx-auto">
-          <p className="text-sm font-bold tracking-widest uppercase mb-4" style={{ color: '#348981' }}>OUR SERVICES</p>
+          <p className="text-lg font-bold tracking-widest uppercase mb-4" style={{ color: '#348981' }}>OUR SERVICES</p>
           <h1 className="text-4xl sm:text-5xl font-bold mb-6 leading-tight" style={{ color: '#2C3E50' }}>
             Everything Your Business Needs, Under One Roof
           </h1>
