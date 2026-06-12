@@ -69,7 +69,7 @@ export default function Home() {
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3" style={{ color: '#2C3E50' }}>
                 Professional Accounting & CFO Advisory
               </h1>
-              <p className="text-base sm:text-lg mb-6" style={{ color: '#348981' }} className="font-semibold">
+              <p className="text-base sm:text-lg mb-6 font-semibold" style={{ color: '#348981' }}>
                 for Malaysian Businesses
               </p>
 
