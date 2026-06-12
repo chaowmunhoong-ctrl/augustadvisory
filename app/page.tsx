@@ -63,7 +63,7 @@ export default function Home() {
       <div>
         {/* Full-width background image with centered description */}
         <section
-          className="relative w-full flex items-center justify-center"
+          className="relative w-full flex items-start justify-center"
           style={{
             backgroundImage: 'url(/Images/hero-image.png)',
             backgroundSize: 'cover',
@@ -75,7 +75,7 @@ export default function Home() {
           <div className="absolute inset-0" style={{ background: 'rgba(255,255,255,0.15)' }} />
 
           {/* Centered description text */}
-          <div className="relative z-10 text-center max-w-2xl mx-auto px-6">
+          <div className="relative z-10 text-center max-w-2xl mx-auto px-6 mt-16 sm:mt-24">
             <p className="text-base sm:text-lg leading-relaxed font-medium" style={{ color: '#1a1a1a' }}>
               August Advisory is your one-stop business advisory partner, helping Malaysian businesses stay compliant, operate efficiently, and grow with confidence.
             </p>
