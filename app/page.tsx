@@ -60,42 +60,51 @@ export default function Home() {
   return (
     <div style={{ backgroundColor: '#F0FFFE' }}>
       {/* Hero Section */}
-      <section
-        className="relative w-full flex items-center"
-        style={{
-          backgroundImage: 'url(/images/hero-image.png)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          minHeight: '520px',
-        }}
-      >
-        {/* Dark overlay so text stays readable */}
-        <div className="absolute inset-0" style={{ background: 'rgba(0,0,0,0.45)' }} />
+      <div>
+        {/* Full-width background image with centered description */}
+        <section
+          className="relative w-full flex items-center justify-center"
+          style={{
+            backgroundImage: 'url(/images/hero-image.png)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            minHeight: '480px',
+          }}
+        >
+          {/* Light overlay */}
+          <div className="absolute inset-0" style={{ background: 'rgba(255,255,255,0.15)' }} />
 
-        {/* Content */}
-        <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-10 py-20 sm:py-28 w-full">
-          <div className="max-w-2xl">
-            <p className="text-base sm:text-lg font-bold tracking-widest uppercase mb-3 text-white opacity-80">
-              Accounting & CFO Advisory
-            </p>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 leading-tight text-white">
-              Running a Business Is Hard Enough.
-            </h1>
-            <p className="text-xl sm:text-2xl font-semibold mb-6 text-white opacity-90">
-              Let Us Handle the Numbers.
-            </p>
-            <p className="text-base sm:text-lg leading-relaxed mb-8 text-white opacity-80">
+          {/* Centered description text */}
+          <div className="relative z-10 text-center max-w-2xl mx-auto px-6">
+            <p className="text-base sm:text-lg leading-relaxed font-medium" style={{ color: '#1a1a1a' }}>
               August Advisory is your one-stop business advisory partner, helping Malaysian businesses stay compliant, operate efficiently, and grow with confidence.
             </p>
-            <Link href="/contact"
-              className="inline-block px-8 py-3 rounded-lg font-bold hover:opacity-90 transition"
-              style={{ backgroundColor: '#FFFFFF', color: '#348981' }}
-            >
-              Book a Free Consultation
-            </Link>
           </div>
+
+          {/* Bottom eyebrow strip */}
+          <div className="absolute bottom-0 left-0 right-0 py-4 text-center" style={{ backgroundColor: 'rgba(232,245,243,0.85)' }}>
+            <p className="text-sm sm:text-base font-bold tracking-widest uppercase" style={{ color: '#348981' }}>
+              Your One-Stop Accounting &amp; CFO Advisory Partner in Malaysia
+            </p>
+          </div>
+        </section>
+
+        {/* Heading below image */}
+        <div className="text-center px-6 py-10 sm:py-14 bg-white">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight" style={{ color: '#2C3E50' }}>
+            Running a Business Is Hard Enough.
+          </h1>
+          <p className="text-xl sm:text-2xl font-semibold mb-8" style={{ color: '#348981' }}>
+            Let Us Handle the Numbers.
+          </p>
+          <Link href="/contact"
+            className="inline-block px-10 py-4 rounded-lg font-bold text-lg hover:opacity-90 transition text-white"
+            style={{ backgroundColor: '#348981' }}
+          >
+            Book a Free Consultation
+          </Link>
         </div>
-      </section>
+      </div>
 
       {/* Services Overview */}
       <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6">
