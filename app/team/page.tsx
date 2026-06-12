@@ -72,7 +72,7 @@ export default function Team() {
                 <img
                   src={`/images/${member.name.split(' ')[0]}.png`}
                   alt={member.name}
-                  className="w-full h-64 object-cover"
+                  className="w-full object-contain"
                 />
                 {/* Member Info */}
                 <div className="p-6 text-center">
