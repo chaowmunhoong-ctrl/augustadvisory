@@ -48,25 +48,35 @@ export default function Home() {
   return (
     <div style={{ backgroundColor: '#F0FFFE' }}>
       {/* Hero Section */}
-      <section style={{ backgroundColor: '#E8F5F3' }} className="py-12 sm:py-16 md:py-20 px-4 sm:px-6">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12 items-center">
+      <section style={{ backgroundColor: '#E8F5F3' }} className="py-16 sm:py-24 md:py-32 px-4 sm:px-6">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
             {/* Left side - Image */}
-            <div className="flex justify-center md:justify-start">
-              <img
-                src="/Images/hero-image.png"
-                alt="August Advisory Team"
-                className="w-full max-w-sm rounded-2xl"
-              />
+            <div className="flex justify-center md:justify-start order-2 md:order-1">
+              <div className="w-full max-w-md">
+                <img
+                  src="/Images/hero-image.png"
+                  alt="August Advisory Team"
+                  className="w-full drop-shadow-lg"
+                />
+              </div>
             </div>
 
             {/* Right side - Content */}
-            <div>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3" style={{ color: '#2C3E50' }}>
-                Professional Accounting & CFO Advisory
+            <div className="order-1 md:order-2">
+              <div className="mb-6">
+                <p className="text-sm sm:text-base font-bold tracking-widest" style={{ color: '#348981' }}>
+                  ACCOUNTING & CFO ADVISORY
+                </p>
+              </div>
+              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 leading-tight" style={{ color: '#2C3E50' }}>
+                Professional Financial Advisory
               </h1>
-              <p className="text-base sm:text-lg font-semibold" style={{ color: '#348981' }}>
+              <p className="text-lg sm:text-xl mb-8 leading-relaxed" style={{ color: '#5A6C7D' }}>
                 for Malaysian Businesses
+              </p>
+              <p className="text-base sm:text-lg leading-relaxed font-medium" style={{ color: '#348981' }}>
+                Your trusted partner for seamless financial growth and compliance
               </p>
             </div>
           </div>
