@@ -56,7 +56,7 @@ export default function Contact() {
               <div className="space-y-6">
                 <div>
                   <h3 className="text-xl font-bold mb-2" style={{ color: '#348981' }}>Email</h3>
-                  <p className="text-gray-600">info@augustadvisory.com</p>
+                  <p className="text-gray-600">client@augustadvisory.com.my</p>
                 </div>
 
                 <div>

@@ -29,7 +29,7 @@ export default function Footer() {
           </div>
           <div>
             <h4 className="font-bold mb-4">Contact</h4>
-            <p className="text-sm mb-2 opacity-90">Email: info@augustadvisory.com</p>
+            <p className="text-sm mb-2 opacity-90">Email: client@augustadvisory.com.my</p>
             <p className="text-sm mb-2 opacity-90">Phone: +60 (your number)</p>
             <p className="text-sm opacity-90">Malaysia</p>
           </div>
