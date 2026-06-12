@@ -2,9 +2,23 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
+import { usePathname } from 'next/navigation';
+
+const navLinks = [
+  { href: '/', label: 'Home' },
+  { href: '/services', label: 'Services' },
+  { href: '/about', label: 'About' },
+  { href: '/team', label: 'Team' },
+  { href: '/blog', label: 'Blog' },
+  { href: '/contact', label: 'Contact' },
+];
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
+
+  const isActive = (href: string) =>
+    href === '/' ? pathname === '/' : pathname.startsWith(href);
 
   return (
     <nav style={{ backgroundColor: '#348981' }} className="text-white sticky top-0 z-50 shadow-lg">
@@ -26,24 +40,38 @@ export default function Navigation() {
 
         {/* Desktop menu */}
         <ul className="hidden md:flex gap-4 lg:gap-8">
-          <li><Link href="/" className="text-sm lg:text-base hover:opacity-80 transition">Home</Link></li>
-          <li><Link href="/services" className="text-sm lg:text-base hover:opacity-80 transition">Services</Link></li>
-          <li><Link href="/about" className="text-sm lg:text-base hover:opacity-80 transition">About</Link></li>
-          <li><Link href="/team" className="text-sm lg:text-base hover:opacity-80 transition">Team</Link></li>
-          <li><Link href="/blog" className="text-sm lg:text-base hover:opacity-80 transition">Blog</Link></li>
-          <li><Link href="/contact" className="text-sm lg:text-base hover:opacity-80 transition">Contact</Link></li>
+          {navLinks.map(({ href, label }) => (
+            <li key={href}>
+              <Link
+                href={href}
+                className={`text-sm lg:text-base transition pb-1 ${
+                  isActive(href)
+                    ? 'border-b-2 border-white font-semibold'
+                    : 'hover:opacity-80'
+                }`}
+              >
+                {label}
+              </Link>
+            </li>
+          ))}
         </ul>
       </div>
 
       {/* Mobile menu */}
       {isOpen && (
         <div className="md:hidden bg-opacity-95 px-4 py-3 space-y-2" style={{ backgroundColor: '#2d7a70' }}>
-          <Link href="/" onClick={() => setIsOpen(false)} className="block py-2 hover:opacity-80 transition">Home</Link>
-          <Link href="/services" onClick={() => setIsOpen(false)} className="block py-2 hover:opacity-80 transition">Services</Link>
-          <Link href="/about" onClick={() => setIsOpen(false)} className="block py-2 hover:opacity-80 transition">About</Link>
-          <Link href="/team" onClick={() => setIsOpen(false)} className="block py-2 hover:opacity-80 transition">Team</Link>
-          <Link href="/blog" onClick={() => setIsOpen(false)} className="block py-2 hover:opacity-80 transition">Blog</Link>
-          <Link href="/contact" onClick={() => setIsOpen(false)} className="block py-2 hover:opacity-80 transition">Contact</Link>
+          {navLinks.map(({ href, label }) => (
+            <Link
+              key={href}
+              href={href}
+              onClick={() => setIsOpen(false)}
+              className={`block py-2 transition ${
+                isActive(href) ? 'font-semibold border-l-4 border-white pl-2' : 'hover:opacity-80'
+              }`}
+            >
+              {label}
+            </Link>
+          ))}
         </div>
       )}
     </nav>
