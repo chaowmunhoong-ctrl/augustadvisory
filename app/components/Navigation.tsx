@@ -9,7 +9,7 @@ export default function Navigation() {
   return (
     <nav style={{ backgroundColor: '#348981' }} className="text-white sticky top-0 z-50 shadow-lg">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-3 sm:py-4 flex justify-between items-center">
-        <Link href="/" className="flex items-center gap-2 sm:gap-3">
+        <Link href="/" className="flex items-center gap-1 sm:gap-2">
           <img src="/images/logo.png" alt="August Advisory Logo" className="h-8 sm:h-10" />
           <span className="text-lg sm:text-xl font-bold whitespace-nowrap">August Advisory</span>
         </Link>
