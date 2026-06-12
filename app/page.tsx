@@ -75,7 +75,7 @@ export default function Home() {
               </p>
 
               {/* August Advisory Description */}
-              <div className="bg-gray-50 p-6 sm:p-8 rounded-xl mb-6">
+              <div className="mb-6">
                 <h3 className="text-xl sm:text-2xl font-bold mb-4 text-left" style={{ color: '#2C3E50' }}>
                   About August Advisory
                 </h3>
