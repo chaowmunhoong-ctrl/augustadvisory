@@ -48,12 +48,12 @@ export default function Home() {
   return (
     <div style={{ backgroundColor: '#F0FFFE' }}>
       {/* Hero Section */}
-      <section style={{ backgroundColor: '#E8F5F3' }} className="py-16 sm:py-24 md:py-32 px-4 sm:px-6">
+      <section style={{ backgroundColor: '#FFFFFF' }} className="py-16 sm:py-24 md:py-32 px-4 sm:px-6">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
             {/* Left side - Image */}
             <div className="flex justify-center md:justify-start order-2 md:order-1">
-              <div className="w-full max-w-md">
+              <div className="w-full max-w-2xl">
                 <img
                   src="/Images/hero-image.png"
                   alt="August Advisory Team"
