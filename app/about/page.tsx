@@ -1,6 +1,6 @@
 export const metadata = {
   title: 'About Us - August Advisory',
-  description: 'Learn about August Advisory — your trusted accounting and CFO advisory partner for Malaysian businesses.',
+  description: 'Learn about August Advisory, your trusted accounting and CFO advisory partner for Malaysian businesses.',
 };
 
 export default function About() {
@@ -14,7 +14,7 @@ export default function About() {
             Your Trusted Financial Partner
           </h1>
           <p className="text-base sm:text-lg leading-relaxed" style={{ color: '#5A6C7D' }}>
-            August Advisory was built on a simple belief — that every Malaysian business, regardless of size, deserves access to professional financial guidance that is honest, practical, and genuinely useful.
+            August Advisory was built on a simple belief: that every Malaysian business, regardless of size, deserves access to professional financial guidance that is honest, practical, and genuinely useful.
           </p>
         </div>
       </section>
@@ -27,7 +27,7 @@ export default function About() {
           <div>
             <h2 className="text-3xl font-bold mb-4" style={{ color: '#348981' }}>Our Mission</h2>
             <p className="text-gray-700 text-lg leading-relaxed">
-              To empower Malaysian businesses with the financial clarity, compliance confidence, and strategic insight they need to grow sustainably — by providing professional, reliable, and personalized accounting and advisory services that make a real difference.
+              To empower Malaysian businesses with the financial clarity, compliance confidence, and strategic insight they need to grow sustainably, through professional, reliable, and personalized accounting and advisory services that make a real difference.
             </p>
           </div>
 
@@ -35,7 +35,7 @@ export default function About() {
           <div>
             <h2 className="text-3xl font-bold mb-4" style={{ color: '#348981' }}>Our Vision</h2>
             <p className="text-gray-700 text-lg leading-relaxed">
-              To be the most trusted and preferred accounting and CFO advisory firm in Malaysia — known not just for our expertise, but for the relationships we build and the results we deliver for every client we serve.
+              To be the most trusted and preferred accounting and CFO advisory firm in Malaysia, known not just for our expertise, but for the relationships we build and the results we deliver for every client we serve.
             </p>
           </div>
 
@@ -51,7 +51,7 @@ export default function About() {
               <div className="p-6 rounded-lg" style={{ backgroundColor: '#E8F5F3' }}>
                 <div className="text-4xl mb-3">⭐</div>
                 <h3 className="text-xl font-bold mb-2" style={{ color: '#348981' }}>Excellence</h3>
-                <p className="text-gray-600">We hold ourselves to a high standard in everything we do — from the accuracy of a tax filing to the quality of a financial report.</p>
+                <p className="text-gray-600">We hold ourselves to a high standard in everything we do, from the accuracy of a tax filing to the quality of a financial report.</p>
               </div>
               <div className="p-6 rounded-lg" style={{ backgroundColor: '#E8F5F3' }}>
                 <div className="text-4xl mb-3">🤲</div>
@@ -65,10 +65,10 @@ export default function About() {
           <div>
             <h2 className="text-3xl font-bold mb-4" style={{ color: '#348981' }}>Our Story</h2>
             <p className="text-gray-700 text-lg leading-relaxed mb-4">
-              August Advisory was founded with a clear purpose — to give Malaysian businesses access to the kind of financial expertise that was once reserved only for large corporations. Too many SMEs and startups were navigating complex tax laws, compliance requirements, and financial decisions without the right guidance, and that needed to change.
+              August Advisory was founded with a clear purpose: to give Malaysian businesses access to the kind of financial expertise that was once reserved only for large corporations. Too many SMEs and startups were navigating complex tax laws, compliance requirements, and financial decisions without the right guidance, and that needed to change.
             </p>
             <p className="text-gray-700 text-lg leading-relaxed">
-              Today, we serve businesses across a wide range of industries — from early-stage startups setting up their first company to established businesses looking for a reliable long-term advisory partner. Our approach is always the same: understand your business first, then deliver solutions that fit.
+              Today, we serve businesses across a wide range of industries, from early-stage startups setting up their first company to established businesses looking for a reliable long-term advisory partner. Our approach is always the same: understand your business first, then deliver solutions that fit.
             </p>
           </div>
 

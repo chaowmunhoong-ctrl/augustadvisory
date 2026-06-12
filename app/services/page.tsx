@@ -8,7 +8,7 @@ const serviceDetails = [
     id: 'cfo',
     title: 'CFO Advisory',
     icon: '📊',
-    description: 'Most growing businesses don\'t need a full-time CFO — but they do need CFO-level thinking. We step in as your strategic financial partner, giving you the clarity to make smarter decisions and the controls to protect what you\'ve built.',
+    description: 'Most growing businesses don\'t need a full-time CFO, but they do need CFO-level thinking. We step in as your strategic financial partner, giving you the clarity to make smarter decisions and the controls to protect what you\'ve built.',
     details: [
       'Financial strategy & planning',
       'Budgeting & forecasting',
@@ -22,7 +22,7 @@ const serviceDetails = [
     id: 'financial',
     title: 'Financial Operations Support',
     icon: '💼',
-    description: 'Behind every successful business is a well-organized set of books. We manage your day-to-day financial operations so you have real-time visibility into your finances — and more time to focus on running your business.',
+    description: 'Behind every successful business is a well-organized set of books. We manage your day-to-day financial operations so you have real-time visibility into your finances and more time to focus on running your business.',
     details: [
       'Organize and maintain financial records',
       'Monthly & quarterly management reporting',
@@ -62,7 +62,7 @@ const serviceDetails = [
     id: 'payroll',
     title: 'Payroll, Compliance & e-Stamping',
     icon: '👥',
-    description: 'Payroll is more than just paying salaries. It involves EPF, SOCSO, EIS, PCB, and annual submissions — all with strict deadlines. We manage the entire cycle so you stay compliant and your employees are paid accurately and on time.',
+    description: 'Payroll is more than just paying salaries. It involves EPF, SOCSO, EIS, PCB, and annual submissions, all with strict deadlines. We manage the entire cycle so you stay compliant and your employees are paid accurately and on time.',
     details: [
       'Monthly payroll processing',
       'EPF, SOCSO, EIS & PCB submissions',
@@ -97,7 +97,7 @@ export default function Services() {
             Everything Your Business Needs, Under One Roof
           </h1>
           <p className="text-base sm:text-lg leading-relaxed" style={{ color: '#5A6C7D' }}>
-            We provide tailored accounting, tax, payroll, and CFO advisory services designed around your business — so you can operate with confidence, stay compliant, and focus on growth.
+            We provide tailored accounting, tax, payroll, and CFO advisory services designed around your business so you can operate with confidence, stay compliant, and focus on growth.
           </p>
         </div>
       </section>
@@ -132,7 +132,7 @@ export default function Services() {
           <div className="mt-16 p-8 rounded-lg text-center" style={{ backgroundColor: '#E8F5F3' }}>
             <h3 className="text-2xl font-bold mb-3" style={{ color: '#348981' }}>Not Sure Where to Start?</h3>
             <p className="text-gray-600 mb-6 max-w-xl mx-auto">
-              Every business is different. Reach out to us and we'll recommend the right combination of services based on your stage, industry, and goals — no obligation.
+              Every business is different. Reach out to us and we'll recommend the right combination of services based on your stage, industry, and goals. No obligation.
             </p>
             <a href="/contact" className="text-white px-8 py-3 rounded-lg font-bold hover:opacity-90 transition inline-block" style={{ backgroundColor: '#348981' }}>
               Book a Free Consultation

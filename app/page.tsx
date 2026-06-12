@@ -80,7 +80,7 @@ export default function Home() {
                 </p>
               </div>
               <h1 className="text-4xl sm:text-4xl lg:text-5xl font-bold mb-4 leading-tight" style={{ color: '#2C3E50' }}>
-                Running a Business Is Hard Enough —
+                Running a Business Is Hard Enough.
               </h1>
               <p className="text-base sm:text-lg mb-6 leading-relaxed font-semibold" style={{ color: '#348981' }}>
                 Let Us Handle the Numbers.
@@ -88,10 +88,10 @@ export default function Home() {
 
               <div className="mb-6">
                 <p className="text-base leading-relaxed mb-4 text-left" style={{ color: '#5A6C7D' }}>
-                  August Advisory is your one-stop business advisory partner — helping Malaysian businesses stay compliant, operate efficiently, and grow with confidence.
+                  August Advisory is your one-stop business advisory partner, helping Malaysian businesses stay compliant, operate efficiently, and grow with confidence.
                 </p>
                 <p className="text-base leading-relaxed text-left" style={{ color: '#5A6C7D' }}>
-                  Whether you're launching a startup, scaling an SME, or managing an established company, we bring the financial expertise you need — without the overhead of a full in-house finance team.
+                  Whether you're launching a startup, scaling an SME, or managing an established company, we bring the financial expertise you need without the overhead of a full in-house finance team.
                 </p>
               </div>
 
@@ -113,7 +113,7 @@ export default function Home() {
             <p className="text-sm sm:text-base font-bold tracking-widest uppercase mb-3" style={{ color: '#348981' }}>What We Do</p>
             <h2 className="text-3xl sm:text-4xl font-bold mb-4" style={{ color: '#2C3E50' }}>Our Services</h2>
             <p className="text-base sm:text-lg max-w-2xl mx-auto" style={{ color: '#5A6C7D' }}>
-              From day-to-day bookkeeping to strategic CFO advisory — we handle the financial side of your business so you can focus on what matters most.
+              From day-to-day bookkeeping to strategic CFO advisory, we handle the financial side of your business so you can focus on what matters most.
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
@@ -146,7 +146,7 @@ export default function Home() {
             <p className="text-sm sm:text-base font-bold tracking-widest uppercase mb-3" style={{ color: '#348981' }}>Why Choose Us</p>
             <h2 className="text-3xl sm:text-4xl font-bold mb-4" style={{ color: '#2C3E50' }}>Why August Advisory?</h2>
             <p className="text-base sm:text-lg max-w-2xl mx-auto" style={{ color: '#5A6C7D' }}>
-              We don't just crunch numbers — we help you make better decisions, stay compliant, and build a stronger business.
+              We don't just crunch numbers. We help you make better decisions, stay compliant, and build a stronger business.
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
@@ -166,7 +166,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-white">Ready to Get Started?</h2>
           <p className="mb-8 text-base sm:text-lg text-white opacity-90">
-            Contact us today for a free consultation — let's explore how August Advisory can support your financial success.
+            Contact us today for a free consultation and let's explore how August Advisory can support your financial success.
           </p>
           <Link href="/contact"
             className="bg-white px-6 sm:px-8 py-3 rounded-full font-bold hover:opacity-90 transition inline-block w-full sm:w-auto text-center"
