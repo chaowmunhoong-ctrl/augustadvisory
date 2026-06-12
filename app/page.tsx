@@ -63,12 +63,14 @@ export default function Home() {
       <section
         className="relative w-full flex items-center"
         style={{
-          background: 'linear-gradient(135deg, #1a5c57 0%, #348981 50%, #4ab3a8 100%)',
+          backgroundImage: 'url(/images/hero-image.png)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
           minHeight: '520px',
         }}
       >
-        {/* Overlay for depth */}
-        <div className="absolute inset-0" style={{ background: 'rgba(0,0,0,0.25)' }} />
+        {/* Dark overlay so text stays readable */}
+        <div className="absolute inset-0" style={{ background: 'rgba(0,0,0,0.45)' }} />
 
         {/* Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-10 py-20 sm:py-28 w-full">
