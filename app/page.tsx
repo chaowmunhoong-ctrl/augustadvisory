@@ -70,7 +70,7 @@ export default function Home() {
         }}
       >
         {/* Light overlay on left, stronger on right for text readability */}
-        <div className="absolute inset-0" style={{ background: 'linear-gradient(to left, rgba(255,255,255,0.92) 45%, rgba(255,255,255,0.1) 100%)' }} />
+        <div className="absolute inset-0" style={{ background: 'linear-gradient(to left, rgba(255,255,255,0.96) 30%, rgba(255,255,255,0.3) 55%, rgba(255,255,255,0) 70%)' }} />
 
         {/* Text block on the right */}
         <div className="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-10 flex justify-end">
