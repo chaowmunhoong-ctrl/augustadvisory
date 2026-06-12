@@ -61,7 +61,7 @@ export default function Contact() {
 
                 <div>
                   <h3 className="text-xl font-bold mb-2" style={{ color: '#348981' }}>Phone</h3>
-                  <p className="text-gray-600">+60 (your number)</p>
+                  <p className="text-gray-600">+60 3-3358 2128</p>
                 </div>
 
                 <div>
