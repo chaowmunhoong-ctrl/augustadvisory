@@ -3,45 +3,57 @@ import Link from 'next/link';
 const services = [
   {
     title: 'CFO Advisory',
-    description: 'Strategic financial leadership and advisory for your business growth',
+    description: 'CFO-level strategic thinking without the full-time cost — for businesses that want to grow smarter.',
     icon: '📊'
   },
   {
-    title: 'Financial Operations Support',
-    description: 'Streamline your accounting and financial operations',
+    title: 'Financial Operations',
+    description: 'Accurate books, timely reports, and organized records so you always know where your business stands.',
     icon: '💼'
   },
   {
     title: 'Taxation',
-    description: 'Expert tax planning and compliance services',
+    description: 'Stay compliant and minimize your tax liability — from corporate filings to e-Invoice readiness.',
     icon: '📋'
   },
   {
-    title: 'Payroll',
-    description: 'Efficient and compliant payroll management',
+    title: 'Payroll & Compliance',
+    description: 'Accurate payroll processing and on-time statutory submissions — EPF, SOCSO, EIS, PCB, and more.',
     icon: '👥'
   },
   {
     title: 'Corporate Secretarial',
-    description: 'Complete corporate compliance and governance',
+    description: 'From company incorporation to annual SSM filings — we keep your business legally compliant.',
     icon: '🏢'
   },
   {
     title: 'e-Stamping',
-    description: 'Simplified e-stamping services for your documents',
+    description: 'Fast and accurate electronic stamping for employment contracts and statutory documents.',
     icon: '✍️'
   },
   {
     title: 'e-Invoice Training',
-    description: 'Comprehensive e-invoice implementation and training',
+    description: 'Get your team ready for Malaysia\'s e-Invoice mandate with practical, hands-on training.',
     icon: '📱'
   },
 ];
 
 const features = [
-  { title: 'Expert Team', description: 'Experienced professionals dedicated to your success' },
-  { title: 'Personalized Service', description: 'Solutions tailored to your unique business needs' },
-  { title: 'Trusted Partner', description: 'Reliable support for your financial growth' },
+  {
+    title: 'One-Stop Advisory Partner',
+    description: 'From accounting to CFO strategy — everything your business needs, under one roof.',
+    icon: '🏆'
+  },
+  {
+    title: 'Tailored to Your Business',
+    description: 'No cookie-cutter solutions. We take the time to understand your business before we advise.',
+    icon: '🎯'
+  },
+  {
+    title: 'Built for Malaysian Businesses',
+    description: 'Deep knowledge of local regulations, tax laws, and compliance requirements — so you don\'t have to worry.',
+    icon: '🇲🇾'
+  },
 ];
 
 export default function Home() {
@@ -51,7 +63,7 @@ export default function Home() {
       <section style={{ backgroundColor: '#FFFFFF' }} className="pt-4 sm:pt-6 pb-12 sm:pb-16 md:pb-24 px-4 sm:px-6">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
-            {/* Left side - Image (half width) */}
+            {/* Left side - Image */}
             <div className="flex justify-center lg:justify-start order-2 lg:order-1">
               <img
                 src="/Images/hero-image.png"
@@ -67,29 +79,28 @@ export default function Home() {
                   Accounting & CFO Advisory
                 </p>
               </div>
-              <h1 className="text-4xl sm:text-4xl lg:text-5xl font-bold mb-6 leading-tight" style={{ color: '#2C3E50' }}>
-                Professional Financial Advisory
+              <h1 className="text-4xl sm:text-4xl lg:text-5xl font-bold mb-4 leading-tight" style={{ color: '#2C3E50' }}>
+                Running a Business Is Hard Enough —
               </h1>
               <p className="text-base sm:text-lg mb-6 leading-relaxed font-semibold" style={{ color: '#348981' }}>
-                for Malaysian Businesses
+                Let Us Handle the Numbers.
               </p>
 
-              {/* August Advisory Description */}
               <div className="mb-6">
-                <h3 className="text-xl sm:text-2xl font-bold mb-4 text-left" style={{ color: '#2C3E50' }}>
-                  About August Advisory
-                </h3>
                 <p className="text-base leading-relaxed mb-4 text-left" style={{ color: '#5A6C7D' }}>
-                  August Advisory is a trusted financial advisory firm serving Malaysian businesses of all sizes. We provide comprehensive accounting, tax planning, and CFO services tailored to your unique business needs.
+                  August Advisory is your one-stop business advisory partner — helping Malaysian businesses stay compliant, operate efficiently, and grow with confidence.
                 </p>
                 <p className="text-base leading-relaxed text-left" style={{ color: '#5A6C7D' }}>
-                  Our team of experienced professionals is committed to helping you achieve financial excellence through expert guidance, compliance management, and strategic financial planning.
+                  Whether you're launching a startup, scaling an SME, or managing an established company, we bring the financial expertise you need — without the overhead of a full in-house finance team.
                 </p>
               </div>
 
-              <p className="text-base sm:text-lg leading-relaxed font-medium text-left" style={{ color: '#348981' }}>
-                Your trusted partner for seamless financial growth and compliance
-              </p>
+              <Link href="/contact"
+                className="inline-block text-white px-8 py-3 rounded-lg font-bold hover:opacity-90 transition"
+                style={{ backgroundColor: '#348981' }}
+              >
+                Book a Free Consultation
+              </Link>
             </div>
           </div>
         </div>
@@ -99,8 +110,11 @@ export default function Home() {
       <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-10 sm:mb-16">
-            <p className="text-sm sm:text-base font-bold tracking-widest uppercase mb-3" style={{ color: '#348981' }}>Our Expertise</p>
-            <h2 className="text-3xl sm:text-4xl font-bold" style={{ color: '#2C3E50' }}>Services We Offer</h2>
+            <p className="text-sm sm:text-base font-bold tracking-widest uppercase mb-3" style={{ color: '#348981' }}>What We Do</p>
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4" style={{ color: '#2C3E50' }}>Our Services</h2>
+            <p className="text-base sm:text-lg max-w-2xl mx-auto" style={{ color: '#5A6C7D' }}>
+              From day-to-day bookkeeping to strategic CFO advisory — we handle the financial side of your business so you can focus on what matters most.
+            </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {services.map((service) => (
@@ -119,7 +133,7 @@ export default function Home() {
               className="font-bold text-base sm:text-lg hover:underline transition inline-block"
               style={{ color: '#348981' }}
             >
-              View all services →
+              Explore all services →
             </Link>
           </div>
         </div>
@@ -130,18 +144,16 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-10 sm:mb-16">
             <p className="text-sm sm:text-base font-bold tracking-widest uppercase mb-3" style={{ color: '#348981' }}>Why Choose Us</p>
-            <h2 className="text-3xl sm:text-4xl font-bold" style={{ color: '#2C3E50' }}>Why August Advisory?</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4" style={{ color: '#2C3E50' }}>Why August Advisory?</h2>
+            <p className="text-base sm:text-lg max-w-2xl mx-auto" style={{ color: '#5A6C7D' }}>
+              We don't just crunch numbers — we help you make better decisions, stay compliant, and build a stronger business.
+            </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {features.map((feature) => (
-              <div key={feature.title} className="text-center">
-                <div
-                  className="rounded-full w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center mx-auto mb-3 sm:mb-4 text-xl sm:text-2xl font-bold"
-                  style={{ backgroundColor: '#348981', color: 'white' }}
-                >
-                  ✓
-                </div>
-                <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3" style={{ color: '#2C3E50' }}>{feature.title}</h3>
+              <div key={feature.title} className="text-center bg-white rounded-xl p-8 shadow-sm">
+                <div className="text-4xl mb-4">{feature.icon}</div>
+                <h3 className="text-lg sm:text-xl font-bold mb-3" style={{ color: '#2C3E50' }}>{feature.title}</h3>
                 <p className="text-sm sm:text-base text-gray-600">{feature.description}</p>
               </div>
             ))}
@@ -153,12 +165,14 @@ export default function Home() {
       <section className="py-12 sm:py-16 px-4 sm:px-6" style={{ backgroundColor: '#348981' }}>
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-white">Ready to Get Started?</h2>
-          <p className="mb-8 text-base sm:text-lg text-white opacity-90">Let us help you achieve your financial goals</p>
+          <p className="mb-8 text-base sm:text-lg text-white opacity-90">
+            Contact us today for a free consultation — let's explore how August Advisory can support your financial success.
+          </p>
           <Link href="/contact"
             className="bg-white px-6 sm:px-8 py-3 rounded-full font-bold hover:opacity-90 transition inline-block w-full sm:w-auto text-center"
             style={{ color: '#348981' }}
           >
-            Contact Us Today
+            Book a Free Consultation
           </Link>
         </div>
       </section>

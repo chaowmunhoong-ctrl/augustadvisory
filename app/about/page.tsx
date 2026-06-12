@@ -1,6 +1,6 @@
 export const metadata = {
   title: 'About Us - August Advisory',
-  description: 'Learn about August Advisory and our mission to support Malaysian businesses.',
+  description: 'Learn about August Advisory — your trusted accounting and CFO advisory partner for Malaysian businesses.',
 };
 
 export default function About() {
@@ -13,11 +13,8 @@ export default function About() {
           <h1 className="text-4xl sm:text-5xl font-bold mb-6 leading-tight" style={{ color: '#2C3E50' }}>
             Your Trusted Financial Partner
           </h1>
-          <p className="text-base sm:text-lg leading-relaxed mb-4" style={{ color: '#5A6C7D' }}>
-            Founded in 2023, August Advisory is dedicated to providing professional, reliable, and innovative accounting and financial advisory services to Malaysian businesses of all sizes.
-          </p>
           <p className="text-base sm:text-lg leading-relaxed" style={{ color: '#5A6C7D' }}>
-            We believe that strong financial management is the foundation of business success, and we're committed to being the trusted partner that helps you achieve your goals.
+            August Advisory was built on a simple belief — that every Malaysian business, regardless of size, deserves access to professional financial guidance that is honest, practical, and genuinely useful.
           </p>
         </div>
       </section>
@@ -25,11 +22,12 @@ export default function About() {
       {/* Main Content */}
       <section className="py-16 px-6 bg-white">
         <div className="max-w-4xl mx-auto space-y-12">
+
           {/* Mission */}
           <div>
             <h2 className="text-3xl font-bold mb-4" style={{ color: '#348981' }}>Our Mission</h2>
             <p className="text-gray-700 text-lg leading-relaxed">
-              At August Advisory, we are committed to providing Malaysian businesses with professional, reliable, and innovative accounting and financial advisory services. We believe that strong financial management is the foundation of business success, and we strive to be the trusted partner that helps you achieve your goals.
+              To empower Malaysian businesses with the financial clarity, compliance confidence, and strategic insight they need to grow sustainably — by providing professional, reliable, and personalized accounting and advisory services that make a real difference.
             </p>
           </div>
 
@@ -37,7 +35,7 @@ export default function About() {
           <div>
             <h2 className="text-3xl font-bold mb-4" style={{ color: '#348981' }}>Our Vision</h2>
             <p className="text-gray-700 text-lg leading-relaxed">
-              To be the most trusted and preferred accounting and CFO advisory firm in Malaysia, known for our expertise, integrity, and commitment to client success.
+              To be the most trusted and preferred accounting and CFO advisory firm in Malaysia — known not just for our expertise, but for the relationships we build and the results we deliver for every client we serve.
             </p>
           </div>
 
@@ -48,42 +46,43 @@ export default function About() {
               <div className="p-6 rounded-lg" style={{ backgroundColor: '#E8F5F3' }}>
                 <div className="text-4xl mb-3">🤝</div>
                 <h3 className="text-xl font-bold mb-2" style={{ color: '#348981' }}>Integrity</h3>
-                <p className="text-gray-600">We maintain the highest ethical standards in all our dealings and advice.</p>
+                <p className="text-gray-600">We give honest advice, even when it's not what you want to hear. Our clients trust us because we always put their best interests first.</p>
               </div>
               <div className="p-6 rounded-lg" style={{ backgroundColor: '#E8F5F3' }}>
                 <div className="text-4xl mb-3">⭐</div>
                 <h3 className="text-xl font-bold mb-2" style={{ color: '#348981' }}>Excellence</h3>
-                <p className="text-gray-600">We deliver quality work that exceeds expectations and drives real value.</p>
+                <p className="text-gray-600">We hold ourselves to a high standard in everything we do — from the accuracy of a tax filing to the quality of a financial report.</p>
               </div>
               <div className="p-6 rounded-lg" style={{ backgroundColor: '#E8F5F3' }}>
                 <div className="text-4xl mb-3">🤲</div>
                 <h3 className="text-xl font-bold mb-2" style={{ color: '#348981' }}>Collaboration</h3>
-                <p className="text-gray-600">We work as partners with our clients to understand and achieve their goals.</p>
+                <p className="text-gray-600">We work alongside you, not just for you. Understanding your business deeply is how we deliver advice that actually moves the needle.</p>
               </div>
             </div>
           </div>
 
-          {/* History */}
+          {/* Our Story */}
           <div>
             <h2 className="text-3xl font-bold mb-4" style={{ color: '#348981' }}>Our Story</h2>
             <p className="text-gray-700 text-lg leading-relaxed mb-4">
-              Founded in 2023, August Advisory was established with a vision to revolutionize financial advisory services in Malaysia. Our founder brought together a team of experienced accountants, tax professionals, and financial advisors to create a firm that truly understands the needs of Malaysian businesses.
+              August Advisory was founded with a clear purpose — to give Malaysian businesses access to the kind of financial expertise that was once reserved only for large corporations. Too many SMEs and startups were navigating complex tax laws, compliance requirements, and financial decisions without the right guidance, and that needed to change.
             </p>
             <p className="text-gray-700 text-lg leading-relaxed">
-              Over the years, we have worked with numerous businesses across various industries, helping them navigate complex financial challenges, optimize their operations, and achieve sustainable growth. Our personalized approach and deep industry knowledge have made us a trusted partner for businesses of all sizes.
+              Today, we serve businesses across a wide range of industries — from early-stage startups setting up their first company to established businesses looking for a reliable long-term advisory partner. Our approach is always the same: understand your business first, then deliver solutions that fit.
             </p>
           </div>
 
           {/* Contact CTA */}
           <div className="p-8 rounded-lg text-center mt-12" style={{ backgroundColor: '#E8F5F3' }}>
-            <h3 className="text-2xl font-bold mb-3" style={{ color: '#348981' }}>Want to Work with Us?</h3>
-            <p className="text-gray-600 mb-6">
-              Learn how August Advisory can help your business achieve financial excellence.
+            <h3 className="text-2xl font-bold mb-3" style={{ color: '#348981' }}>Let's Work Together</h3>
+            <p className="text-gray-600 mb-6 max-w-lg mx-auto">
+              Whether you're just getting started or looking to level up your financial operations, we'd love to learn about your business and explore how we can help.
             </p>
             <a href="/contact" className="text-white px-8 py-3 rounded-lg font-bold hover:opacity-90 transition inline-block" style={{ backgroundColor: '#348981' }}>
-              Contact Us
+              Book a Free Consultation
             </a>
           </div>
+
         </div>
       </section>
     </div>

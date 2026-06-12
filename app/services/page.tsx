@@ -1,6 +1,6 @@
 export const metadata = {
   title: 'Services - August Advisory',
-  description: 'Our comprehensive accounting and CFO advisory services for Malaysian businesses.',
+  description: 'Comprehensive accounting, tax, payroll, and CFO advisory services for Malaysian businesses.',
 };
 
 const serviceDetails = [
@@ -8,91 +8,80 @@ const serviceDetails = [
     id: 'cfo',
     title: 'CFO Advisory',
     icon: '📊',
-    description: 'Strategic financial leadership and guidance for business growth',
+    description: 'Most growing businesses don\'t need a full-time CFO — but they do need CFO-level thinking. We step in as your strategic financial partner, giving you the clarity to make smarter decisions and the controls to protect what you\'ve built.',
     details: [
-      'Financial planning and forecasting',
-      'Budgeting and cost management',
-      'Financial analysis and reporting',
-      'Strategic decision support',
-      'Risk management',
+      'Financial strategy & planning',
+      'Budgeting & forecasting',
+      'Cost control & profitability analysis',
+      'Risk management & internal controls',
+      'Financial reporting & compliance',
+      'Tax planning advisory',
     ],
   },
   {
     id: 'financial',
     title: 'Financial Operations Support',
     icon: '💼',
-    description: 'Streamline your accounting operations with our professional support',
+    description: 'Behind every successful business is a well-organized set of books. We manage your day-to-day financial operations so you have real-time visibility into your finances — and more time to focus on running your business.',
     details: [
-      'General accounting services',
-      'Month-end and year-end closing',
-      'Financial statement preparation',
-      'Internal controls setup',
-      'Accounting system implementation',
+      'Organize and maintain financial records',
+      'Monthly & quarterly management reporting',
+      'Accounts payable & receivable management',
+      'Bank and credit card reconciliations',
+      'Accounting software setup & optimization',
     ],
   },
   {
     id: 'taxation',
-    title: 'Taxation',
+    title: 'Taxation Services',
     icon: '📋',
-    description: 'Expert tax planning and compliance services',
+    description: 'Tax compliance in Malaysia is complex and constantly evolving. We handle your filings, provide proactive tax planning to minimize your liabilities, and stand by your side if LHDN ever comes knocking.',
     details: [
-      'Corporate income tax filing',
-      'Personal income tax advisory',
-      'Sales and Service Tax (SST) compliance',
-      'Tax planning and optimization',
-      'Tax dispute resolution',
-    ],
-  },
-  {
-    id: 'payroll',
-    title: 'Payroll',
-    icon: '👥',
-    description: 'Efficient and compliant payroll management',
-    details: [
-      'Monthly payroll processing',
-      'Statutory compliance (EPF, SOCSO, etc.)',
-      'Payroll tax management',
-      'Payroll system setup and support',
-      'Employee benefits administration',
+      'Corporate income tax compliance & filing',
+      'Tax planning & advisory',
+      'e-Invoice implementation & management',
+      'Withholding tax calculations & submissions',
+      'Tax audit & investigation support',
+      'Payroll-related tax filings & compliance',
     ],
   },
   {
     id: 'secretarial',
     title: 'Corporate Secretarial',
     icon: '🏢',
-    description: 'Complete corporate compliance and governance services',
+    description: 'From company incorporation to ongoing statutory compliance, we take care of all the regulatory requirements so your business remains in good standing with the authorities at all times.',
     details: [
-      'Company registration and incorporation',
-      'Annual filing with SSM',
-      'Board resolutions and minutes',
-      'Statutory compliance',
-      'Corporate governance advisory',
+      'Company incorporation & business setup',
+      'Statutory compliance management',
+      'Annual SSM filings & corporate records',
+      'Board resolutions & meeting minutes',
+      'Nominee director & shareholder services',
     ],
   },
   {
-    id: 'estamping',
-    title: 'e-Stamping',
-    icon: '✍️',
-    description: 'Simplified electronic stamping services for your documents',
+    id: 'payroll',
+    title: 'Payroll, Compliance & e-Stamping',
+    icon: '👥',
+    description: 'Payroll is more than just paying salaries. It involves EPF, SOCSO, EIS, PCB, and annual submissions — all with strict deadlines. We manage the entire cycle so you stay compliant and your employees are paid accurately and on time.',
     details: [
-      'Document e-stamping assistance',
-      'Electronic stamp processing',
-      'Stamp duty calculation',
-      'Document archival support',
-      'Consultation on stamping requirements',
+      'Monthly payroll processing',
+      'EPF, SOCSO, EIS & PCB submissions',
+      'Annual Form E & EA preparation',
+      'e-Stamping of employment contracts',
+      'Stamping of statutory documents',
     ],
   },
   {
     id: 'einvoice',
     title: 'e-Invoice Training',
     icon: '📱',
-    description: 'Comprehensive e-invoice implementation and training',
+    description: 'Malaysia\'s e-Invoice mandate is rolling out across businesses of all sizes. Don\'t get caught unprepared. Our training programme walks your team through the requirements and the practical steps to implement it in your business.',
     details: [
-      'e-Invoice system setup',
-      'Staff training and support',
-      'Integration with accounting systems',
-      'Compliance documentation',
-      'Ongoing technical support',
+      'Introduction to Malaysia e-Invoice requirements',
+      'e-Invoice framework & compliance overview',
+      'Consolidated & self-billed invoice handling',
+      'Practical implementation strategies',
+      'Integration with existing accounting systems',
     ],
   },
 ];
@@ -105,10 +94,10 @@ export default function Services() {
         <div className="max-w-3xl mx-auto">
           <p className="text-base sm:text-lg font-bold tracking-widest mb-4" style={{ color: '#348981' }}>OUR SERVICES</p>
           <h1 className="text-4xl sm:text-5xl font-bold mb-6 leading-tight" style={{ color: '#2C3E50' }}>
-            Comprehensive Accounting & CFO Solutions
+            Everything Your Business Needs, Under One Roof
           </h1>
           <p className="text-base sm:text-lg leading-relaxed" style={{ color: '#5A6C7D' }}>
-            We provide tailored accounting and financial advisory services designed to meet the unique needs of your business. From tax planning to CFO advisory, our expert team is here to support your financial success.
+            We provide tailored accounting, tax, payroll, and CFO advisory services designed around your business — so you can operate with confidence, stay compliant, and focus on growth.
           </p>
         </div>
       </section>
@@ -124,16 +113,9 @@ export default function Services() {
                 className="rounded-xl p-8 shadow-md hover:shadow-lg transition h-full flex flex-col"
                 style={{ backgroundColor: '#F0FFFE', borderTop: '4px solid #348981' }}
               >
-                {/* Icon */}
                 <div className="text-5xl mb-4">{service.icon}</div>
-
-                {/* Title */}
                 <h2 className="text-xl font-bold mb-3" style={{ color: '#348981' }}>{service.title}</h2>
-
-                {/* Description */}
                 <p className="text-sm text-gray-700 mb-5 flex-grow">{service.description}</p>
-
-                {/* Details List */}
                 <ul className="space-y-2 border-t pt-5" style={{ borderColor: '#E0F2F1' }}>
                   {service.details.map((detail) => (
                     <li key={detail} className="flex items-start">
@@ -148,12 +130,12 @@ export default function Services() {
 
           {/* Contact CTA */}
           <div className="mt-16 p-8 rounded-lg text-center" style={{ backgroundColor: '#E8F5F3' }}>
-            <h3 className="text-2xl font-bold mb-3" style={{ color: '#348981' }}>Need a Custom Solution?</h3>
-            <p className="text-gray-600 mb-6">
-              Contact us to discuss how we can tailor our services to meet your specific business needs.
+            <h3 className="text-2xl font-bold mb-3" style={{ color: '#348981' }}>Not Sure Where to Start?</h3>
+            <p className="text-gray-600 mb-6 max-w-xl mx-auto">
+              Every business is different. Reach out to us and we'll recommend the right combination of services based on your stage, industry, and goals — no obligation.
             </p>
             <a href="/contact" className="text-white px-8 py-3 rounded-lg font-bold hover:opacity-90 transition inline-block" style={{ backgroundColor: '#348981' }}>
-              Get in Touch
+              Book a Free Consultation
             </a>
           </div>
         </div>
