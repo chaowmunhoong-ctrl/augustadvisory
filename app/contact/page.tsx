@@ -65,6 +65,13 @@ export default function Contact() {
                 </div>
 
                 <div>
+                  <h3 className="text-xl font-bold mb-2" style={{ color: '#348981' }}>WhatsApp</h3>
+                  <a href="https://wa.me/601024625151" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:underline">
+                    +60 10-2462 5151
+                  </a>
+                </div>
+
+                <div>
                   <h3 className="text-xl font-bold mb-2" style={{ color: '#348981' }}>Head Office (Klang)</h3>
                   <p className="text-gray-600">No. 12-1, Jalan Astaka 1C/KU2,</p>
                   <p className="text-gray-600">Bandar Bukit Raja, 41050 Klang,</p>
