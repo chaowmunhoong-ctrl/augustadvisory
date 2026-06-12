@@ -166,9 +166,8 @@ export default function Home() {
               </p>
               <ul className="space-y-4 mb-10">
                 {[
-                  'Income tax and corporate tax updates from LHDN',
-                  'SST changes and implementation guidance',
-                  'SSM, Companies Act, and compliance deadlines',
+                  'Updates on income tax, SST, and companies compliance',
+                  'Follow closely on changes announced by LHDN, SSM, and Customs',
                   'e-Invoice mandate rollout and requirements',
                   'Practical insights for Malaysian business owners',
                 ].map((item) => (
@@ -202,9 +201,8 @@ export default function Home() {
                 </div>
                 <div className="space-y-3">
                   {[
-                    { icon: '📊', label: 'Tax & LHDN Updates' },
-                    { icon: '🛒', label: 'SST Guidance' },
-                    { icon: '🏢', label: 'SSM & Companies Act' },
+                    { icon: '📊', label: 'Income Tax & SST Updates' },
+                    { icon: '🏢', label: 'LHDN, SSM & Customs' },
                     { icon: '📋', label: 'e-Invoice Requirements' },
                     { icon: '💡', label: 'Business Owner Insights' },
                   ].map((item) => (
