@@ -51,17 +51,13 @@ export default function Home() {
       <section style={{ backgroundColor: '#E8F5F3' }} className="py-12 sm:py-16 md:py-20 px-4 sm:px-6">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12 items-center">
-            {/* Left side - Image placeholder */}
+            {/* Left side - Image */}
             <div className="flex justify-center md:justify-start">
-              <div
-                className="w-full max-w-sm h-64 sm:h-80 md:h-96 rounded-2xl flex items-center justify-center text-gray-400"
-                style={{ backgroundColor: '#D4EBE8', border: '2px dashed #348981' }}
-              >
-                <div className="text-center">
-                  <p className="text-lg font-semibold text-gray-500">Image Placeholder</p>
-                  <p className="text-sm text-gray-400 mt-2">Your professional image here</p>
-                </div>
-              </div>
+              <img
+                src="/images/hero-image.png"
+                alt="August Advisory Team"
+                className="w-full max-w-sm rounded-2xl"
+              />
             </div>
 
             {/* Right side - Content */}
