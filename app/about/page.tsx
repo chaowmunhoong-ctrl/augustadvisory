@@ -68,14 +68,17 @@ export default function About() {
             <h2 className="text-3xl font-bold mb-6" style={{ color: '#348981' }}>Our Values</h2>
             <div className="grid md:grid-cols-3 gap-6">
               <div className="p-6 rounded-lg" style={{ backgroundColor: '#E8F5F3' }}>
+                <div className="text-4xl mb-3">🤝</div>
                 <h3 className="text-xl font-bold mb-2" style={{ color: '#348981' }}>Integrity</h3>
                 <p className="text-gray-600">We maintain the highest ethical standards in all our dealings and advice.</p>
               </div>
               <div className="p-6 rounded-lg" style={{ backgroundColor: '#E8F5F3' }}>
+                <div className="text-4xl mb-3">⭐</div>
                 <h3 className="text-xl font-bold mb-2" style={{ color: '#348981' }}>Excellence</h3>
                 <p className="text-gray-600">We deliver quality work that exceeds expectations and drives real value.</p>
               </div>
               <div className="p-6 rounded-lg" style={{ backgroundColor: '#E8F5F3' }}>
+                <div className="text-4xl mb-3">🤲</div>
                 <h3 className="text-xl font-bold mb-2" style={{ color: '#348981' }}>Collaboration</h3>
                 <p className="text-gray-600">We work as partners with our clients to understand and achieve their goals.</p>
               </div>
