@@ -209,7 +209,7 @@ export default function Home() {
             {/* Center: Phone image */}
             <div className="lg:col-span-1 flex justify-center">
               <img
-                src="/images/channel.png"
+                src="/Images/channel.png"
                 alt="August Advisory WhatsApp Channel"
                 className="w-full max-w-xs object-contain drop-shadow-xl"
               />
