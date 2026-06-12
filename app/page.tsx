@@ -48,33 +48,45 @@ export default function Home() {
   return (
     <div style={{ backgroundColor: '#F0FFFE' }}>
       {/* Hero Section */}
-      <section style={{ backgroundColor: '#FFFFFF' }} className="py-16 sm:py-24 md:py-32 px-4 sm:px-6">
+      <section style={{ backgroundColor: '#FFFFFF' }} className="py-12 sm:py-16 md:py-24 px-4 sm:px-6">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
-            {/* Left side - Image */}
-            <div className="flex justify-center md:justify-start order-2 md:order-1">
-              <div className="w-full max-w-2xl">
-                <img
-                  src="/Images/hero-image.png"
-                  alt="August Advisory Team"
-                  className="w-full drop-shadow-lg"
-                />
-              </div>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+            {/* Left side - Image (maximized) */}
+            <div className="lg:col-span-1 flex justify-center order-2 lg:order-1">
+              <img
+                src="/Images/hero-image.png"
+                alt="August Advisory Team"
+                className="w-full drop-shadow-lg"
+              />
             </div>
 
             {/* Right side - Content */}
-            <div className="order-1 md:order-2">
-              <div className="mb-6">
+            <div className="lg:col-span-2 order-1 lg:order-2">
+              <div className="mb-4">
                 <p className="text-sm sm:text-base font-bold tracking-widest" style={{ color: '#348981' }}>
                   ACCOUNTING & CFO ADVISORY
                 </p>
               </div>
-              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 leading-tight" style={{ color: '#2C3E50' }}>
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight" style={{ color: '#2C3E50' }}>
                 Professional Financial Advisory
               </h1>
-              <p className="text-lg sm:text-xl mb-8 leading-relaxed" style={{ color: '#5A6C7D' }}>
+              <p className="text-lg sm:text-xl mb-6 leading-relaxed" style={{ color: '#5A6C7D' }}>
                 for Malaysian Businesses
               </p>
+
+              {/* August Advisory Description */}
+              <div className="bg-gray-50 p-6 sm:p-8 rounded-xl mb-6">
+                <h3 className="text-xl sm:text-2xl font-bold mb-4" style={{ color: '#2C3E50' }}>
+                  About August Advisory
+                </h3>
+                <p className="text-base leading-relaxed mb-4" style={{ color: '#5A6C7D' }}>
+                  August Advisory is a trusted financial advisory firm serving Malaysian businesses of all sizes. We provide comprehensive accounting, tax planning, and CFO services tailored to your unique business needs.
+                </p>
+                <p className="text-base leading-relaxed" style={{ color: '#5A6C7D' }}>
+                  Our team of experienced professionals is committed to helping you achieve financial excellence through expert guidance, compliance management, and strategic financial planning.
+                </p>
+              </div>
+
               <p className="text-base sm:text-lg leading-relaxed font-medium" style={{ color: '#348981' }}>
                 Your trusted partner for seamless financial growth and compliance
               </p>
