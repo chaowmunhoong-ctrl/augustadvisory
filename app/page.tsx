@@ -62,18 +62,9 @@ export default function Home() {
       {/* Hero Section */}
       <section style={{ backgroundColor: '#FFFFFF' }} className="pt-4 sm:pt-6 pb-12 sm:pb-16 md:pb-24 px-4 sm:px-6">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
-            {/* Left side - Image */}
-            <div className="flex justify-center lg:justify-start order-2 lg:order-1">
-              <img
-                src="/Images/hero-image.png"
-                alt="August Advisory Team"
-                className="w-full drop-shadow-lg"
-              />
-            </div>
-
+          <div className="grid grid-cols-1 lg:grid-cols-[70%_30%] gap-8 lg:gap-12 items-center">
             {/* Right side - Content */}
-            <div className="order-1 lg:order-2 text-left">
+            <div className="order-1 text-left">
               <div className="mb-4">
                 <p className="text-xl sm:text-2xl font-bold tracking-widest uppercase" style={{ color: '#348981' }}>
                   Accounting & CFO Advisory
@@ -101,6 +92,15 @@ export default function Home() {
               >
                 Book a Free Consultation
               </Link>
+            </div>
+
+            {/* Right side - Image */}
+            <div className="order-2 flex justify-center lg:justify-end">
+              <img
+                src="/Images/hero-image.png"
+                alt="August Advisory Team"
+                className="w-full drop-shadow-lg"
+              />
             </div>
           </div>
         </div>
