@@ -65,8 +65,17 @@ export default function Contact() {
                 </div>
 
                 <div>
-                  <h3 className="text-xl font-bold mb-2" style={{ color: '#348981' }}>Location</h3>
-                  <p className="text-gray-600">Malaysia</p>
+                  <h3 className="text-xl font-bold mb-2" style={{ color: '#348981' }}>Head Office (Klang)</h3>
+                  <p className="text-gray-600">No. 12-1, Jalan Astaka 1C/KU2,</p>
+                  <p className="text-gray-600">Bandar Bukit Raja, 41050 Klang,</p>
+                  <p className="text-gray-600">Selangor</p>
+                </div>
+
+                <div>
+                  <h3 className="text-xl font-bold mb-2" style={{ color: '#348981' }}>KL Office</h3>
+                  <p className="text-gray-600">B-1-11, Northpoint, Mid Valley City,</p>
+                  <p className="text-gray-600">No. 1, Medan Syed Putra Utara,</p>
+                  <p className="text-gray-600">59200 Kuala Lumpur</p>
                 </div>
 
                 <div>
