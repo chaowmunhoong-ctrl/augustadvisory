@@ -60,50 +60,47 @@ export default function Home() {
   return (
     <div style={{ backgroundColor: '#F0FFFE' }}>
       {/* Hero Section */}
-      <div>
-        {/* Full-width background image with centered description */}
-        <section
-          className="relative w-full flex items-start justify-center"
-          style={{
-            backgroundImage: 'url(/Images/hero-image.png)',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            minHeight: '700px',
-          }}
-        >
-          {/* Light overlay */}
-          <div className="absolute inset-0" style={{ background: 'rgba(255,255,255,0.15)' }} />
+      <section
+        className="relative w-full flex items-center"
+        style={{
+          backgroundImage: 'url(/Images/hero-image.png)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          minHeight: '600px',
+        }}
+      >
+        {/* Light overlay on left, stronger on right for text readability */}
+        <div className="absolute inset-0" style={{ background: 'linear-gradient(to left, rgba(255,255,255,0.92) 45%, rgba(255,255,255,0.1) 100%)' }} />
 
-          {/* Centered description text */}
-          <div className="relative z-10 text-center max-w-2xl mx-auto px-6 mt-16 sm:mt-24">
-            <p className="text-base sm:text-lg leading-relaxed font-medium" style={{ color: '#1a1a1a' }}>
+        {/* Text block on the right */}
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-10 flex justify-end">
+          <div className="w-full sm:w-1/2 lg:w-2/5 text-left py-16">
+            <p className="text-sm font-bold tracking-widest uppercase mb-4" style={{ color: '#348981' }}>
+              Accounting & CFO Advisory
+            </p>
+            <h1 className="text-4xl sm:text-5xl font-extrabold mb-5 leading-tight uppercase" style={{ color: '#2C3E50' }}>
+              Professional & Trusted Accounting
+            </h1>
+            <p className="text-base sm:text-lg leading-relaxed mb-8" style={{ color: '#4A5568' }}>
               August Advisory is your one-stop business advisory partner, helping Malaysian businesses stay compliant, operate efficiently, and grow with confidence.
             </p>
+            <div className="flex flex-wrap gap-4">
+              <Link href="/contact"
+                className="inline-block px-8 py-3 rounded font-bold text-white hover:opacity-90 transition"
+                style={{ backgroundColor: '#348981' }}
+              >
+                Contact Us
+              </Link>
+              <a href="tel:0333582128"
+                className="inline-block px-8 py-3 rounded font-bold border-2 hover:opacity-80 transition"
+                style={{ borderColor: '#348981', color: '#348981' }}
+              >
+                Call 03-3358 2128
+              </a>
+            </div>
           </div>
-
-          {/* Bottom eyebrow strip */}
-          <div className="absolute bottom-0 left-0 right-0 py-4 text-center" style={{ backgroundColor: 'rgba(232,245,243,0.85)' }}>
-            <p className="text-sm sm:text-base font-bold tracking-widest uppercase" style={{ color: '#348981' }}>
-              Your One-Stop Accounting &amp; CFO Advisory Partner in Malaysia
-            </p>
-          </div>
-        </section>
-
-        {/* Heading below image */}
-        <div className="text-center px-6 py-10 sm:py-14 bg-white">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight" style={{ color: '#2C3E50' }}>
-            Running a Business Is Hard Enough.
-          </h1>
-          <p className="text-xl sm:text-2xl font-semibold mb-8" style={{ color: '#348981' }}>
-            Let Us Handle the Numbers.
-          </p>
-          <Link href="/contact"
-            className="inline-block px-10 py-4 rounded-lg font-bold text-lg hover:opacity-90 transition text-white"
-            style={{ backgroundColor: '#348981' }}
-          >
-            Book a Free Consultation
-          </Link>
         </div>
+      </section>
       </div>
 
       {/* Services Overview */}
