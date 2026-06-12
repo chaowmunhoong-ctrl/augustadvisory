@@ -70,7 +70,7 @@ export default function Team() {
               <div key={member.name} className="rounded-lg overflow-hidden hover:shadow-lg transition" style={{ backgroundColor: '#F9FFFE' }}>
                 {/* Member Image */}
                 <img
-                  src={`/images/${member.name.split(' ')[0].toLowerCase()}.png`}
+                  src={`/images/${member.name.split(' ')[0]}.png`}
                   alt={member.name}
                   className="w-full h-64 object-cover"
                 />
