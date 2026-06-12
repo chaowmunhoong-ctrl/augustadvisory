@@ -166,10 +166,11 @@ export default function Home() {
               </p>
               <ul className="space-y-4 mb-10">
                 {[
-                  'Updates on income tax, SST, and companies compliance',
-                  'Follow closely on changes announced by LHDN, SSM, and Customs',
-                  'e-Invoice mandate rollout and requirements',
-                  'Practical insights for Malaysian business owners',
+                  'Income tax and SST updates',
+                  'e-Invoice implementation and compliance guidance',
+                  'LHDN, SSM, and Customs announcements',
+                  'Business compliance tips and reminders',
+                  'Practical insights for SME owners and entrepreneurs',
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3">
                     <span className="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 text-white text-xs font-bold mt-0.5" style={{ backgroundColor: '#348981' }}>✓</span>
@@ -201,10 +202,11 @@ export default function Home() {
                 </div>
                 <div className="space-y-3">
                   {[
-                    { icon: '📊', label: 'Income Tax & SST Updates' },
+                    { icon: '📊', label: 'Income Tax & SST' },
+                    { icon: '📋', label: 'e-Invoice Guidance' },
                     { icon: '🏢', label: 'LHDN, SSM & Customs' },
-                    { icon: '📋', label: 'e-Invoice Requirements' },
-                    { icon: '💡', label: 'Business Owner Insights' },
+                    { icon: '✅', label: 'Compliance Tips' },
+                    { icon: '💡', label: 'Insights for SME Owners' },
                   ].map((item) => (
                     <div key={item.label} className="flex items-center gap-3 px-4 py-3 rounded-lg bg-white">
                       <span className="text-base">{item.icon}</span>
