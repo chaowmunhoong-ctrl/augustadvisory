@@ -37,10 +37,10 @@ export default function Contact() {
         <div className="max-w-3xl mx-auto">
           <p className="text-base sm:text-lg font-bold tracking-widest mb-4" style={{ color: '#348981' }}>GET IN TOUCH</p>
           <h1 className="text-4xl sm:text-5xl font-bold mb-6 leading-tight" style={{ color: '#2C3E50' }}>
-            Let's Connect
+            Let's Talk About Your Business
           </h1>
           <p className="text-base sm:text-lg leading-relaxed" style={{ color: '#5A6C7D' }}>
-            Have questions about our services? Ready to discuss your financial needs? Contact us today for a free consultation and let's explore how August Advisory can support your financial success.
+            Have questions about our services? Not sure where to start? Reach out — our first consultation is free, and we'd love to learn about your business and how we can support your growth.
           </p>
         </div>
       </section>
