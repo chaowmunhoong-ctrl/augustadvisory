@@ -5,7 +5,7 @@ export const metadata = {
 
 const team = [
   {
-    name: 'Chao Wm Hoong',
+    name: 'Hazel Lim',
     title: 'Founder & CFO Advisor',
     bio: 'Experienced financial leader with 15+ years in accounting and CFO advisory services.',
   },
@@ -68,16 +68,12 @@ export default function Team() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {team.map((member) => (
               <div key={member.name} className="rounded-lg overflow-hidden hover:shadow-lg transition" style={{ backgroundColor: '#F9FFFE' }}>
-                {/* Member Image Placeholder */}
-                <div
-                  className="w-full flex items-center justify-center text-center"
-                  style={{ backgroundColor: '#E8F5F3', minHeight: '200px' }}
-                >
-                  <div>
-                    <p className="text-sm font-semibold" style={{ color: '#348981' }}>Member Photo</p>
-                    <p className="text-xs text-gray-500 mt-1">team-{member.name.toLowerCase().replace(/\s+/g, '-')}.png</p>
-                  </div>
-                </div>
+                {/* Member Image */}
+                <img
+                  src={`/images/${member.name.split(' ')[0].toLowerCase()}.png`}
+                  alt={member.name}
+                  className="w-full h-64 object-cover"
+                />
                 {/* Member Info */}
                 <div className="p-6 text-center">
                   <h3 className="text-xl font-bold mb-2" style={{ color: '#348981' }}>{member.name}</h3>
