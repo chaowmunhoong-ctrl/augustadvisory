@@ -93,11 +93,18 @@ const serviceDetails = [
 export default function Services() {
   return (
     <div className="bg-white">
-      {/* Header */}
-      <section className="bg-gradient-to-r from-blue-900 to-blue-800 text-white py-12 px-6">
-        <div className="max-w-6xl mx-auto">
-          <h1 className="text-4xl font-bold">Our Services</h1>
-          <p className="text-lg opacity-90 mt-2">Comprehensive accounting and CFO solutions for your business</p>
+      {/* Header with Background Image */}
+      <section
+        className="text-white py-20 px-6 relative"
+        style={{
+          backgroundImage: `linear-gradient(rgba(23, 37, 84, 0.75), rgba(23, 37, 84, 0.75)), url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&h=400&fit=crop')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center'
+        }}
+      >
+        <div className="max-w-6xl mx-auto relative z-10">
+          <h1 className="text-5xl font-bold">Our Services</h1>
+          <p className="text-xl opacity-95 mt-3">Comprehensive accounting and CFO solutions for your business</p>
         </div>
       </section>
 

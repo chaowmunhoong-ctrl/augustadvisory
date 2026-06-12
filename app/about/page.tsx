@@ -6,11 +6,18 @@ export const metadata = {
 export default function About() {
   return (
     <div className="bg-white">
-      {/* Header */}
-      <section className="bg-gradient-to-r from-blue-900 to-blue-800 text-white py-12 px-6">
-        <div className="max-w-6xl mx-auto">
-          <h1 className="text-4xl font-bold">About August Advisory</h1>
-          <p className="text-lg opacity-90 mt-2">Your trusted partner in financial excellence</p>
+      {/* Header with Background Image */}
+      <section
+        className="text-white py-20 px-6 relative"
+        style={{
+          backgroundImage: `linear-gradient(rgba(23, 37, 84, 0.75), rgba(23, 37, 84, 0.75)), url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=400&fit=crop')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center'
+        }}
+      >
+        <div className="max-w-6xl mx-auto relative z-10">
+          <h1 className="text-5xl font-bold">About August Advisory</h1>
+          <p className="text-xl opacity-95 mt-3">Your trusted partner in financial excellence</p>
         </div>
       </section>
 
