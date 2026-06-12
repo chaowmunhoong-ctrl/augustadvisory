@@ -141,21 +141,28 @@ export default function Services() {
       {/* Services Detail */}
       <section className="py-16 px-6 bg-white">
         <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {serviceDetails.map((service) => (
-              <div key={service.id} id={service.id} className="border-l-4 pl-6 py-6" style={{ borderColor: '#348981' }}>
+              <div
+                key={service.id}
+                id={service.id}
+                className="rounded-xl p-8 shadow-md hover:shadow-lg transition h-full flex flex-col"
+                style={{ backgroundColor: '#F0FFFE', borderTop: '4px solid #348981' }}
+              >
                 {/* Icon */}
                 <div className="text-5xl mb-4">{service.icon}</div>
 
-                {/* Title and Description */}
-                <h2 className="text-2xl font-bold mb-3" style={{ color: '#348981' }}>{service.title}</h2>
-                <p className="text-base text-gray-700 mb-5">{service.description}</p>
+                {/* Title */}
+                <h2 className="text-xl font-bold mb-3" style={{ color: '#348981' }}>{service.title}</h2>
+
+                {/* Description */}
+                <p className="text-sm text-gray-700 mb-5 flex-grow">{service.description}</p>
 
                 {/* Details List */}
-                <ul className="space-y-2">
+                <ul className="space-y-2 border-t pt-5" style={{ borderColor: '#E0F2F1' }}>
                   {service.details.map((detail) => (
                     <li key={detail} className="flex items-start">
-                      <span className="font-bold mr-3 text-lg" style={{ color: '#348981' }}>✓</span>
+                      <span className="font-bold mr-2" style={{ color: '#348981' }}>✓</span>
                       <span className="text-gray-600 text-sm">{detail}</span>
                     </li>
                   ))}
