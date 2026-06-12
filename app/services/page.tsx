@@ -135,7 +135,7 @@ export default function Services() {
               Every business is different. Reach out to us and we'll recommend the right combination of services based on your stage, industry, and goals. No obligation.
             </p>
             <a href="/contact" className="text-white px-8 py-3 rounded-lg font-bold hover:opacity-90 transition inline-block" style={{ backgroundColor: '#348981' }}>
-              Book a Free Consultation
+              Book a Consultation
             </a>
           </div>
         </div>

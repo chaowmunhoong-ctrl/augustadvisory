@@ -79,7 +79,7 @@ export default function About() {
               Whether you're just getting started or looking to level up your financial operations, we'd love to learn about your business and explore how we can help.
             </p>
             <a href="/contact" className="text-white px-8 py-3 rounded-lg font-bold hover:opacity-90 transition inline-block" style={{ backgroundColor: '#348981' }}>
-              Book a Free Consultation
+              Book a Consultation
             </a>
           </div>
 
