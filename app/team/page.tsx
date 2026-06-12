@@ -34,7 +34,7 @@ export default function Team() {
               <img
                 src={`/images/${founder.name.split(' ')[0]}.png`}
                 alt={founder.name}
-                className="w-full rounded-xl shadow-lg"
+                className="w-full"
               />
             </div>
 
