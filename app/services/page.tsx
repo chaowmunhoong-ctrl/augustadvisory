@@ -93,37 +93,76 @@ const serviceDetails = [
 export default function Services() {
   return (
     <div className="bg-white">
-      {/* Header with Background Image */}
-      <section
-        className="text-white py-20 px-6 relative"
-        style={{
-          backgroundImage: `linear-gradient(135deg, rgba(52, 152, 129, 0.85), rgba(41, 128, 185, 0.85)), url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&h=400&fit=crop')`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center'
-        }}
-      >
-        <div className="max-w-6xl mx-auto relative z-10">
-          <h1 className="text-5xl font-bold">Our Services</h1>
-          <p className="text-xl opacity-95 mt-3">Comprehensive accounting and CFO solutions for your business</p>
+      {/* Hero Section */}
+      <section style={{ backgroundColor: '#FFFFFF' }} className="py-16 sm:py-24 md:py-32 px-4 sm:px-6">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+            {/* Left side - Image placeholder */}
+            <div className="flex justify-center lg:justify-start order-2 lg:order-1">
+              <div
+                className="w-full drop-shadow-lg rounded-xl p-8 flex items-center justify-center text-center"
+                style={{ backgroundColor: '#E8F5F3', minHeight: '400px' }}
+              >
+                <div>
+                  <p className="text-lg font-semibold" style={{ color: '#348981' }}>Services Hero Image</p>
+                  <p className="text-sm text-gray-500 mt-2">services-hero.png</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Right side - Content */}
+            <div className="order-1 lg:order-2 text-left">
+              <div className="mb-4">
+                <p className="text-sm sm:text-base font-bold tracking-widest" style={{ color: '#348981' }}>
+                  OUR SERVICES
+                </p>
+              </div>
+              <h1 className="text-4xl sm:text-5xl lg:text-5xl font-bold mb-6 leading-tight" style={{ color: '#2C3E50' }}>
+                Comprehensive Accounting & CFO Solutions
+              </h1>
+              <p className="text-lg sm:text-xl mb-6 leading-relaxed" style={{ color: '#5A6C7D' }}>
+                for Malaysian Businesses
+              </p>
+              <p className="text-base sm:text-lg leading-relaxed" style={{ color: '#5A6C7D' }}>
+                We provide tailored accounting and financial advisory services designed to meet the unique needs of your business. From tax planning to CFO advisory, our expert team is here to support your financial success.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Services Detail */}
       <section className="py-16 px-6 bg-white">
         <div className="max-w-6xl mx-auto">
-          <div className="space-y-12">
+          <div className="space-y-16">
             {serviceDetails.map((service) => (
-              <div key={service.id} id={service.id} className="border-l-4 pl-8" style={{ borderColor: '#348981' }}>
-                <h2 className="text-3xl font-bold mb-3" style={{ color: '#348981' }}>{service.title}</h2>
-                <p className="text-lg text-gray-700 mb-6">{service.description}</p>
-                <ul className="space-y-2">
-                  {service.details.map((detail) => (
-                    <li key={detail} className="flex items-start">
-                      <span className="font-bold mr-3" style={{ color: '#348981' }}>•</span>
-                      <span className="text-gray-600">{detail}</span>
-                    </li>
-                  ))}
-                </ul>
+              <div key={service.id} id={service.id} className="grid lg:grid-cols-2 gap-8 items-center">
+                {/* Service Content */}
+                <div className="border-l-4 pl-8" style={{ borderColor: '#348981' }}>
+                  <h2 className="text-3xl font-bold mb-3" style={{ color: '#348981' }}>{service.title}</h2>
+                  <p className="text-lg text-gray-700 mb-6">{service.description}</p>
+                  <ul className="space-y-3">
+                    {service.details.map((detail) => (
+                      <li key={detail} className="flex items-start">
+                        <span className="font-bold mr-3 text-lg" style={{ color: '#348981' }}>✓</span>
+                        <span className="text-gray-600">{detail}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* Service Image Placeholder */}
+                <div className="flex justify-center">
+                  <div
+                    className="w-full drop-shadow-lg rounded-xl p-8 flex items-center justify-center text-center"
+                    style={{ backgroundColor: '#E8F5F3', minHeight: '300px' }}
+                  >
+                    <div>
+                      <p className="text-lg font-semibold" style={{ color: '#348981' }}>Service Image</p>
+                      <p className="text-sm text-gray-500 mt-2">service-{service.id}.png</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             ))}
           </div>

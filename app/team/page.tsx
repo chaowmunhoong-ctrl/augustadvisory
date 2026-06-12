@@ -24,18 +24,41 @@ const team = [
 export default function Team() {
   return (
     <div className="bg-white">
-      {/* Header with Background Image */}
-      <section
-        className="text-white py-20 px-6 relative"
-        style={{
-          backgroundImage: `linear-gradient(135deg, rgba(52, 152, 129, 0.85), rgba(41, 128, 185, 0.85)), url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=400&fit=crop')`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center'
-        }}
-      >
-        <div className="max-w-6xl mx-auto relative z-10">
-          <h1 className="text-5xl font-bold">Our Team</h1>
-          <p className="text-xl opacity-95 mt-3">Expert professionals dedicated to your financial success</p>
+      {/* Hero Section */}
+      <section style={{ backgroundColor: '#FFFFFF' }} className="py-16 sm:py-24 md:py-32 px-4 sm:px-6">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+            {/* Left side - Image placeholder */}
+            <div className="flex justify-center lg:justify-start order-2 lg:order-1">
+              <div
+                className="w-full drop-shadow-lg rounded-xl p-8 flex items-center justify-center text-center"
+                style={{ backgroundColor: '#E8F5F3', minHeight: '400px' }}
+              >
+                <div>
+                  <p className="text-lg font-semibold" style={{ color: '#348981' }}>Team Hero Image</p>
+                  <p className="text-sm text-gray-500 mt-2">team-hero.png</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Right side - Content */}
+            <div className="order-1 lg:order-2 text-left">
+              <div className="mb-4">
+                <p className="text-sm sm:text-base font-bold tracking-widest" style={{ color: '#348981' }}>
+                  OUR TEAM
+                </p>
+              </div>
+              <h1 className="text-4xl sm:text-5xl lg:text-5xl font-bold mb-6 leading-tight" style={{ color: '#2C3E50' }}>
+                Expert Professionals at Your Service
+              </h1>
+              <p className="text-base sm:text-lg leading-relaxed mb-4" style={{ color: '#5A6C7D' }}>
+                Our team consists of experienced accountants, tax professionals, and financial advisors dedicated to delivering excellence in every engagement.
+              </p>
+              <p className="text-base sm:text-lg leading-relaxed" style={{ color: '#5A6C7D' }}>
+                With decades of combined experience across various industries, we bring deep expertise and personalized service to each of our clients.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -44,13 +67,23 @@ export default function Team() {
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {team.map((member) => (
-              <div key={member.name} className="rounded-lg p-8 text-center hover:shadow-lg transition" style={{ backgroundColor: '#F9FFFE' }}>
-                <div className="text-white rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-4 text-4xl font-bold" style={{ backgroundColor: '#348981' }}>
-                  {member.name.charAt(0)}
+              <div key={member.name} className="rounded-lg overflow-hidden hover:shadow-lg transition" style={{ backgroundColor: '#F9FFFE' }}>
+                {/* Member Image Placeholder */}
+                <div
+                  className="w-full flex items-center justify-center text-center"
+                  style={{ backgroundColor: '#E8F5F3', minHeight: '200px' }}
+                >
+                  <div>
+                    <p className="text-sm font-semibold" style={{ color: '#348981' }}>Member Photo</p>
+                    <p className="text-xs text-gray-500 mt-1">team-{member.name.toLowerCase().replace(/\s+/g, '-')}.png</p>
+                  </div>
                 </div>
-                <h3 className="text-xl font-bold mb-2" style={{ color: '#348981' }}>{member.name}</h3>
-                <p className="font-semibold mb-3" style={{ color: '#348981' }}>{member.title}</p>
-                <p className="text-gray-600">{member.bio}</p>
+                {/* Member Info */}
+                <div className="p-6 text-center">
+                  <h3 className="text-xl font-bold mb-2" style={{ color: '#348981' }}>{member.name}</h3>
+                  <p className="font-semibold mb-3" style={{ color: '#348981' }}>{member.title}</p>
+                  <p className="text-gray-600 text-sm">{member.bio}</p>
+                </div>
               </div>
             ))}
           </div>
