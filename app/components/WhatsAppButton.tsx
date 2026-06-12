@@ -11,7 +11,7 @@ export default function WhatsAppButton() {
       title="Chat with us on WhatsApp"
     >
       <img
-        src="/images/whatsapp.png"
+        src="/images/whatsApp.png"
         alt="WhatsApp"
         className="w-full h-full rounded-full object-cover"
       />
