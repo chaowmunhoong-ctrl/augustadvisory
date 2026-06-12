@@ -109,7 +109,6 @@ export default function Contact() {
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none"
-                    style={{ focusBorderColor: '#348981' }}
                   />
                 </div>
 
@@ -122,7 +121,6 @@ export default function Contact() {
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none"
-                    style={{ focusBorderColor: '#348981' }}
                   />
                 </div>
 
@@ -134,7 +132,6 @@ export default function Contact() {
                     value={formData.phone}
                     onChange={handleChange}
                     className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none"
-                    style={{ focusBorderColor: '#348981' }}
                   />
                 </div>
 
@@ -146,7 +143,6 @@ export default function Contact() {
                     value={formData.company}
                     onChange={handleChange}
                     className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none"
-                    style={{ focusBorderColor: '#348981' }}
                   />
                 </div>
 
@@ -159,7 +155,6 @@ export default function Contact() {
                     required
                     rows={5}
                     className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none"
-                    style={{ focusBorderColor: '#348981' }}
                   ></textarea>
                 </div>
 
