@@ -48,7 +48,7 @@ export default function Home() {
   return (
     <div style={{ backgroundColor: '#F0FFFE' }}>
       {/* Hero Section */}
-      <section style={{ backgroundColor: '#FFFFFF' }} className="py-12 sm:py-16 md:py-24 px-4 sm:px-6">
+      <section style={{ backgroundColor: '#FFFFFF' }} className="pt-4 sm:pt-6 pb-12 sm:pb-16 md:pb-24 px-4 sm:px-6">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
             {/* Left side - Image (half width) */}
