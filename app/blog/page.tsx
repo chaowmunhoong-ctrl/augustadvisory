@@ -16,10 +16,10 @@ export default function Blog() {
         <div className="max-w-3xl mx-auto">
           <p className="text-base sm:text-lg font-bold tracking-widest mb-4" style={{ color: '#348981' }}>INSIGHTS & UPDATES</p>
           <h1 className="text-4xl sm:text-5xl font-bold mb-6 leading-tight" style={{ color: '#2C3E50' }}>
-            Latest News & Insights
+            Practical Insights for Malaysian Businesses
           </h1>
           <p className="text-base sm:text-lg leading-relaxed" style={{ color: '#5A6C7D' }}>
-            Stay updated with the latest trends, tips, and insights on accounting, taxation, and financial management for Malaysian businesses.
+            Stay informed on the latest developments in tax, compliance, and financial management — written in plain language so you can act on it, not just read it.
           </p>
         </div>
       </section>

@@ -6,7 +6,7 @@ export const metadata = {
 const founder = {
   name: 'Hazel Lim',
   title: 'Founder & CFO Advisor',
-  bio: 'With over 15 years of experience in accounting and financial advisory, Hazel brings a wealth of expertise to August Advisory. Her strategic approach to financial management has helped numerous Malaysian businesses achieve sustainable growth and financial excellence. Hazel is passionate about delivering personalized solutions that address the unique challenges faced by modern enterprises. Her commitment to integrity, innovation, and client success makes her a trusted advisor in the industry.',
+  bio: 'Hazel founded August Advisory with a clear purpose — to give Malaysian businesses access to the kind of financial expertise that was once reserved for large corporations. With a background spanning accounting, tax compliance, and CFO-level advisory, she has helped businesses at every stage navigate complex financial challenges and build stronger foundations for growth. Hazel believes that great financial advice should be honest, practical, and delivered in plain language — and that\'s exactly the standard she holds August Advisory to, every day.',
 };
 
 export default function Team() {
@@ -17,10 +17,10 @@ export default function Team() {
         <div className="max-w-3xl mx-auto">
           <p className="text-base sm:text-lg font-bold tracking-widest mb-4" style={{ color: '#348981' }}>OUR TEAM</p>
           <h1 className="text-4xl sm:text-5xl font-bold mb-6 leading-tight" style={{ color: '#2C3E50' }}>
-            Expert Professionals at Your Service
+            The People Behind Your Financial Success
           </h1>
           <p className="text-base sm:text-lg leading-relaxed" style={{ color: '#5A6C7D' }}>
-            Our team consists of experienced accountants, tax professionals, and financial advisors dedicated to delivering excellence in every engagement.
+            Our team brings together experienced accountants, tax professionals, and financial advisors who are genuinely invested in your business outcomes — not just your compliance deadlines.
           </p>
         </div>
       </section>

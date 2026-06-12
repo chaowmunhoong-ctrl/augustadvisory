@@ -78,10 +78,10 @@ export default function Contact() {
                 <div className="p-6 rounded-lg mt-8" style={{ backgroundColor: '#E8F5F3' }}>
                   <h3 className="text-lg font-bold mb-3" style={{ color: '#348981' }}>What to Expect</h3>
                   <ul className="text-gray-600 space-y-2">
-                    <li>• Free initial consultation</li>
-                    <li>• Personalized service plan</li>
-                    <li>• Prompt responses to inquiries</li>
-                    <li>• Expert guidance and support</li>
+                    <li>• Free initial consultation — no obligation</li>
+                    <li>• We listen first, then recommend</li>
+                    <li>• A tailored plan based on your needs</li>
+                    <li>• Prompt, professional responses</li>
                   </ul>
                 </div>
               </div>
