@@ -69,46 +69,9 @@ export default function Home() {
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3" style={{ color: '#2C3E50' }}>
                 Professional Accounting & CFO Advisory
               </h1>
-              <p className="text-base sm:text-lg mb-6 font-semibold" style={{ color: '#348981' }}>
+              <p className="text-base sm:text-lg font-semibold" style={{ color: '#348981' }}>
                 for Malaysian Businesses
               </p>
-
-              {/* Toggle Buttons */}
-              <div className="flex flex-col sm:flex-row gap-3 mb-6">
-                <button
-                  className="px-4 sm:px-6 py-2 rounded-full font-semibold text-white transition"
-                  style={{ backgroundColor: '#348981' }}
-                >
-                  New Client
-                </button>
-                <button
-                  className="px-4 sm:px-6 py-2 rounded-full font-semibold border-2 transition hover:opacity-80"
-                  style={{ borderColor: '#348981', color: '#348981', backgroundColor: 'white' }}
-                >
-                  Existing Client
-                </button>
-              </div>
-
-              {/* Tagline */}
-              <p className="text-gray-700 mb-6 font-medium">
-                Your Trusted Financial Partner for Seamless Growth
-              </p>
-
-              {/* Search Input and Button */}
-              <div className="flex flex-col sm:flex-row gap-3">
-                <input
-                  type="text"
-                  placeholder="Enter your company name..."
-                  className="flex-1 px-4 sm:px-6 py-3 rounded-full border-2 focus:outline-none focus:border-teal-600"
-                  style={{ borderColor: '#348981' }}
-                />
-                <button
-                  className="px-6 sm:px-8 py-3 rounded-full font-bold text-white transition hover:opacity-90 w-full sm:w-auto"
-                  style={{ backgroundColor: '#E94B8C' }}
-                >
-                  Get Started
-                </button>
-              </div>
             </div>
           </div>
         </div>
