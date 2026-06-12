@@ -152,15 +152,15 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-12 sm:py-16 px-4 sm:px-6" style={{ backgroundColor: '#348981' }}>
+      <section className="py-12 sm:py-16 px-4 sm:px-6" style={{ backgroundColor: '#E8F5F3' }}>
         <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-white">Ready to Get Started?</h2>
-          <p className="mb-8 text-base sm:text-lg text-white opacity-90">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-4" style={{ color: '#2C3E50' }}>Ready to Get Started?</h2>
+          <p className="mb-8 text-base sm:text-lg" style={{ color: '#5A6C7D' }}>
             Contact us today for a free consultation and let's explore how August Advisory can support your financial success.
           </p>
           <Link href="/contact"
-            className="bg-white px-6 sm:px-8 py-3 rounded-full font-bold hover:opacity-90 transition inline-block w-full sm:w-auto text-center"
-            style={{ color: '#348981' }}
+            className="px-6 sm:px-8 py-3 rounded-full font-bold text-white hover:opacity-90 transition inline-block w-full sm:w-auto text-center"
+            style={{ backgroundColor: '#348981' }}
           >
             Book a Free Consultation
           </Link>
