@@ -91,12 +91,6 @@ export default function Home() {
               >
                 Contact Us
               </Link>
-              <a href="tel:0333582128"
-                className="inline-block px-8 py-3 rounded font-bold border-2 hover:opacity-80 transition"
-                style={{ borderColor: '#348981', color: '#348981' }}
-              >
-                Call 03-3358 2128
-              </a>
             </div>
           </div>
         </div>
