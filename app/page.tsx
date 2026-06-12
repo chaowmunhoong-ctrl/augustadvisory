@@ -1,70 +1,94 @@
-import { getAllPosts } from '@/lib/posts';
 import Link from 'next/link';
 
-export const metadata = {
-  title: 'August Advisory - Accounting & Tax Insights',
-  description: 'Updates and insights on tax, SST, Companies Act, and accounting topics for Malaysian businesses.',
-};
+const services = [
+  { title: 'CFO Advisory', description: 'Strategic financial leadership and advisory for your business growth' },
+  { title: 'Financial Operations Support', description: 'Streamline your accounting and financial operations' },
+  { title: 'Taxation', description: 'Expert tax planning and compliance services' },
+  { title: 'Payroll', description: 'Efficient and compliant payroll management' },
+  { title: 'Corporate Secretarial', description: 'Complete corporate compliance and governance' },
+  { title: 'e-Stamping', description: 'Simplified e-stamping services for your documents' },
+  { title: 'e-Invoice Training', description: 'Comprehensive e-invoice implementation and training' },
+];
 
 export default function Home() {
-  const posts = getAllPosts();
-
   return (
-    <div className="min-h-screen bg-gray-50">
-      {/* Header */}
-      <header className="bg-white shadow-sm">
-        <div className="max-w-3xl mx-auto px-6 py-12">
-          <h1 className="text-4xl font-bold text-gray-900">August Advisory</h1>
-          <p className="text-lg text-gray-600 mt-2">Accounting & CFO Advisory for Malaysian Businesses</p>
+    <div className="bg-white">
+      {/* Hero Section */}
+      <section className="bg-gradient-to-r from-blue-900 to-blue-800 text-white py-20 px-6">
+        <div className="max-w-6xl mx-auto text-center">
+          <h1 className="text-5xl font-bold mb-4">Professional Accounting & CFO Advisory</h1>
+          <p className="text-xl mb-8 opacity-90">Trusted financial partner for Malaysian businesses</p>
+          <div className="flex gap-4 justify-center">
+            <Link href="/services" className="bg-white text-blue-900 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition">
+              Explore Services
+            </Link>
+            <Link href="/contact" className="bg-blue-700 text-white px-8 py-3 rounded-lg font-bold hover:bg-blue-600 transition border border-white">
+              Get in Touch
+            </Link>
+          </div>
         </div>
-      </header>
+      </section>
 
-      {/* Main Content */}
-      <main className="max-w-3xl mx-auto px-6 py-12">
-        <div className="mb-12">
-          <h2 className="text-2xl font-bold text-gray-900 mb-8">Latest Updates</h2>
+      {/* Services Overview */}
+      <section className="py-16 px-6">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl font-bold text-center mb-12">Our Services</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {services.map((service) => (
+              <div key={service.title} className="bg-gray-50 p-6 rounded-lg hover:shadow-lg transition">
+                <h3 className="text-xl font-bold text-blue-900 mb-3">{service.title}</h3>
+                <p className="text-gray-600 text-sm">{service.description}</p>
+              </div>
+            ))}
+          </div>
+          <div className="text-center mt-12">
+            <Link href="/services" className="text-blue-900 font-bold text-lg hover:underline">
+              View all services →
+            </Link>
+          </div>
+        </div>
+      </section>
 
-          {posts.length === 0 ? (
-            <p className="text-gray-600">No posts yet.</p>
-          ) : (
-            <div className="space-y-8">
-              {posts.map((post) => (
-                <article
-                  key={post.slug}
-                  className="bg-white p-6 rounded-lg shadow hover:shadow-md transition"
-                >
-                  <Link href={`/posts/${post.slug}`}>
-                    <h3 className="text-xl font-bold text-blue-700 hover:text-blue-900 cursor-pointer">
-                      {post.title}
-                    </h3>
-                  </Link>
-                  <p className="text-sm text-gray-500 mt-2">
-                    {new Date(post.date).toLocaleDateString('en-MY', {
-                      year: 'numeric',
-                      month: 'long',
-                      day: 'numeric',
-                    })}
-                  </p>
-                  <p className="text-gray-700 mt-3">{post.excerpt}</p>
-                  <Link
-                    href={`/posts/${post.slug}`}
-                    className="inline-block mt-4 text-blue-700 hover:text-blue-900 font-medium"
-                  >
-                    Read more →
-                  </Link>
-                </article>
-              ))}
+      {/* Why Choose Us */}
+      <section className="bg-gray-50 py-16 px-6">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl font-bold text-center mb-12">Why Choose August Advisory?</h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="bg-blue-900 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
+                ✓
+              </div>
+              <h3 className="text-xl font-bold mb-2">Expert Team</h3>
+              <p className="text-gray-600">Experienced accountants and CFO professionals with proven track record</p>
             </div>
-          )}
+            <div className="text-center">
+              <div className="bg-blue-900 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
+                ✓
+              </div>
+              <h3 className="text-xl font-bold mb-2">Personalized Service</h3>
+              <p className="text-gray-600">Customized solutions tailored to your business needs and goals</p>
+            </div>
+            <div className="text-center">
+              <div className="bg-blue-900 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
+                ✓
+              </div>
+              <h3 className="text-xl font-bold mb-2">Latest Technology</h3>
+              <p className="text-gray-600">Using modern tools and systems for efficiency and compliance</p>
+            </div>
+          </div>
         </div>
-      </main>
+      </section>
 
-      {/* Footer */}
-      <footer className="bg-gray-900 text-white py-8 mt-12">
-        <div className="max-w-3xl mx-auto px-6 text-center">
-          <p>&copy; 2026 August Advisory. All rights reserved.</p>
+      {/* CTA Section */}
+      <section className="bg-blue-900 text-white py-12 px-6">
+        <div className="max-w-6xl mx-auto text-center">
+          <h2 className="text-3xl font-bold mb-4">Ready to Partner with August Advisory?</h2>
+          <p className="mb-8 text-lg opacity-90">Let us help you achieve your financial goals</p>
+          <Link href="/contact" className="bg-white text-blue-900 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition inline-block">
+            Contact Us Today
+          </Link>
         </div>
-      </footer>
+      </section>
     </div>
   );
 }
