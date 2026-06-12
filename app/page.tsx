@@ -48,25 +48,68 @@ export default function Home() {
   return (
     <div style={{ backgroundColor: '#F0FFFE' }}>
       {/* Hero Section */}
-      <section
-        className="text-white py-16 sm:py-24 md:py-32 px-4 sm:px-6 relative overflow-hidden"
-        style={{
-          backgroundImage: `linear-gradient(135deg, rgba(52, 152, 129, 0.85), rgba(41, 128, 185, 0.85)), url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&h=600&fit=crop')`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundAttachment: 'fixed'
-        }}
-      >
-        <div className="max-w-6xl mx-auto text-center relative z-10">
-          <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-2 sm:mb-4">Accounting & CFO Advisory</h1>
-          <p className="text-base sm:text-lg md:text-2xl mb-6 sm:mb-10 opacity-95">Professional financial partnership for Malaysian businesses</p>
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center flex-wrap">
-            <Link href="/services" className="bg-white text-teal-700 px-6 sm:px-8 py-3 rounded-full font-bold hover:bg-gray-100 transition shadow-lg w-full sm:w-auto text-center">
-              Explore Services
-            </Link>
-            <Link href="/contact" className="bg-teal-600 text-white px-6 sm:px-8 py-3 rounded-full font-bold hover:bg-teal-700 transition shadow-lg border-2 border-white w-full sm:w-auto text-center">
-              Get in Touch
-            </Link>
+      <section style={{ backgroundColor: '#E8F5F3' }} className="py-12 sm:py-16 md:py-20 px-4 sm:px-6">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12 items-center">
+            {/* Left side - Image placeholder */}
+            <div className="flex justify-center md:justify-start">
+              <div
+                className="w-full max-w-sm h-64 sm:h-80 md:h-96 rounded-2xl flex items-center justify-center text-gray-400"
+                style={{ backgroundColor: '#D4EBE8', border: '2px dashed #348981' }}
+              >
+                <div className="text-center">
+                  <p className="text-lg font-semibold text-gray-500">Image Placeholder</p>
+                  <p className="text-sm text-gray-400 mt-2">Your professional image here</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Right side - Content */}
+            <div>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3" style={{ color: '#2C3E50' }}>
+                Professional Accounting & CFO Advisory
+              </h1>
+              <p className="text-base sm:text-lg mb-6" style={{ color: '#348981' }} className="font-semibold">
+                for Malaysian Businesses
+              </p>
+
+              {/* Toggle Buttons */}
+              <div className="flex flex-col sm:flex-row gap-3 mb-6">
+                <button
+                  className="px-4 sm:px-6 py-2 rounded-full font-semibold text-white transition"
+                  style={{ backgroundColor: '#348981' }}
+                >
+                  New Client
+                </button>
+                <button
+                  className="px-4 sm:px-6 py-2 rounded-full font-semibold border-2 transition hover:opacity-80"
+                  style={{ borderColor: '#348981', color: '#348981', backgroundColor: 'white' }}
+                >
+                  Existing Client
+                </button>
+              </div>
+
+              {/* Tagline */}
+              <p className="text-gray-700 mb-6 font-medium">
+                Your Trusted Financial Partner for Seamless Growth
+              </p>
+
+              {/* Search Input and Button */}
+              <div className="flex flex-col sm:flex-row gap-3">
+                <input
+                  type="text"
+                  placeholder="Enter your company name..."
+                  className="flex-1 px-4 sm:px-6 py-3 rounded-full border-2 focus:outline-none focus:border-teal-600"
+                  style={{ borderColor: '#348981' }}
+                />
+                <button
+                  className="px-6 sm:px-8 py-3 rounded-full font-bold text-white transition hover:opacity-90 w-full sm:w-auto"
+                  style={{ backgroundColor: '#E94B8C' }}
+                >
+                  Get Started
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
