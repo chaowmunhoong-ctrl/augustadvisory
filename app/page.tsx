@@ -54,7 +54,7 @@ export default function Home() {
             {/* Left side - Image */}
             <div className="flex justify-center md:justify-start">
               <img
-                src="/images/hero-image.png"
+                src="/Images/hero-image.png"
                 alt="August Advisory Team"
                 className="w-full max-w-sm rounded-2xl"
               />
