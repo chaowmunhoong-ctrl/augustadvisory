@@ -162,7 +162,7 @@ export default function Home() {
                 Know Every Regulatory Change Before It Affects Your Business
               </h2>
               <p className="text-base sm:text-lg leading-relaxed mb-8" style={{ color: '#5A6C7D' }}>
-                Follow the August Advisory WhatsApp Channel for curated, plain-language updates on Malaysian tax, SST, SSM, and regulatory changes — plus actionable insights to help you run a smarter, more compliant business.
+                Follow the August Advisory WhatsApp Channel for curated, plain-language updates on Malaysian tax, SST, SSM, and regulatory changes, along with actionable insights to help you run a smarter, more compliant business.
               </p>
               <ul className="space-y-4 mb-10">
                 {[
