@@ -32,7 +32,7 @@ export default function Team() {
             {/* Right side - Content */}
             <div className="order-1 lg:order-2 text-left">
               <div className="mb-4">
-                <p className="text-sm sm:text-base font-bold tracking-widest" style={{ color: '#348981' }}>
+                <p className="text-base sm:text-lg font-bold tracking-widest" style={{ color: '#348981' }}>
                   OUR TEAM
                 </p>
               </div>
@@ -65,7 +65,7 @@ export default function Team() {
 
             {/* Profile Info */}
             <div>
-              <p className="text-xs sm:text-sm font-bold tracking-widest uppercase mb-4" style={{ color: '#348981' }}>
+              <p className="text-sm sm:text-base font-bold tracking-widest uppercase mb-4" style={{ color: '#348981' }}>
                 Meet Our Founder
               </p>
               <h2 className="text-3xl sm:text-4xl font-bold mb-3" style={{ color: '#2C3E50' }}>

@@ -26,7 +26,7 @@ export default function About() {
             {/* Right side - Content */}
             <div className="order-1 lg:order-2 text-left">
               <div className="mb-4">
-                <p className="text-sm sm:text-base font-bold tracking-widest" style={{ color: '#348981' }}>
+                <p className="text-base sm:text-lg font-bold tracking-widest" style={{ color: '#348981' }}>
                   ABOUT US
                 </p>
               </div>

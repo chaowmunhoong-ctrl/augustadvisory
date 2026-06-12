@@ -63,7 +63,7 @@ export default function Home() {
             {/* Right side - Content */}
             <div className="order-1 lg:order-2 text-left">
               <div className="mb-4">
-                <p className="text-xs sm:text-sm font-bold tracking-widest uppercase" style={{ color: '#348981' }}>
+                <p className="text-sm sm:text-base font-bold tracking-widest uppercase" style={{ color: '#348981' }}>
                   Accounting & CFO Advisory
                 </p>
               </div>
@@ -99,7 +99,7 @@ export default function Home() {
       <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-10 sm:mb-16">
-            <p className="text-xs sm:text-sm font-bold tracking-widest uppercase mb-3" style={{ color: '#348981' }}>Our Expertise</p>
+            <p className="text-sm sm:text-base font-bold tracking-widest uppercase mb-3" style={{ color: '#348981' }}>Our Expertise</p>
             <h2 className="text-3xl sm:text-4xl font-bold" style={{ color: '#2C3E50' }}>Services We Offer</h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
@@ -129,7 +129,7 @@ export default function Home() {
       <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6" style={{ backgroundColor: '#E8F5F3' }}>
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-10 sm:mb-16">
-            <p className="text-xs sm:text-sm font-bold tracking-widest uppercase mb-3" style={{ color: '#348981' }}>Why Choose Us</p>
+            <p className="text-sm sm:text-base font-bold tracking-widest uppercase mb-3" style={{ color: '#348981' }}>Why Choose Us</p>
             <h2 className="text-3xl sm:text-4xl font-bold" style={{ color: '#2C3E50' }}>Why August Advisory?</h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
