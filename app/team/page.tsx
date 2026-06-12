@@ -3,23 +3,11 @@ export const metadata = {
   description: 'Meet the expert team at August Advisory.',
 };
 
-const team = [
-  {
-    name: 'Hazel Lim',
-    title: 'Founder & CFO Advisor',
-    bio: 'Experienced financial leader with 15+ years in accounting and CFO advisory services.',
-  },
-  {
-    name: 'Team Member Name',
-    title: 'Senior Accountant',
-    bio: 'Specializing in corporate accounting and financial reporting.',
-  },
-  {
-    name: 'Team Member Name',
-    title: 'Tax Specialist',
-    bio: 'Expert in tax planning, compliance, and optimization strategies.',
-  },
-];
+const founder = {
+  name: 'Hazel Lim',
+  title: 'Founder & CFO Advisor',
+  bio: 'With over 15 years of experience in accounting and financial advisory, Hazel brings a wealth of expertise to August Advisory. Her strategic approach to financial management has helped numerous Malaysian businesses achieve sustainable growth and financial excellence. Hazel is passionate about delivering personalized solutions that address the unique challenges faced by modern enterprises. Her commitment to integrity, innovation, and client success makes her a trusted advisor in the industry.',
+};
 
 export default function Team() {
   return (
@@ -62,37 +50,37 @@ export default function Team() {
         </div>
       </section>
 
-      {/* Team Members */}
+      {/* Founder Profile */}
       <section className="py-16 px-6 bg-white">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {team.map((member) => (
-              <div key={member.name} className="rounded-lg overflow-hidden hover:shadow-lg transition" style={{ backgroundColor: '#F9FFFE' }}>
-                {/* Member Image */}
-                <img
-                  src={`/images/${member.name.split(' ')[0]}.png`}
-                  alt={member.name}
-                  className="w-full object-contain"
-                />
-                {/* Member Info */}
-                <div className="p-6 text-center">
-                  <h3 className="text-xl font-bold mb-2" style={{ color: '#348981' }}>{member.name}</h3>
-                  <p className="font-semibold mb-3" style={{ color: '#348981' }}>{member.title}</p>
-                  <p className="text-gray-600 text-sm">{member.bio}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+        <div className="max-w-4xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Image */}
+            <div className="flex justify-center">
+              <img
+                src={`/images/${founder.name.split(' ')[0]}.png`}
+                alt={founder.name}
+                className="w-full rounded-xl shadow-lg"
+              />
+            </div>
 
-          {/* Call to action */}
-          <div className="mt-16 p-8 rounded-lg text-center" style={{ backgroundColor: '#E8F5F3' }}>
-            <h3 className="text-2xl font-bold mb-3" style={{ color: '#348981' }}>Ready to Work with Our Team?</h3>
-            <p className="text-gray-600 mb-6">
-              Contact us to discuss how our team can support your business.
-            </p>
-            <a href="/contact" className="text-white px-8 py-3 rounded-lg font-bold hover:opacity-90 transition inline-block" style={{ backgroundColor: '#348981' }}>
-              Get Started
-            </a>
+            {/* Profile Info */}
+            <div>
+              <p className="text-xs sm:text-sm font-bold tracking-widest uppercase mb-4" style={{ color: '#348981' }}>
+                Meet Our Founder
+              </p>
+              <h2 className="text-3xl sm:text-4xl font-bold mb-3" style={{ color: '#2C3E50' }}>
+                {founder.name}
+              </h2>
+              <p className="text-lg font-semibold mb-6" style={{ color: '#348981' }}>
+                {founder.title}
+              </p>
+              <p className="text-base leading-relaxed text-gray-700 mb-8">
+                {founder.bio}
+              </p>
+              <a href="/contact" className="text-white px-8 py-3 rounded-lg font-bold hover:opacity-90 transition inline-block" style={{ backgroundColor: '#348981' }}>
+                Connect with Hazel
+              </a>
+            </div>
           </div>
         </div>
       </section>
