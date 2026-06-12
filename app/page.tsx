@@ -3,7 +3,7 @@ import Link from 'next/link';
 const services = [
   {
     title: 'CFO Advisory',
-    description: 'CFO-level strategic thinking without the full-time cost — for businesses that want to grow smarter.',
+    description: 'CFO-level strategic thinking without the full-time cost, built for businesses that want to grow smarter.',
     icon: '📊'
   },
   {
@@ -13,17 +13,17 @@ const services = [
   },
   {
     title: 'Taxation',
-    description: 'Stay compliant and minimize your tax liability — from corporate filings to e-Invoice readiness.',
+    description: 'Stay compliant and minimize your tax liability, from corporate filings to e-Invoice readiness.',
     icon: '📋'
   },
   {
     title: 'Payroll & Compliance',
-    description: 'Accurate payroll processing and on-time statutory submissions — EPF, SOCSO, EIS, PCB, and more.',
+    description: 'Accurate payroll processing and on-time statutory submissions including EPF, SOCSO, EIS, PCB, and more.',
     icon: '👥'
   },
   {
     title: 'Corporate Secretarial',
-    description: 'From company incorporation to annual SSM filings — we keep your business legally compliant.',
+    description: 'From company incorporation to annual SSM filings, we keep your business legally compliant.',
     icon: '🏢'
   },
   {
@@ -41,7 +41,7 @@ const services = [
 const features = [
   {
     title: 'One-Stop Advisory Partner',
-    description: 'From accounting to CFO strategy — everything your business needs, under one roof.',
+    description: 'From accounting to CFO strategy, everything your business needs is under one roof.',
     icon: '🏆'
   },
   {
@@ -51,7 +51,7 @@ const features = [
   },
   {
     title: 'Built for Malaysian Businesses',
-    description: 'Deep knowledge of local regulations, tax laws, and compliance requirements — so you don\'t have to worry.',
+    description: 'Deep knowledge of local regulations, tax laws, and compliance requirements so you never have to worry about falling behind.',
     icon: '🇲🇾'
   },
 ];
