@@ -75,7 +75,7 @@ export default function Home() {
             {/* Right side - Content */}
             <div className="order-1 lg:order-2 text-left">
               <div className="mb-4">
-                <p className="text-sm sm:text-base font-bold tracking-widest uppercase" style={{ color: '#348981' }}>
+                <p className="text-xl sm:text-2xl font-bold tracking-widest uppercase" style={{ color: '#348981' }}>
                   Accounting & CFO Advisory
                 </p>
               </div>
