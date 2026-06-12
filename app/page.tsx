@@ -101,7 +101,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-      </div>
 
       {/* Services Overview */}
       <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6">
