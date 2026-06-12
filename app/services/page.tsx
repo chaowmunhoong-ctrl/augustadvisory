@@ -7,6 +7,7 @@ const serviceDetails = [
   {
     id: 'cfo',
     title: 'CFO Advisory',
+    icon: '📊',
     description: 'Strategic financial leadership and guidance for business growth',
     details: [
       'Financial planning and forecasting',
@@ -19,6 +20,7 @@ const serviceDetails = [
   {
     id: 'financial',
     title: 'Financial Operations Support',
+    icon: '💼',
     description: 'Streamline your accounting operations with our professional support',
     details: [
       'General accounting services',
@@ -31,6 +33,7 @@ const serviceDetails = [
   {
     id: 'taxation',
     title: 'Taxation',
+    icon: '📋',
     description: 'Expert tax planning and compliance services',
     details: [
       'Corporate income tax filing',
@@ -43,6 +46,7 @@ const serviceDetails = [
   {
     id: 'payroll',
     title: 'Payroll',
+    icon: '👥',
     description: 'Efficient and compliant payroll management',
     details: [
       'Monthly payroll processing',
@@ -55,6 +59,7 @@ const serviceDetails = [
   {
     id: 'secretarial',
     title: 'Corporate Secretarial',
+    icon: '🏢',
     description: 'Complete corporate compliance and governance services',
     details: [
       'Company registration and incorporation',
@@ -67,6 +72,7 @@ const serviceDetails = [
   {
     id: 'estamping',
     title: 'e-Stamping',
+    icon: '✍️',
     description: 'Simplified electronic stamping services for your documents',
     details: [
       'Document e-stamping assistance',
@@ -79,6 +85,7 @@ const serviceDetails = [
   {
     id: 'einvoice',
     title: 'e-Invoice Training',
+    icon: '📱',
     description: 'Comprehensive e-invoice implementation and training',
     details: [
       'e-Invoice system setup',
@@ -134,35 +141,25 @@ export default function Services() {
       {/* Services Detail */}
       <section className="py-16 px-6 bg-white">
         <div className="max-w-6xl mx-auto">
-          <div className="space-y-16">
+          <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
             {serviceDetails.map((service) => (
-              <div key={service.id} id={service.id} className="grid lg:grid-cols-2 gap-8 items-center">
-                {/* Service Content */}
-                <div className="border-l-4 pl-8" style={{ borderColor: '#348981' }}>
-                  <h2 className="text-3xl font-bold mb-3" style={{ color: '#348981' }}>{service.title}</h2>
-                  <p className="text-lg text-gray-700 mb-6">{service.description}</p>
-                  <ul className="space-y-3">
-                    {service.details.map((detail) => (
-                      <li key={detail} className="flex items-start">
-                        <span className="font-bold mr-3 text-lg" style={{ color: '#348981' }}>✓</span>
-                        <span className="text-gray-600">{detail}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+              <div key={service.id} id={service.id} className="border-l-4 pl-6 py-6" style={{ borderColor: '#348981' }}>
+                {/* Icon */}
+                <div className="text-5xl mb-4">{service.icon}</div>
 
-                {/* Service Image Placeholder */}
-                <div className="flex justify-center">
-                  <div
-                    className="w-full drop-shadow-lg rounded-xl p-8 flex items-center justify-center text-center"
-                    style={{ backgroundColor: '#E8F5F3', minHeight: '300px' }}
-                  >
-                    <div>
-                      <p className="text-lg font-semibold" style={{ color: '#348981' }}>Service Image</p>
-                      <p className="text-sm text-gray-500 mt-2">service-{service.id}.png</p>
-                    </div>
-                  </div>
-                </div>
+                {/* Title and Description */}
+                <h2 className="text-2xl font-bold mb-3" style={{ color: '#348981' }}>{service.title}</h2>
+                <p className="text-base text-gray-700 mb-5">{service.description}</p>
+
+                {/* Details List */}
+                <ul className="space-y-2">
+                  {service.details.map((detail) => (
+                    <li key={detail} className="flex items-start">
+                      <span className="font-bold mr-3 text-lg" style={{ color: '#348981' }}>✓</span>
+                      <span className="text-gray-600 text-sm">{detail}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
             ))}
           </div>

@@ -63,14 +63,14 @@ export default function Home() {
             {/* Right side - Content */}
             <div className="order-1 lg:order-2 text-left">
               <div className="mb-4">
-                <p className="text-sm sm:text-base font-bold tracking-widest" style={{ color: '#348981' }}>
-                  ACCOUNTING & CFO ADVISORY
+                <p className="text-xs sm:text-sm font-bold tracking-widest uppercase" style={{ color: '#348981' }}>
+                  Accounting & CFO Advisory
                 </p>
               </div>
-              <h1 className="text-4xl sm:text-5xl lg:text-5xl font-bold mb-6 leading-tight" style={{ color: '#2C3E50' }}>
+              <h1 className="text-4xl sm:text-4xl lg:text-5xl font-bold mb-6 leading-tight" style={{ color: '#2C3E50' }}>
                 Professional Financial Advisory
               </h1>
-              <p className="text-lg sm:text-xl mb-6 leading-relaxed" style={{ color: '#5A6C7D' }}>
+              <p className="text-base sm:text-lg mb-6 leading-relaxed font-semibold" style={{ color: '#348981' }}>
                 for Malaysian Businesses
               </p>
 
@@ -99,8 +99,8 @@ export default function Home() {
       <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-10 sm:mb-16">
-            <p className="text-xs sm:text-sm font-bold tracking-wide mb-2" style={{ color: '#348981' }}>OUR EXPERTISE</p>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold" style={{ color: '#2C3E50' }}>Services We Offer</h2>
+            <p className="text-xs sm:text-sm font-bold tracking-widest uppercase mb-3" style={{ color: '#348981' }}>Our Expertise</p>
+            <h2 className="text-3xl sm:text-4xl font-bold" style={{ color: '#2C3E50' }}>Services We Offer</h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {services.map((service) => (
@@ -129,8 +129,8 @@ export default function Home() {
       <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6" style={{ backgroundColor: '#E8F5F3' }}>
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-10 sm:mb-16">
-            <p className="text-xs sm:text-sm font-bold tracking-wide mb-2" style={{ color: '#348981' }}>WHY CHOOSE US</p>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold" style={{ color: '#2C3E50' }}>Why August Advisory?</h2>
+            <p className="text-xs sm:text-sm font-bold tracking-widest uppercase mb-3" style={{ color: '#348981' }}>Why Choose Us</p>
+            <h2 className="text-3xl sm:text-4xl font-bold" style={{ color: '#2C3E50' }}>Why August Advisory?</h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {features.map((feature) => (
@@ -152,8 +152,8 @@ export default function Home() {
       {/* CTA Section */}
       <section className="py-12 sm:py-16 px-4 sm:px-6" style={{ backgroundColor: '#348981' }}>
         <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 text-white">Ready to Get Started?</h2>
-          <p className="mb-6 sm:mb-8 text-base sm:text-lg text-white opacity-90">Let us help you achieve your financial goals</p>
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-white">Ready to Get Started?</h2>
+          <p className="mb-8 text-base sm:text-lg text-white opacity-90">Let us help you achieve your financial goals</p>
           <Link href="/contact"
             className="bg-white px-6 sm:px-8 py-3 rounded-full font-bold hover:opacity-90 transition inline-block w-full sm:w-auto text-center"
             style={{ color: '#348981' }}
