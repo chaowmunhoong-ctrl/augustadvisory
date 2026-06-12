@@ -40,7 +40,7 @@ export default function Contact() {
             Let's Talk About Your Business
           </h1>
           <p className="text-base sm:text-lg leading-relaxed" style={{ color: '#5A6C7D' }}>
-            Have questions about our services? Not sure where to start? Reach out — our first consultation is free, and we'd love to learn about your business and how we can support your growth.
+            Have questions about our services? Not sure where to start? Reach out. Our first consultation is free, and we'd love to learn about your business and how we can support your growth.
           </p>
         </div>
       </section>
@@ -78,7 +78,7 @@ export default function Contact() {
                 <div className="p-6 rounded-lg mt-8" style={{ backgroundColor: '#E8F5F3' }}>
                   <h3 className="text-lg font-bold mb-3" style={{ color: '#348981' }}>What to Expect</h3>
                   <ul className="text-gray-600 space-y-2">
-                    <li>• Free initial consultation — no obligation</li>
+                    <li>• Free initial consultation, no obligation</li>
                     <li>• We listen first, then recommend</li>
                     <li>• A tailored plan based on your needs</li>
                     <li>• Prompt, professional responses</li>

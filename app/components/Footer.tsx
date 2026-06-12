@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           <div>
             <h3 className="font-bold mb-4">August Advisory</h3>
-            <p className="text-sm opacity-90">Your one-stop accounting and CFO advisory partner — helping Malaysian businesses stay compliant, grow confidently, and thrive.</p>
+            <p className="text-sm opacity-90">Your one-stop accounting and CFO advisory partner, helping Malaysian businesses stay compliant, grow confidently, and thrive.</p>
           </div>
           <div>
             <h4 className="font-bold mb-4">Services</h4>

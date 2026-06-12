@@ -6,7 +6,7 @@ export const metadata = {
 const founder = {
   name: 'Hazel Lim',
   title: 'Founder & CFO Advisor',
-  bio: 'Hazel founded August Advisory with a clear purpose — to give Malaysian businesses access to the kind of financial expertise that was once reserved for large corporations. With a background spanning accounting, tax compliance, and CFO-level advisory, she has helped businesses at every stage navigate complex financial challenges and build stronger foundations for growth. Hazel believes that great financial advice should be honest, practical, and delivered in plain language — and that\'s exactly the standard she holds August Advisory to, every day.',
+  bio: 'Hazel founded August Advisory with a clear purpose: to give Malaysian businesses access to the kind of financial expertise that was once reserved for large corporations. With a background spanning accounting, tax compliance, and CFO-level advisory, she has helped businesses at every stage navigate complex financial challenges and build stronger foundations for growth. Hazel believes that great financial advice should be honest, practical, and delivered in plain language. That is exactly the standard she holds August Advisory to, every day.',
 };
 
 export default function Team() {
@@ -20,7 +20,7 @@ export default function Team() {
             The People Behind Your Financial Success
           </h1>
           <p className="text-base sm:text-lg leading-relaxed" style={{ color: '#5A6C7D' }}>
-            Our team brings together experienced accountants, tax professionals, and financial advisors who are genuinely invested in your business outcomes — not just your compliance deadlines.
+            Our team brings together experienced accountants, tax professionals, and financial advisors who are genuinely invested in your business outcomes, not just your compliance deadlines.
           </p>
         </div>
       </section>

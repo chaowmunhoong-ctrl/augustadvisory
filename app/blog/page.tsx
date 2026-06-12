@@ -19,7 +19,7 @@ export default function Blog() {
             Practical Insights for Malaysian Businesses
           </h1>
           <p className="text-base sm:text-lg leading-relaxed" style={{ color: '#5A6C7D' }}>
-            Stay informed on the latest developments in tax, compliance, and financial management — written in plain language so you can act on it, not just read it.
+            Stay informed on the latest developments in tax, compliance, and financial management. Written in plain language so you can act on it, not just read it.
           </p>
         </div>
       </section>
