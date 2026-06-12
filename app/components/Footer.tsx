@@ -23,7 +23,6 @@ export default function Footer() {
             <ul className="text-sm space-y-2">
               <li><Link href="/about" className="opacity-80 hover:opacity-100">About Us</Link></li>
               <li><Link href="/team" className="opacity-80 hover:opacity-100">Team</Link></li>
-              <li><Link href="/blog" className="opacity-80 hover:opacity-100">Blog</Link></li>
               <li><Link href="/contact" className="opacity-80 hover:opacity-100">Contact</Link></li>
             </ul>
           </div>
