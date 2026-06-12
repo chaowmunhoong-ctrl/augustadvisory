@@ -13,40 +13,15 @@ export default function Team() {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section style={{ backgroundColor: '#FFFFFF' }} className="pt-4 sm:pt-6 pb-16 sm:pb-24 md:pb-32 px-4 sm:px-6">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
-            {/* Left side - Image placeholder */}
-            <div className="flex justify-center lg:justify-start order-2 lg:order-1">
-              <div
-                className="w-full drop-shadow-lg rounded-xl p-8 flex items-center justify-center text-center"
-                style={{ backgroundColor: '#E8F5F3', minHeight: '400px' }}
-              >
-                <div>
-                  <p className="text-lg font-semibold" style={{ color: '#348981' }}>Team Hero Image</p>
-                  <p className="text-sm text-gray-500 mt-2">team-hero.png</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Right side - Content */}
-            <div className="order-1 lg:order-2 text-left">
-              <div className="mb-4">
-                <p className="text-base sm:text-lg font-bold tracking-widest" style={{ color: '#348981' }}>
-                  OUR TEAM
-                </p>
-              </div>
-              <h1 className="text-4xl sm:text-5xl lg:text-5xl font-bold mb-6 leading-tight" style={{ color: '#2C3E50' }}>
-                Expert Professionals at Your Service
-              </h1>
-              <p className="text-base sm:text-lg leading-relaxed mb-4" style={{ color: '#5A6C7D' }}>
-                Our team consists of experienced accountants, tax professionals, and financial advisors dedicated to delivering excellence in every engagement.
-              </p>
-              <p className="text-base sm:text-lg leading-relaxed" style={{ color: '#5A6C7D' }}>
-                With decades of combined experience across various industries, we bring deep expertise and personalized service to each of our clients.
-              </p>
-            </div>
-          </div>
+      <section style={{ backgroundColor: '#FFFFFF' }} className="pt-8 sm:pt-12 pb-12 sm:pb-16 px-4 sm:px-6 text-center">
+        <div className="max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg font-bold tracking-widest mb-4" style={{ color: '#348981' }}>OUR TEAM</p>
+          <h1 className="text-4xl sm:text-5xl font-bold mb-6 leading-tight" style={{ color: '#2C3E50' }}>
+            Expert Professionals at Your Service
+          </h1>
+          <p className="text-base sm:text-lg leading-relaxed" style={{ color: '#5A6C7D' }}>
+            Our team consists of experienced accountants, tax professionals, and financial advisors dedicated to delivering excellence in every engagement.
+          </p>
         </div>
       </section>
 
