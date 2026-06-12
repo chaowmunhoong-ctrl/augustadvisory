@@ -27,7 +27,7 @@ export default function Blog() {
       </section>
 
       {/* Blog Posts */}
-      <section className="py-16 px-6">
+      <section className="py-16 px-6 bg-white">
         <div className="max-w-4xl mx-auto">
           {posts.length === 0 ? (
             <div className="text-center py-12">
@@ -38,10 +38,11 @@ export default function Blog() {
               {posts.map((post) => (
                 <article
                   key={post.slug}
-                  className="border-l-4 border-blue-900 pl-8 py-6 hover:bg-gray-50 px-6 rounded-r-lg transition"
+                  className="border-l-4 pl-8 py-6 hover:bg-gray-50 px-6 rounded-r-lg transition"
+                  style={{ borderColor: '#348981' }}
                 >
                   <Link href={`/blog/${post.slug}`}>
-                    <h2 className="text-2xl font-bold text-blue-900 hover:text-blue-700 cursor-pointer mb-2">
+                    <h2 className="text-2xl font-bold hover:opacity-80 cursor-pointer mb-2" style={{ color: '#348981' }}>
                       {post.title}
                     </h2>
                   </Link>
@@ -56,7 +57,8 @@ export default function Blog() {
                   <p className="text-gray-700 mb-4">{post.excerpt}</p>
                   <Link
                     href={`/blog/${post.slug}`}
-                    className="text-blue-900 font-bold hover:underline"
+                    className="font-bold hover:underline"
+                    style={{ color: '#348981' }}
                   >
                     Read full article →
                   </Link>

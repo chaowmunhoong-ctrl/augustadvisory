@@ -109,17 +109,17 @@ export default function Services() {
       </section>
 
       {/* Services Detail */}
-      <section className="py-16 px-6">
+      <section className="py-16 px-6 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="space-y-12">
             {serviceDetails.map((service) => (
-              <div key={service.id} id={service.id} className="border-l-4 border-blue-900 pl-8">
-                <h2 className="text-3xl font-bold text-blue-900 mb-3">{service.title}</h2>
+              <div key={service.id} id={service.id} className="border-l-4 pl-8" style={{ borderColor: '#348981' }}>
+                <h2 className="text-3xl font-bold mb-3" style={{ color: '#348981' }}>{service.title}</h2>
                 <p className="text-lg text-gray-700 mb-6">{service.description}</p>
                 <ul className="space-y-2">
                   {service.details.map((detail) => (
                     <li key={detail} className="flex items-start">
-                      <span className="text-blue-900 font-bold mr-3">•</span>
+                      <span className="font-bold mr-3" style={{ color: '#348981' }}>•</span>
                       <span className="text-gray-600">{detail}</span>
                     </li>
                   ))}
@@ -129,12 +129,12 @@ export default function Services() {
           </div>
 
           {/* Contact CTA */}
-          <div className="mt-16 bg-blue-50 p-8 rounded-lg text-center">
-            <h3 className="text-2xl font-bold text-blue-900 mb-3">Need a Custom Solution?</h3>
+          <div className="mt-16 p-8 rounded-lg text-center" style={{ backgroundColor: '#E8F5F3' }}>
+            <h3 className="text-2xl font-bold mb-3" style={{ color: '#348981' }}>Need a Custom Solution?</h3>
             <p className="text-gray-600 mb-6">
               Contact us to discuss how we can tailor our services to meet your specific business needs.
             </p>
-            <a href="/contact" className="bg-blue-900 text-white px-8 py-3 rounded-lg font-bold hover:bg-blue-800 transition inline-block">
+            <a href="/contact" className="text-white px-8 py-3 rounded-lg font-bold hover:opacity-90 transition inline-block" style={{ backgroundColor: '#348981' }}>
               Get in Touch
             </a>
           </div>

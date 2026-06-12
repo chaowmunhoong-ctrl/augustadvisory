@@ -99,7 +99,7 @@ export default function Home() {
       <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-10 sm:mb-16">
-            <p style={{ color: '#348981' }} className="text-xs sm:text-sm font-bold tracking-wide mb-2">OUR EXPERTISE</p>
+            <p className="text-xs sm:text-sm font-bold tracking-wide mb-2" style={{ color: '#348981' }}>OUR EXPERTISE</p>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold" style={{ color: '#2C3E50' }}>Services We Offer</h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
@@ -126,10 +126,10 @@ export default function Home() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6" style={{ backgroundColor: '#E0F2F1' }}>
+      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6" style={{ backgroundColor: '#E8F5F3' }}>
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-10 sm:mb-16">
-            <p style={{ color: '#348981' }} className="text-xs sm:text-sm font-bold tracking-wide mb-2">WHY CHOOSE US</p>
+            <p className="text-xs sm:text-sm font-bold tracking-wide mb-2" style={{ color: '#348981' }}>WHY CHOOSE US</p>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold" style={{ color: '#2C3E50' }}>Why August Advisory?</h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">

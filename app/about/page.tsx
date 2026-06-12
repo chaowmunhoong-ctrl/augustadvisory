@@ -22,11 +22,11 @@ export default function About() {
       </section>
 
       {/* Main Content */}
-      <section className="py-16 px-6">
+      <section className="py-16 px-6 bg-white">
         <div className="max-w-4xl mx-auto space-y-12">
           {/* Mission */}
           <div>
-            <h2 className="text-3xl font-bold text-blue-900 mb-4">Our Mission</h2>
+            <h2 className="text-3xl font-bold mb-4" style={{ color: '#348981' }}>Our Mission</h2>
             <p className="text-gray-700 text-lg leading-relaxed">
               At August Advisory, we are committed to providing Malaysian businesses with professional, reliable, and innovative accounting and financial advisory services. We believe that strong financial management is the foundation of business success, and we strive to be the trusted partner that helps you achieve your goals.
             </p>
@@ -34,7 +34,7 @@ export default function About() {
 
           {/* Vision */}
           <div>
-            <h2 className="text-3xl font-bold text-blue-900 mb-4">Our Vision</h2>
+            <h2 className="text-3xl font-bold mb-4" style={{ color: '#348981' }}>Our Vision</h2>
             <p className="text-gray-700 text-lg leading-relaxed">
               To be the most trusted and preferred accounting and CFO advisory firm in Malaysia, known for our expertise, integrity, and commitment to client success.
             </p>
@@ -42,18 +42,18 @@ export default function About() {
 
           {/* Values */}
           <div>
-            <h2 className="text-3xl font-bold text-blue-900 mb-6">Our Values</h2>
+            <h2 className="text-3xl font-bold mb-6" style={{ color: '#348981' }}>Our Values</h2>
             <div className="grid md:grid-cols-3 gap-6">
-              <div className="bg-blue-50 p-6 rounded-lg">
-                <h3 className="text-xl font-bold text-blue-900 mb-2">Integrity</h3>
+              <div className="p-6 rounded-lg" style={{ backgroundColor: '#E8F5F3' }}>
+                <h3 className="text-xl font-bold mb-2" style={{ color: '#348981' }}>Integrity</h3>
                 <p className="text-gray-600">We maintain the highest ethical standards in all our dealings and advice.</p>
               </div>
-              <div className="bg-blue-50 p-6 rounded-lg">
-                <h3 className="text-xl font-bold text-blue-900 mb-2">Excellence</h3>
+              <div className="p-6 rounded-lg" style={{ backgroundColor: '#E8F5F3' }}>
+                <h3 className="text-xl font-bold mb-2" style={{ color: '#348981' }}>Excellence</h3>
                 <p className="text-gray-600">We deliver quality work that exceeds expectations and drives real value.</p>
               </div>
-              <div className="bg-blue-50 p-6 rounded-lg">
-                <h3 className="text-xl font-bold text-blue-900 mb-2">Collaboration</h3>
+              <div className="p-6 rounded-lg" style={{ backgroundColor: '#E8F5F3' }}>
+                <h3 className="text-xl font-bold mb-2" style={{ color: '#348981' }}>Collaboration</h3>
                 <p className="text-gray-600">We work as partners with our clients to understand and achieve their goals.</p>
               </div>
             </div>
@@ -61,7 +61,7 @@ export default function About() {
 
           {/* History */}
           <div>
-            <h2 className="text-3xl font-bold text-blue-900 mb-4">Our Story</h2>
+            <h2 className="text-3xl font-bold mb-4" style={{ color: '#348981' }}>Our Story</h2>
             <p className="text-gray-700 text-lg leading-relaxed mb-4">
               Founded in 2023, August Advisory was established with a vision to revolutionize financial advisory services in Malaysia. Our founder brought together a team of experienced accountants, tax professionals, and financial advisors to create a firm that truly understands the needs of Malaysian businesses.
             </p>
@@ -71,12 +71,12 @@ export default function About() {
           </div>
 
           {/* Contact CTA */}
-          <div className="bg-blue-50 p-8 rounded-lg text-center mt-12">
-            <h3 className="text-2xl font-bold text-blue-900 mb-3">Want to Work with Us?</h3>
+          <div className="p-8 rounded-lg text-center mt-12" style={{ backgroundColor: '#E8F5F3' }}>
+            <h3 className="text-2xl font-bold mb-3" style={{ color: '#348981' }}>Want to Work with Us?</h3>
             <p className="text-gray-600 mb-6">
               Learn how August Advisory can help your business achieve financial excellence.
             </p>
-            <a href="/contact" className="bg-blue-900 text-white px-8 py-3 rounded-lg font-bold hover:bg-blue-800 transition inline-block">
+            <a href="/contact" className="text-white px-8 py-3 rounded-lg font-bold hover:opacity-90 transition inline-block" style={{ backgroundColor: '#348981' }}>
               Contact Us
             </a>
           </div>

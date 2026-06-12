@@ -48,37 +48,37 @@ export default function Contact() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-16 px-6">
+      <section className="py-16 px-6 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12">
             {/* Contact Info */}
             <div>
-              <h2 className="text-3xl font-bold text-blue-900 mb-8">Get in Touch</h2>
+              <h2 className="text-3xl font-bold mb-8" style={{ color: '#348981' }}>Get in Touch</h2>
 
               <div className="space-y-6">
                 <div>
-                  <h3 className="text-xl font-bold text-blue-900 mb-2">Email</h3>
+                  <h3 className="text-xl font-bold mb-2" style={{ color: '#348981' }}>Email</h3>
                   <p className="text-gray-600">info@augustadvisory.com</p>
                 </div>
 
                 <div>
-                  <h3 className="text-xl font-bold text-blue-900 mb-2">Phone</h3>
+                  <h3 className="text-xl font-bold mb-2" style={{ color: '#348981' }}>Phone</h3>
                   <p className="text-gray-600">+60 (your number)</p>
                 </div>
 
                 <div>
-                  <h3 className="text-xl font-bold text-blue-900 mb-2">Location</h3>
+                  <h3 className="text-xl font-bold mb-2" style={{ color: '#348981' }}>Location</h3>
                   <p className="text-gray-600">Malaysia</p>
                 </div>
 
                 <div>
-                  <h3 className="text-xl font-bold text-blue-900 mb-4">Operating Hours</h3>
+                  <h3 className="text-xl font-bold mb-4" style={{ color: '#348981' }}>Operating Hours</h3>
                   <p className="text-gray-600 mb-2">Monday - Friday: 9:00 AM - 6:00 PM</p>
                   <p className="text-gray-600">Saturday - Sunday: Closed</p>
                 </div>
 
-                <div className="bg-blue-50 p-6 rounded-lg mt-8">
-                  <h3 className="text-lg font-bold text-blue-900 mb-3">What to Expect</h3>
+                <div className="p-6 rounded-lg mt-8" style={{ backgroundColor: '#E8F5F3' }}>
+                  <h3 className="text-lg font-bold mb-3" style={{ color: '#348981' }}>What to Expect</h3>
                   <ul className="text-gray-600 space-y-2">
                     <li>• Free initial consultation</li>
                     <li>• Personalized service plan</li>
@@ -91,10 +91,10 @@ export default function Contact() {
 
             {/* Contact Form */}
             <div>
-              <h2 className="text-3xl font-bold text-blue-900 mb-8">Send us a Message</h2>
+              <h2 className="text-3xl font-bold mb-8" style={{ color: '#348981' }}>Send us a Message</h2>
 
               {submitted && (
-                <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg text-green-700">
+                <div className="mb-6 p-4 rounded-lg text-green-700" style={{ backgroundColor: '#D4EDDA', borderColor: '#C3E6CB', border: '1px solid' }}>
                   Thank you! We've received your message and will get back to you soon.
                 </div>
               )}
@@ -108,7 +108,8 @@ export default function Contact() {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-900"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none"
+                    style={{ focusBorderColor: '#348981' }}
                   />
                 </div>
 
@@ -120,7 +121,8 @@ export default function Contact() {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-900"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none"
+                    style={{ focusBorderColor: '#348981' }}
                   />
                 </div>
 
@@ -131,7 +133,8 @@ export default function Contact() {
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-900"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none"
+                    style={{ focusBorderColor: '#348981' }}
                   />
                 </div>
 
@@ -142,7 +145,8 @@ export default function Contact() {
                     name="company"
                     value={formData.company}
                     onChange={handleChange}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-900"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none"
+                    style={{ focusBorderColor: '#348981' }}
                   />
                 </div>
 
@@ -154,13 +158,15 @@ export default function Contact() {
                     onChange={handleChange}
                     required
                     rows={5}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-900"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none"
+                    style={{ focusBorderColor: '#348981' }}
                   ></textarea>
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full bg-blue-900 text-white px-8 py-3 rounded-lg font-bold hover:bg-blue-800 transition"
+                  className="w-full text-white px-8 py-3 rounded-lg font-bold hover:opacity-90 transition"
+                  style={{ backgroundColor: '#348981' }}
                 >
                   Send Message
                 </button>

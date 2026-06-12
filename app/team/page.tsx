@@ -40,28 +40,28 @@ export default function Team() {
       </section>
 
       {/* Team Members */}
-      <section className="py-16 px-6">
+      <section className="py-16 px-6 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {team.map((member) => (
-              <div key={member.name} className="bg-gray-50 rounded-lg p-8 text-center hover:shadow-lg transition">
-                <div className="bg-blue-900 text-white rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-4 text-4xl font-bold">
+              <div key={member.name} className="rounded-lg p-8 text-center hover:shadow-lg transition" style={{ backgroundColor: '#F9FFFE' }}>
+                <div className="text-white rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-4 text-4xl font-bold" style={{ backgroundColor: '#348981' }}>
                   {member.name.charAt(0)}
                 </div>
-                <h3 className="text-xl font-bold text-blue-900 mb-2">{member.name}</h3>
-                <p className="text-blue-700 font-semibold mb-3">{member.title}</p>
+                <h3 className="text-xl font-bold mb-2" style={{ color: '#348981' }}>{member.name}</h3>
+                <p className="font-semibold mb-3" style={{ color: '#348981' }}>{member.title}</p>
                 <p className="text-gray-600">{member.bio}</p>
               </div>
             ))}
           </div>
 
           {/* Call to action */}
-          <div className="mt-16 bg-blue-50 p-8 rounded-lg text-center">
-            <h3 className="text-2xl font-bold text-blue-900 mb-3">Ready to Work with Our Team?</h3>
+          <div className="mt-16 p-8 rounded-lg text-center" style={{ backgroundColor: '#E8F5F3' }}>
+            <h3 className="text-2xl font-bold mb-3" style={{ color: '#348981' }}>Ready to Work with Our Team?</h3>
             <p className="text-gray-600 mb-6">
               Contact us to discuss how our team can support your business.
             </p>
-            <a href="/contact" className="bg-blue-900 text-white px-8 py-3 rounded-lg font-bold hover:bg-blue-800 transition inline-block">
+            <a href="/contact" className="text-white px-8 py-3 rounded-lg font-bold hover:opacity-90 transition inline-block" style={{ backgroundColor: '#348981' }}>
               Get Started
             </a>
           </div>
