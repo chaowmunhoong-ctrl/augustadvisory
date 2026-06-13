@@ -66,7 +66,7 @@ export default function Contact() {
 
                 <div>
                   <h3 className="text-xl font-bold mb-2" style={{ color: '#348981' }}>WhatsApp</h3>
-                  <a href="https://wa.me/601024625151" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:underline">
+                  <a href="https://wa.me/60102462151" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:underline">
                     010-2462 5151
                   </a>
                 </div>
