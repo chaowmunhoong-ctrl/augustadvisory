@@ -86,7 +86,6 @@ export default function Contact() {
                 >
                   Message Us on WhatsApp
                 </a>
-                <p className="text-sm mt-3" style={{ color: '#5A6C7D' }}>010-246 2151</p>
               </div>
 
               {/* Social Media Card */}
