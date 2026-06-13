@@ -7,7 +7,7 @@ export default function About() {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section style={{ backgroundColor: '#FFFFFF' }} className="pt-8 sm:pt-12 pb-12 sm:pb-16 px-4 sm:px-6 text-center">
+      <section style={{ backgroundColor: '#E8F5F3' }} className="pt-12 sm:pt-16 pb-12 sm:pb-16 px-4 sm:px-6 text-center">
         <div className="max-w-5xl mx-auto">
           <p className="text-lg font-bold tracking-widest uppercase mb-4" style={{ color: '#348981' }}>ABOUT US</p>
           <h1 className="text-4xl sm:text-5xl font-bold mb-6 leading-tight" style={{ color: '#2C3E50' }}>
@@ -25,7 +25,7 @@ export default function About() {
 
           {/* Mission */}
           <div>
-            <h2 className="text-2xl sm:text-3xl font-bold mb-4" style={{ color: '#348981' }}>Our Mission</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold mb-4" style={{ color: '#2C3E50' }}>Our Mission</h2>
             <p className="text-gray-700 text-lg leading-relaxed">
               To empower Malaysian businesses with the financial clarity, compliance confidence, and strategic insight they need to grow sustainably, through professional, reliable, and personalized accounting and advisory services that make a real difference.
             </p>
@@ -33,7 +33,7 @@ export default function About() {
 
           {/* Vision */}
           <div>
-            <h2 className="text-2xl sm:text-3xl font-bold mb-4" style={{ color: '#348981' }}>Our Vision</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold mb-4" style={{ color: '#2C3E50' }}>Our Vision</h2>
             <p className="text-gray-700 text-lg leading-relaxed">
               To be the most trusted and preferred accounting and CFO advisory firm in Malaysia, known not just for our expertise, but for the relationships we build and the results we deliver for every client we serve.
             </p>
@@ -41,7 +41,7 @@ export default function About() {
 
           {/* Values */}
           <div>
-            <h2 className="text-2xl sm:text-3xl font-bold mb-6" style={{ color: '#348981' }}>Our Values</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold mb-6" style={{ color: '#2C3E50' }}>Our Values</h2>
             <div className="grid md:grid-cols-3 gap-6">
               <div className="p-6 rounded-lg" style={{ backgroundColor: '#E8F5F3' }}>
                 <div className="text-4xl mb-3">🤝</div>
@@ -63,7 +63,7 @@ export default function About() {
 
           {/* Our Story */}
           <div>
-            <h2 className="text-2xl sm:text-3xl font-bold mb-4" style={{ color: '#348981' }}>Our Story</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold mb-4" style={{ color: '#2C3E50' }}>Our Story</h2>
             <p className="text-gray-700 text-lg leading-relaxed mb-4">
               August Advisory was founded with a clear purpose: to give Malaysian businesses access to the kind of financial expertise that was once reserved only for large corporations. Too many SMEs and startups were navigating complex tax laws, compliance requirements, and financial decisions without the right guidance, and that needed to change.
             </p>
@@ -74,11 +74,11 @@ export default function About() {
 
           {/* Contact CTA */}
           <div className="p-8 rounded-lg text-center mt-12" style={{ backgroundColor: '#E8F5F3' }}>
-            <h3 className="text-2xl font-bold mb-3" style={{ color: '#348981' }}>Let's Work Together</h3>
+            <h3 className="text-2xl font-bold mb-3" style={{ color: '#2C3E50' }}>Let's Work Together</h3>
             <p className="text-gray-600 mb-6 max-w-lg mx-auto">
               Whether you're just getting started or looking to level up your financial operations, we'd love to learn about your business and explore how we can help.
             </p>
-            <a href="/contact" className="text-white px-8 py-3 rounded-lg font-bold hover:opacity-90 transition inline-block" style={{ backgroundColor: '#348981' }}>
+            <a href="/contact" className="text-white px-8 py-3 rounded-full font-bold hover:opacity-90 transition inline-block" style={{ backgroundColor: '#348981' }}>
               Book a Consultation
             </a>
           </div>

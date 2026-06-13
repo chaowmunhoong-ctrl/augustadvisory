@@ -81,12 +81,12 @@ export default function Home() {
             <h1 className="text-4xl sm:text-5xl font-extrabold mb-5 leading-tight uppercase" style={{ color: '#2C3E50' }}>
               Professional & Trusted Accounting
             </h1>
-            <p className="text-base sm:text-lg leading-relaxed mb-8" style={{ color: '#4A5568' }}>
+            <p className="text-base sm:text-lg leading-relaxed mb-8" style={{ color: '#5A6C7D' }}>
               August Advisory is your one-stop business advisory partner, helping Malaysian businesses stay compliant, operate efficiently, and grow with confidence.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link href="/contact"
-                className="inline-block px-8 py-3 rounded font-bold text-white hover:opacity-90 transition"
+                className="inline-block px-8 py-3 rounded-full font-bold text-white hover:opacity-90 transition"
                 style={{ backgroundColor: '#348981' }}
               >
                 Contact Us
@@ -97,7 +97,7 @@ export default function Home() {
       </section>
 
       {/* Services Overview */}
-      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6">
+      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-10 sm:mb-16">
             <p className="text-lg font-bold tracking-widest uppercase mb-3" style={{ color: '#348981' }}>What We Do</p>
@@ -143,7 +143,7 @@ export default function Home() {
             {features.map((feature) => (
               <div key={feature.title} className="text-center bg-white rounded-xl p-8 shadow-sm">
                 <div className="text-4xl mb-4">{feature.icon}</div>
-                <h3 className="text-xl font-bold mb-3" style={{ color: '#2C3E50' }}>{feature.title}</h3>
+                <h3 className="text-xl font-bold mb-3" style={{ color: '#348981' }}>{feature.title}</h3>
                 <p className="text-base text-gray-600">{feature.description}</p>
               </div>
             ))}
@@ -152,7 +152,7 @@ export default function Home() {
       </section>
 
       {/* WhatsApp Channel Section */}
-      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6" style={{ backgroundColor: '#E8F5F3' }}>
+      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-5 gap-8 items-center">
 
@@ -165,7 +165,7 @@ export default function Home() {
               </div>
 
               {/* Headline */}
-              <h2 className="text-4xl sm:text-5xl font-extrabold leading-tight mb-4" style={{ color: '#2C3E50' }}>
+              <h2 className="text-3xl sm:text-4xl font-bold leading-tight mb-4" style={{ color: '#2C3E50' }}>
                 Stay <span style={{ color: '#348981' }}>Informed.</span><br />
                 Stay <span style={{ color: '#348981' }}>Ahead.</span>
               </h2>
@@ -222,6 +222,7 @@ export default function Home() {
       {/* CTA Section */}
       <section className="py-12 sm:py-16 px-4 sm:px-6" style={{ backgroundColor: '#E8F5F3' }}>
         <div className="max-w-6xl mx-auto text-center">
+          <p className="text-lg font-bold tracking-widest uppercase mb-3" style={{ color: '#348981' }}>Get Started</p>
           <h2 className="text-2xl sm:text-3xl font-bold mb-4" style={{ color: '#2C3E50' }}>Ready to Get Started?</h2>
           <p className="mb-8 text-base sm:text-lg" style={{ color: '#5A6C7D' }}>
             Reach out today and let's have a conversation about your business goals. We'll recommend the right approach based on where you are and where you want to go.

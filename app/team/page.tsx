@@ -13,7 +13,7 @@ export default function Team() {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section style={{ backgroundColor: '#FFFFFF' }} className="pt-8 sm:pt-12 pb-12 sm:pb-16 px-4 sm:px-6 text-center">
+      <section style={{ backgroundColor: '#E8F5F3' }} className="pt-12 sm:pt-16 pb-12 sm:pb-16 px-4 sm:px-6 text-center">
         <div className="max-w-5xl mx-auto">
           <p className="text-lg font-bold tracking-widest uppercase mb-4" style={{ color: '#348981' }}>OUR TEAM</p>
           <h1 className="text-4xl sm:text-5xl font-bold mb-6 leading-tight" style={{ color: '#2C3E50' }}>
@@ -52,7 +52,7 @@ export default function Team() {
               <p className="text-base leading-relaxed text-gray-700 mb-8">
                 {founder.bio}
               </p>
-              <a href="/contact" className="text-white px-8 py-3 rounded-lg font-bold hover:opacity-90 transition inline-block" style={{ backgroundColor: '#348981' }}>
+              <a href="/contact" className="text-white px-8 py-3 rounded-full font-bold hover:opacity-90 transition inline-block" style={{ backgroundColor: '#348981' }}>
                 Connect with Hazel
               </a>
             </div>

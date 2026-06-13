@@ -90,7 +90,7 @@ export default function Services() {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section style={{ backgroundColor: '#FFFFFF' }} className="pt-8 sm:pt-12 pb-12 sm:pb-16 px-4 sm:px-6 text-center">
+      <section style={{ backgroundColor: '#E8F5F3' }} className="pt-12 sm:pt-16 pb-12 sm:pb-16 px-4 sm:px-6 text-center">
         <div className="max-w-5xl mx-auto">
           <p className="text-lg font-bold tracking-widest uppercase mb-4" style={{ color: '#348981' }}>OUR SERVICES</p>
           <h1 className="text-4xl sm:text-5xl font-bold mb-6 leading-tight" style={{ color: '#2C3E50' }}>
@@ -130,11 +130,11 @@ export default function Services() {
 
           {/* Contact CTA */}
           <div className="mt-16 p-8 rounded-lg text-center" style={{ backgroundColor: '#E8F5F3' }}>
-            <h3 className="text-2xl font-bold mb-3" style={{ color: '#348981' }}>Not Sure Where to Start?</h3>
+            <h3 className="text-2xl font-bold mb-3" style={{ color: '#2C3E50' }}>Not Sure Where to Start?</h3>
             <p className="text-gray-600 mb-6 max-w-xl mx-auto">
               Every business is different. Reach out to us and we'll recommend the right combination of services based on your stage, industry, and goals. No obligation.
             </p>
-            <a href="/contact" className="text-white px-8 py-3 rounded-lg font-bold hover:opacity-90 transition inline-block" style={{ backgroundColor: '#348981' }}>
+            <a href="/contact" className="text-white px-8 py-3 rounded-full font-bold hover:opacity-90 transition inline-block" style={{ backgroundColor: '#348981' }}>
               Book a Consultation
             </a>
           </div>
