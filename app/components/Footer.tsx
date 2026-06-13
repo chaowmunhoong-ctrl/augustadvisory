@@ -31,7 +31,7 @@ export default function Footer() {
             <p className="text-sm mb-2 opacity-90">Email: client@augustadvisory.com.my</p>
             <p className="text-sm mb-2 opacity-90">Phone: 03-3358 2128</p>
             <p className="text-sm opacity-90">Head Office: Klang, Selangor</p>
-            <p className="text-sm opacity-90">Branch: Kuala Lumpur</p>
+            <p className="text-sm opacity-90">Branch: Mid Valley, Kuala Lumpur</p>
           </div>
         </div>
         <div className="border-t border-white border-opacity-20 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm opacity-90">
