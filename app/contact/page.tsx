@@ -60,10 +60,6 @@ export default function Contact() {
                   <p className="text-gray-600">Saturday and Sunday: Closed</p>
                 </div>
 
-                <div className="pt-6 mt-2" style={{ borderTop: '1px solid #E0F2F1' }}>
-                  <p className="text-sm text-gray-500">August Advisory Sdn Bhd</p>
-                  <p className="text-sm text-gray-500">202201029858 (1475555-V)</p>
-                </div>
 
               </div>
             </div>
