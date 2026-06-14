@@ -51,7 +51,8 @@ export default function Contact() {
                   <h3 className="text-xl font-bold mb-2" style={{ color: '#348981' }}>KL Office</h3>
                   <p className="text-gray-600">B-1-11, Northpoint, Mid Valley City,</p>
                   <p className="text-gray-600">No. 1, Medan Syed Putra Utara,</p>
-                  <p className="text-gray-600">59200 Kuala Lumpur</p>
+                  <p className="text-gray-600 mb-2">59200 Kuala Lumpur</p>
+                  <p className="text-sm italic" style={{ color: '#348981' }}>By appointment only</p>
                 </div>
 
                 <div>
