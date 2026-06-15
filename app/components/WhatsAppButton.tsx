@@ -24,31 +24,20 @@ export default function WhatsAppButton() {
         </div>
       </div>
 
-      {/* Button with pulse */}
+      {/* Button with ring animation */}
       <a
         href={whatsappUrl}
         target="_blank"
         rel="noopener noreferrer"
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
-        className="relative w-14 h-14 flex items-center justify-center"
+        className="relative w-14 h-14 flex items-center justify-center phone-ring"
         aria-label="Chat with us on WhatsApp"
       >
-        {/* Pulse rings */}
-        <span
-          className="absolute inset-0 rounded-full animate-ping"
-          style={{ backgroundColor: '#25D366', opacity: 0.3 }}
-        />
-        <span
-          className="absolute inset-0 rounded-full animate-ping"
-          style={{ backgroundColor: '#25D366', opacity: 0.2, animationDelay: '0.5s' }}
-        />
-
-        {/* Button */}
         <img
           src="/images/whatsApp.png"
           alt="WhatsApp"
-          className="relative w-14 h-14 rounded-full object-cover shadow-lg hover:scale-110 transition-transform duration-200"
+          className="w-14 h-14 rounded-full object-cover shadow-lg"
         />
       </a>
     </div>

@@ -62,30 +62,35 @@ export default function Home() {
     <div style={{ backgroundColor: '#F0FFFE' }}>
       {/* Hero Section */}
       <section
-        className="relative w-full flex items-center"
-        style={{
-          backgroundImage: 'url(/Images/hero-image.png)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          minHeight: '600px',
-        }}
+        className="relative w-full flex items-center overflow-hidden"
+        style={{ minHeight: '600px' }}
       >
-        {/* Light overlay on left, stronger on right for text readability */}
+        {/* Ken Burns background */}
+        <div
+          className="absolute inset-0 hero-bg"
+          style={{
+            backgroundImage: 'url(/Images/hero-image.png)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
+        />
+
+        {/* Overlay */}
         <div className="absolute inset-0" style={{ background: 'linear-gradient(to left, rgba(255,255,255,0.96) 30%, rgba(255,255,255,0.3) 55%, rgba(255,255,255,0) 70%)' }} />
 
         {/* Text block on the right */}
         <div className="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-10 flex justify-end">
           <div className="w-full sm:w-1/2 lg:w-2/5 text-left py-16">
-            <p className="text-lg font-bold tracking-widest uppercase mb-4" style={{ color: '#348981' }}>
+            <p className="hero-text-1 text-lg font-bold tracking-widest uppercase mb-4" style={{ color: '#348981' }}>
               Accounting & CFO Advisory
             </p>
-            <h1 className="text-4xl sm:text-5xl font-extrabold mb-5 leading-tight uppercase" style={{ color: '#2C3E50' }}>
+            <h1 className="hero-text-2 text-4xl sm:text-5xl font-extrabold mb-5 leading-tight uppercase" style={{ color: '#2C3E50' }}>
               Professional & Trusted Accounting
             </h1>
-            <p className="text-base sm:text-lg leading-relaxed mb-8" style={{ color: '#5A6C7D' }}>
+            <p className="hero-text-3 text-base sm:text-lg leading-relaxed mb-8" style={{ color: '#5A6C7D' }}>
               August Advisory is your one-stop business advisory partner, helping Malaysian businesses stay compliant, operate efficiently, and grow with confidence.
             </p>
-            <div className="flex flex-wrap gap-4">
+            <div className="hero-text-4 flex flex-wrap gap-4">
               <Link href="/contact"
                 className="inline-block px-8 py-3 rounded-full font-bold text-white hover:opacity-90 transition"
                 style={{ backgroundColor: '#348981' }}
