@@ -1,4 +1,4 @@
-export const revalidate = 0;
+export const dynamic = 'force-dynamic';
 
 interface BlogPost {
   id: number;
@@ -25,11 +25,6 @@ function formatDate(iso: string) {
       day: 'numeric', month: 'long', year: 'numeric'
     });
   } catch { return ''; }
-}
-
-export async function generateStaticParams() {
-  const posts = await getPosts();
-  return posts.map(p => ({ id: String(p.id) }));
 }
 
 export default async function BlogPost({ params }: { params: { id: string } }) {
