@@ -62,6 +62,39 @@ body {
   transform-origin: top center;
 }
 
+/* Floating phone animation */
+@keyframes floatPhone {
+  0%   { transform: translateY(0px); }
+  50%  { transform: translateY(-12px); }
+  100% { transform: translateY(0px); }
+}
+
+.float-phone {
+  animation: floatPhone 4s ease-in-out infinite;
+}
+
+/* WhatsApp button glow pulse */
+@keyframes glowPulse {
+  0%   { box-shadow: 0 0 0 0 rgba(52, 137, 129, 0.5); }
+  70%  { box-shadow: 0 0 0 12px rgba(52, 137, 129, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(52, 137, 129, 0); }
+}
+
+.glow-pulse {
+  animation: glowPulse 2s ease-in-out infinite;
+}
+
+/* Slide in from right */
+@keyframes slideInRight {
+  0%   { opacity: 0; transform: translateX(40px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+.slide-in-right {
+  opacity: 0;
+  animation: slideInRight 0.5s ease forwards;
+}
+
 /* Hero animations */
 @keyframes kenBurns {
   0%   { transform: scale(1); }
