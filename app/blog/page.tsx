@@ -64,7 +64,7 @@ export default async function BlogPage({ searchParams }: { searchParams: Promise
               <p className="text-lg">No posts yet. Check back soon.</p>
             </div>
           ) : (
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 items-start">
               {posts.map(post => (
                 <div
                   key={post.id}
@@ -140,8 +140,8 @@ export default async function BlogPage({ searchParams }: { searchParams: Promise
       </section>
 
       {/* WhatsApp Channel Section */}
-      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 bg-white" style={{ borderTop: '1px solid #E8F5F3' }}>
-        <div className="max-w-7xl mx-auto">
+      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6" style={{ backgroundColor: '#E8F5F3' }}>
+        <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-5 gap-8 items-center">
 
             {/* Left: Text */}
