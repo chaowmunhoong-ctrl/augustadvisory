@@ -15,7 +15,9 @@ export default function Footer() {
               <li><Link href="/services#cfo" className="opacity-80 hover:opacity-100">CFO Advisory</Link></li>
               <li><Link href="/services#financial" className="opacity-80 hover:opacity-100">Financial Operations</Link></li>
               <li><Link href="/services#taxation" className="opacity-80 hover:opacity-100">Taxation</Link></li>
-              <li><Link href="/services#payroll" className="opacity-80 hover:opacity-100">Payroll</Link></li>
+              <li><Link href="/services#payroll" className="opacity-80 hover:opacity-100">Payroll & Compliance</Link></li>
+              <li><Link href="/services#estamp" className="opacity-80 hover:opacity-100">Stamp Duty & e-Stamping</Link></li>
+              <li><Link href="/services#einvoice" className="opacity-80 hover:opacity-100">Training & Workshops</Link></li>
             </ul>
           </div>
           <div>

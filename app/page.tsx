@@ -27,13 +27,13 @@ const services = [
     icon: '🏢'
   },
   {
-    title: 'e-Stamping',
-    description: 'Fast and accurate electronic stamping for employment contracts and statutory documents.',
-    icon: '✍️'
+    title: 'Stamp Duty & e-Stamping',
+    description: 'Fast and accurate electronic stamping for tenancy agreements, loan agreements, and statutory documents.',
+    icon: '🔏'
   },
   {
-    title: 'e-Invoice Training',
-    description: 'Get your team ready for Malaysia\'s e-Invoice mandate with practical, hands-on training.',
+    title: 'Training & Advisory Workshops',
+    description: 'Practical workshops on e-Invoice compliance, accounting software (SQL, Xero, Bukku), and tax awareness for SMEs.',
     icon: '📱'
   },
 ];
