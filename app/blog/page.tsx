@@ -60,17 +60,16 @@ export default async function BlogPage() {
           ) : (
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
               {posts.map(post => (
-                <a
+                <div
                   key={post.id}
-                  href={`/blog/${post.id}`}
-                  className="group rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition border border-gray-100 flex flex-col"
+                  className="rounded-2xl overflow-hidden shadow-sm border border-gray-100 flex flex-col"
                 >
                   {post.imageFileId && (
-                    <div className="aspect-video overflow-hidden bg-gray-100">
+                    <div className="aspect-square overflow-hidden bg-gray-100">
                       <img
                         src={`https://drive.google.com/thumbnail?id=${post.imageFileId}&sz=w600`}
                         alt=""
-                        className="w-full h-full object-cover group-hover:scale-105 transition duration-300"
+                        className="w-full h-full object-cover"
                       />
                     </div>
                   )}
@@ -81,11 +80,15 @@ export default async function BlogPage() {
                     <p className="text-base leading-relaxed flex-1" style={{ color: '#2C3E50' }}>
                       {excerpt(post.caption)}
                     </p>
-                    <p className="mt-4 text-sm font-semibold" style={{ color: '#348981' }}>
+                    <a
+                      href={`/blog/${post.id}`}
+                      className="mt-4 text-sm font-semibold hover:opacity-70 transition inline-block"
+                      style={{ color: '#348981' }}
+                    >
                       Read more →
-                    </p>
+                    </a>
                   </div>
-                </a>
+                </div>
               ))}
             </div>
           )}
