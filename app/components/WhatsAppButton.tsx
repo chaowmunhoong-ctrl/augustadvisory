@@ -1,20 +1,56 @@
+'use client';
+
+import { useState } from 'react';
+
 export default function WhatsAppButton() {
-  const phoneNumber = '60102462151';
-  const whatsappUrl = `https://wa.me/${phoneNumber}`;
+  const [hovered, setHovered] = useState(false);
+  const whatsappUrl = 'https://wa.me/60102462151';
 
   return (
-    <a
-      href={whatsappUrl}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="fixed bottom-6 right-6 z-40 w-14 h-14 rounded-full shadow-lg hover:shadow-xl transition"
-      title="Chat with us on WhatsApp"
-    >
-      <img
-        src="/images/whatsApp.png"
-        alt="WhatsApp"
-        className="w-full h-full rounded-full object-cover"
-      />
-    </a>
+    <div className="fixed bottom-6 right-6 z-40 flex items-center gap-3">
+      {/* Tooltip */}
+      <div
+        className="transition-all duration-300 pointer-events-none"
+        style={{
+          opacity: hovered ? 1 : 0,
+          transform: hovered ? 'translateX(0)' : 'translateX(10px)',
+        }}
+      >
+        <div
+          className="text-white text-sm font-semibold px-4 py-2 rounded-full shadow-lg whitespace-nowrap"
+          style={{ backgroundColor: '#348981' }}
+        >
+          Chat with us!
+        </div>
+      </div>
+
+      {/* Button with pulse */}
+      <a
+        href={whatsappUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        onMouseEnter={() => setHovered(true)}
+        onMouseLeave={() => setHovered(false)}
+        className="relative w-14 h-14 flex items-center justify-center"
+        aria-label="Chat with us on WhatsApp"
+      >
+        {/* Pulse rings */}
+        <span
+          className="absolute inset-0 rounded-full animate-ping"
+          style={{ backgroundColor: '#25D366', opacity: 0.3 }}
+        />
+        <span
+          className="absolute inset-0 rounded-full animate-ping"
+          style={{ backgroundColor: '#25D366', opacity: 0.2, animationDelay: '0.5s' }}
+        />
+
+        {/* Button */}
+        <img
+          src="/images/whatsApp.png"
+          alt="WhatsApp"
+          className="relative w-14 h-14 rounded-full object-cover shadow-lg hover:scale-110 transition-transform duration-200"
+        />
+      </a>
+    </div>
   );
 }
