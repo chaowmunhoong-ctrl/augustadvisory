@@ -78,9 +78,30 @@ export default async function BlogPost({ params }: { params: Promise<{ id: strin
   }
 
   const paragraphs = post.caption.split(/\n\n+/).filter(Boolean);
+  const postTitle = post.caption.split('\n')[0].slice(0, 100);
+  const postDescription = post.caption.replace(/\n+/g, ' ').trim().slice(0, 160);
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: postTitle,
+    description: postDescription,
+    datePublished: post.websitePublishedAt,
+    publisher: {
+      '@type': 'Organization',
+      name: 'August Advisory',
+      url: 'https://www.augustadvisory.com.my',
+    },
+    ...(post.imageFileId && {
+      image: `https://drive.google.com/thumbnail?id=${post.imageFileId}&sz=w1200`,
+    }),
+  };
 
   return (
     <div className="bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       {/* Hero image */}
       {post.imageFileId && (
         <div className="flex justify-center py-8 px-6" style={{ backgroundColor: '#E8F5F3' }}>
@@ -101,9 +122,13 @@ export default async function BlogPost({ params }: { params: Promise<{ id: strin
             ← Back to Blog
           </a>
 
-          <p className="text-sm font-semibold mb-6" style={{ color: '#348981' }}>
+          <p className="text-sm font-semibold mb-3" style={{ color: '#348981' }}>
             {formatDate(post.websitePublishedAt)}
           </p>
+
+          <h1 className="text-2xl sm:text-3xl font-bold mb-8 leading-tight" style={{ color: '#2C3E50' }}>
+            {postTitle}
+          </h1>
 
           <div className="space-y-5">
             {paragraphs.length > 0 ? paragraphs.map((para, i) => (
