@@ -1,3 +1,5 @@
+import FadeIn from '../components/FadeIn';
+
 export const metadata = {
   title: 'Services - August Advisory',
   description: 'Comprehensive accounting, tax, payroll, and CFO advisory services for Malaysian businesses.',
@@ -119,11 +121,11 @@ export default function Services() {
       <section className="py-16 px-6 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {serviceDetails.map((service) => (
+            {serviceDetails.map((service, i) => (
+              <FadeIn key={service.id} delay={(i % 6) + 1 as 1|2|3|4|5|6}>
               <div
-                key={service.id}
                 id={service.id}
-                className="rounded-xl p-8 shadow-md hover:shadow-lg transition h-full flex flex-col"
+                className="rounded-xl p-8 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 h-full flex flex-col"
                 style={{ backgroundColor: '#F0FFFE', borderTop: '4px solid #348981' }}
               >
                 <div className="text-5xl mb-4">{service.icon}</div>
@@ -138,6 +140,7 @@ export default function Services() {
                   ))}
                 </ul>
               </div>
+              </FadeIn>
             ))}
           </div>
 

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import FadeIn from './components/FadeIn';
 
 const services = [
   {
@@ -107,15 +108,17 @@ export default function Home() {
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-            {services.map((service) => (
-              <div key={service.title}
-                className="p-4 sm:p-6 rounded-xl hover:shadow-lg transition border"
+            {services.map((service, i) => (
+              <FadeIn key={service.title} delay={(i % 6) + 1 as 1|2|3|4|5|6}>
+              <div
+                className="p-4 sm:p-6 rounded-xl hover:shadow-lg hover:-translate-y-1 transition-all duration-300 border h-full"
                 style={{ backgroundColor: '#FFFFFF', borderColor: '#E0F2F1' }}
               >
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">{service.icon}</div>
                 <h3 className="text-xl font-bold mb-2" style={{ color: '#348981' }}>{service.title}</h3>
                 <p className="text-gray-600 text-sm">{service.description}</p>
               </div>
+              </FadeIn>
             ))}
           </div>
           <div className="text-center mt-8 sm:mt-12">
@@ -140,12 +143,14 @@ export default function Home() {
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-            {features.map((feature) => (
-              <div key={feature.title} className="text-center bg-white rounded-xl p-8 shadow-sm">
+            {features.map((feature, i) => (
+              <FadeIn key={feature.title} delay={(i % 6) + 1 as 1|2|3|4|5|6}>
+              <div className="text-center bg-white rounded-xl p-8 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300">
                 <div className="text-4xl mb-4">{feature.icon}</div>
                 <h3 className="text-xl font-bold mb-3" style={{ color: '#348981' }}>{feature.title}</h3>
                 <p className="text-base text-gray-600">{feature.description}</p>
               </div>
+              </FadeIn>
             ))}
           </div>
         </div>
