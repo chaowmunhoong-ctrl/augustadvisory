@@ -27,9 +27,10 @@ function formatDate(iso: string) {
   } catch { return ''; }
 }
 
-export default async function BlogPost({ params }: { params: { id: string } }) {
+export default async function BlogPost({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
   const posts = await getPosts();
-  const post = posts.find(p => String(p.id) === params.id);
+  const post = posts.find(p => String(p.id) === id);
 
   if (!post) {
     return (
