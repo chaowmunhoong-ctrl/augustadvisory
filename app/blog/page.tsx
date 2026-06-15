@@ -1,5 +1,19 @@
 export const dynamic = 'force-dynamic';
 
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Blog | August Advisory',
+  description: 'Practical insights on income tax, SST, e-Invoice and company compliance for Malaysian business owners.',
+  openGraph: {
+    title: 'Blog | August Advisory',
+    description: 'Practical insights on income tax, SST, e-Invoice and company compliance for Malaysian business owners.',
+    url: 'https://www.augustadvisory.com.my/blog',
+    siteName: 'August Advisory',
+    type: 'website',
+  },
+};
+
 interface BlogPost {
   id: number;
   caption: string;
