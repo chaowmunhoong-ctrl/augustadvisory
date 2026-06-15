@@ -49,13 +49,14 @@ export default async function BlogPost({ params }: { params: Promise<{ id: strin
     <div className="bg-white">
       {/* Hero image */}
       {post.imageFileId && (
-        <div className="w-full" style={{ maxHeight: '480px', overflow: 'hidden', backgroundColor: '#E8F5F3' }}>
-          <img
-            src={`https://drive.google.com/thumbnail?id=${post.imageFileId}&sz=w1200`}
-            alt=""
-            className="w-full object-cover"
-            style={{ maxHeight: '480px' }}
-          />
+        <div className="flex justify-center py-8 px-6" style={{ backgroundColor: '#E8F5F3' }}>
+          <div className="w-full max-w-lg aspect-square overflow-hidden rounded-2xl">
+            <img
+              src={`https://drive.google.com/thumbnail?id=${post.imageFileId}&sz=w1200`}
+              alt=""
+              className="w-full h-full object-cover"
+            />
+          </div>
         </div>
       )}
 
