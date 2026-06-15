@@ -86,15 +86,15 @@ const serviceDetails = [
   },
   {
     id: 'einvoice',
-    title: 'e-Invoice Training',
+    title: 'Training & Advisory Workshops',
     icon: '📱',
-    description: 'Malaysia\'s e-Invoice mandate is rolling out across businesses of all sizes. Don\'t get caught unprepared. Our training programme walks your team through the requirements and the practical steps to implement it in your business.',
+    description: 'Equipping business owners and their teams with the knowledge to stay compliant and operate efficiently. From e-Invoice readiness to accounting software onboarding, our practical workshops are designed for real-world application.',
     details: [
-      'Introduction to Malaysia e-Invoice requirements',
-      'e-Invoice framework & compliance overview',
-      'Consolidated & self-billed invoice handling',
-      'Practical implementation strategies',
-      'Integration with existing accounting systems',
+      'e-Invoice implementation & compliance training',
+      'Accounting software training (SQL, Xero, Bukku)',
+      'Bookkeeping fundamentals for business owners',
+      'Payroll & HR compliance workshops',
+      'Tax awareness sessions for SME owners',
     ],
   },
 ];
