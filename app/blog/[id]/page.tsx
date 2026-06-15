@@ -122,13 +122,9 @@ export default async function BlogPost({ params }: { params: Promise<{ id: strin
             ← Back to Blog
           </a>
 
-          <p className="text-sm font-semibold mb-3" style={{ color: '#348981' }}>
+          <p className="text-sm font-semibold mb-6" style={{ color: '#348981' }}>
             {formatDate(post.websitePublishedAt)}
           </p>
-
-          <h1 className="text-2xl sm:text-3xl font-bold mb-8 leading-tight" style={{ color: '#2C3E50' }}>
-            {postTitle}
-          </h1>
 
           <div className="space-y-5">
             {paragraphs.length > 0 ? paragraphs.map((para, i) => (
