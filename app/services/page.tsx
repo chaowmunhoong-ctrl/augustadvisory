@@ -60,15 +60,28 @@ const serviceDetails = [
   },
   {
     id: 'payroll',
-    title: 'Payroll, Compliance & e-Stamping',
+    title: 'Payroll & Compliance',
     icon: '👥',
     description: 'Payroll is more than just paying salaries. It involves EPF, SOCSO, EIS, PCB, and annual submissions, all with strict deadlines. We manage the entire cycle so you stay compliant and your employees are paid accurately and on time.',
     details: [
       'Monthly payroll processing',
       'EPF, SOCSO, EIS & PCB submissions',
       'Annual Form E & EA preparation',
-      'e-Stamping of employment contracts',
-      'Stamping of statutory documents',
+      'Payroll reporting & payslip generation',
+      'New employee onboarding & offboarding',
+    ],
+  },
+  {
+    id: 'estamp',
+    title: 'Stamp Duty & e-Stamping',
+    icon: '🔏',
+    description: 'Stamping your legal documents correctly is a statutory requirement in Malaysia. We handle the entire e-Stamping process on LHDN\'s portal, ensuring your documents are properly stamped, compliant, and submitted on time.',
+    details: [
+      'e-Stamping of tenancy agreements',
+      'Stamping of loan & financing agreements',
+      'Employment contract stamping',
+      'Stamp duty computation & advisory',
+      'Stamping of statutory & legal documents',
     ],
   },
   {
