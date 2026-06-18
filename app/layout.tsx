@@ -17,6 +17,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.augustadvisory.com.my"),
   title: "August Advisory - Accounting & CFO Advisory",
   description: "Professional accounting, CFO advisory, taxation, payroll, and corporate secretarial services for Malaysian businesses.",
 };
