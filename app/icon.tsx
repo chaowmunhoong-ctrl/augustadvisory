@@ -6,14 +6,14 @@ export const size = { width: 32, height: 32 };
 export const contentType = 'image/png';
 
 export default async function Icon() {
-  const logoBuffer = await readFile(join(process.cwd(), 'public/images/logo-mark.png'));
+  const logoBuffer = await readFile(join(process.cwd(), 'public/images/logo-mark-dark.png'));
   const logoSrc = `data:image/png;base64,${logoBuffer.toString('base64')}`;
 
   return new ImageResponse(
     (
       <div
         style={{
-          background: '#348981',
+          background: '#ffffff',
           width: '100%',
           height: '100%',
           display: 'flex',
@@ -21,7 +21,7 @@ export default async function Icon() {
           justifyContent: 'center',
         }}
       >
-        <img src={logoSrc} width={24} height={21} />
+        <img src={logoSrc} width={26} height={23} />
       </div>
     ),
     { ...size }
