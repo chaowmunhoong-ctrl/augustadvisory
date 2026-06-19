@@ -2,11 +2,10 @@ import { ImageResponse } from 'next/og';
 import { readFile } from 'node:fs/promises';
 import { join } from 'node:path';
 
-export const alt = 'August Advisory - Accounting & CFO Advisory';
-export const size = { width: 1200, height: 630 };
+export const size = { width: 180, height: 180 };
 export const contentType = 'image/png';
 
-export default async function Image() {
+export default async function AppleIcon() {
   const logoBuffer = await readFile(join(process.cwd(), 'public/images/logo-mark.png'));
   const logoSrc = `data:image/png;base64,${logoBuffer.toString('base64')}`;
 
@@ -18,18 +17,11 @@ export default async function Image() {
           width: '100%',
           height: '100%',
           display: 'flex',
-          flexDirection: 'column',
           alignItems: 'center',
           justifyContent: 'center',
         }}
       >
-        <img src={logoSrc} width={170} height={150} />
-        <div style={{ fontSize: 56, fontWeight: 700, color: 'white', marginTop: 24 }}>
-          August Advisory
-        </div>
-        <div style={{ fontSize: 26, color: 'white', marginTop: 12, opacity: 0.9 }}>
-          Accounting & CFO Advisory
-        </div>
+        <img src={logoSrc} width={130} height={115} />
       </div>
     ),
     { ...size }
