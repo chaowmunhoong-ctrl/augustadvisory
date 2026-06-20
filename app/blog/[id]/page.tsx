@@ -1,6 +1,7 @@
 export const dynamic = 'force-dynamic';
 
 import type { Metadata } from 'next';
+import TrackedLink from '../../components/TrackedLink';
 
 interface BlogPost {
   id: number;
@@ -145,15 +146,17 @@ export default async function BlogPost({ params }: { params: Promise<{ id: strin
               <p className="font-bold text-base mb-1" style={{ color: '#2C3E50' }}>Get more updates like this</p>
               <p className="text-sm" style={{ color: '#5A6C7D' }}>Follow our WhatsApp channel for the latest tax, SST and compliance news.</p>
             </div>
-            <a
+            <TrackedLink
               href="https://whatsapp.com/channel/0029Vb8EDWHBKfhzGpiHA90c"
               target="_blank"
               rel="noopener noreferrer"
               className="flex-shrink-0 px-6 py-3 rounded-full font-bold text-white hover:opacity-90 transition text-sm"
               style={{ backgroundColor: '#348981' }}
+              eventName="whatsapp_channel_click"
+              eventParams={{ location: 'blog_post_cta' }}
             >
               Follow Now
-            </a>
+            </TrackedLink>
           </div>
         </div>
       </section>

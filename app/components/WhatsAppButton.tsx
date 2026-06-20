@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { trackEvent } from '../lib/gtag';
 
 export default function WhatsAppButton() {
   const [hovered, setHovered] = useState(false);
@@ -31,6 +32,7 @@ export default function WhatsAppButton() {
         rel="noopener noreferrer"
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
+        onClick={() => trackEvent('whatsapp_click', { location: 'floating_button' })}
         className="relative w-14 h-14 flex items-center justify-center phone-ring"
         aria-label="Chat with us on WhatsApp"
       >
