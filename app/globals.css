@@ -107,7 +107,7 @@ body {
 }
 
 .hero-bg {
-  animation: kenBurns 10s ease-in-out infinite alternate;
+  animation: kenBurns 6s ease-in-out infinite alternate;
 }
 
 .hero-text-1 {
