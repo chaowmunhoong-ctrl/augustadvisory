@@ -20,9 +20,8 @@ const vcard = [
 
 const vcardHref = `data:text/vcard;charset=utf-8,${encodeURIComponent(vcard)}`;
 
-// Encodes the vCard directly (not a URL) so scanning this QR pops the
-// device's native "Add Contact" prompt, rather than opening a link.
-const vcardQrSrc = `https://api.qrserver.com/v1/create-qr-code/?size=240x240&margin=10&data=${encodeURIComponent(vcard)}`;
+const whatsappUrl = 'https://wa.me/60122322151';
+const whatsappQrSrc = `https://api.qrserver.com/v1/create-qr-code/?size=240x240&margin=10&data=${encodeURIComponent(whatsappUrl)}`;
 
 const actions = [
   {
@@ -70,8 +69,8 @@ const offices = [
   },
   {
     label: 'KL Office',
-    lines: ['B-1-11, Northpoint,', 'Mid Valley City, Kuala Lumpur'],
-    query: 'B-1-11, Northpoint, Mid Valley City, Kuala Lumpur',
+    lines: ['B-1-11, Northpoint, Mid Valley City,', 'No. 1, Medan Syed Putra Utara,', '59200 Kuala Lumpur'],
+    query: 'B-1-11, Northpoint, Mid Valley City, No. 1, Medan Syed Putra Utara, 59200 Kuala Lumpur',
   },
 ];
 
@@ -149,15 +148,15 @@ export default function HazelCard() {
 
           <div className="flex flex-col items-center mt-5">
             <img
-              src={vcardQrSrc}
-              alt="Scan to save Hazel Lim's contact"
+              src={whatsappQrSrc}
+              alt="Scan to chat with Hazel Lim on WhatsApp"
               width={140}
               height={140}
               className="rounded-lg border"
               style={{ borderColor: '#E0F2F1' }}
             />
             <p className="text-[10.5px] font-bold tracking-widest uppercase mt-2" style={{ color: '#348981' }}>
-              Scan to Save Contact
+              Scan to Chat on WhatsApp
             </p>
           </div>
         </div>
