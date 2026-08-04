@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Script from "next/script";
-import Navigation from "./components/Navigation";
-import Footer from "./components/Footer";
-import WhatsAppButton from "./components/WhatsAppButton";
+import SiteChrome from "./components/SiteChrome";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -45,10 +43,7 @@ export default function RootLayout({
             gtag('config', 'G-F8WNSEK2SE');
           `}
         </Script>
-        <Navigation />
-        <main className="flex-1">{children}</main>
-        <Footer />
-        <WhatsAppButton />
+        <SiteChrome>{children}</SiteChrome>
       </body>
     </html>
   );
