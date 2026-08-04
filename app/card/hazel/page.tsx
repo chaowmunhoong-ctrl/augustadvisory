@@ -3,26 +3,6 @@ export const metadata = {
   description: 'Digital business card for Hazel Lim, Managing Director at August Advisory.',
 };
 
-const vcard = [
-  'BEGIN:VCARD',
-  'VERSION:3.0',
-  'N:Lim;Hazel;;;',
-  'FN:Hazel Lim',
-  'ORG:August Advisory Sdn Bhd',
-  'TITLE:Managing Director',
-  'TEL;TYPE=CELL:+60122322151',
-  'TEL;TYPE=WORK:+60333582128',
-  'EMAIL:hazel@augustadvisory.com.my',
-  'URL:https://www.augustadvisory.com.my',
-  'ADR;TYPE=WORK:;;No. 12-1, Jalan Astaka 1C/KU2, Bandar Bukit Raja;Klang;Selangor;41050;Malaysia',
-  'END:VCARD',
-].join('\r\n');
-
-const vcardHref = `data:text/vcard;charset=utf-8,${encodeURIComponent(vcard)}`;
-
-const whatsappUrl = 'https://wa.me/60122322151';
-const whatsappQrSrc = `https://api.qrserver.com/v1/create-qr-code/?size=240x240&margin=10&data=${encodeURIComponent(whatsappUrl)}`;
-
 const actions = [
   {
     href: 'tel:+60122322151',
@@ -135,30 +115,17 @@ export default function HazelCard() {
           ))}
         </div>
 
-        {/* Save to contacts */}
+        {/* Chat on WhatsApp CTA */}
         <div className="px-6 pt-3 pb-6">
           <a
-            href={vcardHref}
-            download="Hazel-Lim-August-Advisory.vcf"
+            href="https://wa.me/60122322151"
+            target="_blank"
+            rel="noopener noreferrer"
             className="block text-center text-white rounded-full font-bold py-3 text-sm hover:opacity-90 transition"
             style={{ backgroundColor: '#348981' }}
           >
-            Save to Contacts
+            Chat on WhatsApp
           </a>
-
-          <div className="flex flex-col items-center mt-5">
-            <img
-              src={whatsappQrSrc}
-              alt="Scan to chat with Hazel Lim on WhatsApp"
-              width={140}
-              height={140}
-              className="rounded-lg border"
-              style={{ borderColor: '#E0F2F1' }}
-            />
-            <p className="text-[10.5px] font-bold tracking-widest uppercase mt-2" style={{ color: '#348981' }}>
-              Scan to Chat on WhatsApp
-            </p>
-          </div>
         </div>
 
         {/* Offices */}
