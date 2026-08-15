@@ -144,7 +144,7 @@ export default function HazelCard() {
         </div>
 
         <p className="text-center text-[10px] py-3" style={{ color: '#5A6C7D' }}>
-          August Advisory Sdn Bhd (202201029858-V)
+          August Advisory Sdn Bhd (202201029858)
         </p>
       </div>
     </div>
