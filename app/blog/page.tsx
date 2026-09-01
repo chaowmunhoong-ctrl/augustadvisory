@@ -1,5 +1,3 @@
-export const dynamic = 'force-dynamic';
-
 import type { Metadata } from 'next';
 import TrackedLink from '../components/TrackedLink';
 
@@ -15,47 +13,7 @@ export const metadata: Metadata = {
   },
 };
 
-interface BlogPost {
-  id: number;
-  caption: string;
-  imageFileId: string;
-  websitePublishedAt: string;
-}
-
-async function getPosts(): Promise<BlogPost[]> {
-  const url = process.env.BLOG_API_URL;
-  if (!url) return [];
-  try {
-    const res = await fetch(url, { cache: 'no-store' });
-    return await res.json();
-  } catch {
-    return [];
-  }
-}
-
-function formatDate(iso: string) {
-  if (!iso) return '';
-  try {
-    return new Date(iso).toLocaleDateString('en-MY', {
-      day: 'numeric', month: 'long', year: 'numeric'
-    });
-  } catch { return ''; }
-}
-
-function excerpt(caption: string, max = 160) {
-  const plain = caption.replace(/\n+/g, ' ').trim();
-  return plain.length > max ? plain.slice(0, max) + '…' : plain;
-}
-
-const PER_PAGE = 9;
-
-export default async function BlogPage({ searchParams }: { searchParams: Promise<{ page?: string }> }) {
-  const { page: pageParam } = await searchParams;
-  const page = Math.max(1, parseInt(pageParam || '1', 10));
-  const allPosts = await getPosts();
-  const totalPages = Math.ceil(allPosts.length / PER_PAGE);
-  const posts = allPosts.slice((page - 1) * PER_PAGE, page * PER_PAGE);
-
+export default function BlogPage() {
   return (
     <div className="bg-white">
       {/* Hero */}
@@ -68,89 +26,6 @@ export default async function BlogPage({ searchParams }: { searchParams: Promise
           <p className="text-base sm:text-lg leading-relaxed" style={{ color: '#5A6C7D' }}>
             Practical insights on income tax, SST, e-Invoice and company compliance for Malaysian business owners.
           </p>
-        </div>
-      </section>
-
-      {/* Posts */}
-      <section className="py-16 px-6">
-        <div className="max-w-6xl mx-auto">
-          {posts.length === 0 ? (
-            <div className="text-center py-20" style={{ color: '#5A6C7D' }}>
-              <p className="text-lg">No posts yet. Check back soon.</p>
-            </div>
-          ) : (
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 items-start">
-              {posts.map(post => (
-                <div
-                  key={post.id}
-                  className="rounded-2xl overflow-hidden shadow-sm border border-gray-100 flex flex-col"
-                >
-                  {post.imageFileId && (
-                    <div className="aspect-square overflow-hidden bg-gray-100">
-                      <img
-                        src={`https://drive.google.com/thumbnail?id=${post.imageFileId}&sz=w600`}
-                        alt=""
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                  )}
-                  <div className="p-6 flex flex-col flex-1">
-                    <p className="text-xs font-semibold mb-3" style={{ color: '#348981' }}>
-                      {formatDate(post.websitePublishedAt)}
-                    </p>
-                    <p className="text-base leading-relaxed flex-1" style={{ color: '#2C3E50' }}>
-                      {excerpt(post.caption)}
-                    </p>
-                    <a
-                      href={`/blog/${post.id}`}
-                      className="mt-4 text-sm font-semibold hover:opacity-70 transition inline-block"
-                      style={{ color: '#348981' }}
-                    >
-                      Read more →
-                    </a>
-                  </div>
-                </div>
-              ))}
-            </div>
-          )}
-
-          {/* Pagination */}
-          {totalPages > 1 && (
-            <div className="flex justify-center items-center gap-2 mt-14">
-              {page > 1 && (
-                <a
-                  href={`/blog?page=${page - 1}`}
-                  className="px-4 py-2 rounded-lg text-sm font-semibold border transition hover:opacity-80"
-                  style={{ borderColor: '#348981', color: '#348981' }}
-                >
-                  ← Prev
-                </a>
-              )}
-              {Array.from({ length: totalPages }, (_, i) => i + 1).map(p => (
-                <a
-                  key={p}
-                  href={`/blog?page=${p}`}
-                  className="w-9 h-9 flex items-center justify-center rounded-lg text-sm font-semibold transition"
-                  style={
-                    p === page
-                      ? { backgroundColor: '#348981', color: '#fff' }
-                      : { border: '1px solid #d1d5db', color: '#5A6C7D' }
-                  }
-                >
-                  {p}
-                </a>
-              ))}
-              {page < totalPages && (
-                <a
-                  href={`/blog?page=${page + 1}`}
-                  className="px-4 py-2 rounded-lg text-sm font-semibold border transition hover:opacity-80"
-                  style={{ borderColor: '#348981', color: '#348981' }}
-                >
-                  Next →
-                </a>
-              )}
-            </div>
-          )}
         </div>
       </section>
 
