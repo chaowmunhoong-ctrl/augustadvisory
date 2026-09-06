@@ -160,27 +160,21 @@ export default async function BlogPost({ params }: { params: Promise<{ id: strin
             ))}
           </div>
 
-          {/* Prev / Next navigation */}
-          {(prevPost || nextPost) && (
-            <div className="mt-12 pt-8 grid grid-cols-2 gap-4" style={{ borderTop: '1px solid #E5E7EB' }}>
-              <div>
-                {prevPost && (
-                  <a href={`/blog/${prevPost.id}`} className="group flex flex-col gap-1 hover:opacity-70 transition">
-                    <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#348981' }}>← Previous</span>
-                    <span className="text-sm font-semibold leading-snug" style={{ color: '#2C3E50' }}>{postSnippet(prevPost)}</span>
-                  </a>
-                )}
+          {/* Next / Prev navigation — show one at a time */}
+          {(nextPost || prevPost) && (() => {
+            const featured = nextPost ?? prevPost;
+            const isNext = !!nextPost;
+            return (
+              <div className="mt-12 pt-8" style={{ borderTop: '1px solid #E5E7EB' }}>
+                <a href={`/blog/${featured!.id}`} className="group flex flex-col gap-1 hover:opacity-70 transition">
+                  <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#348981' }}>
+                    {isNext ? 'Next →' : '← Previous'}
+                  </span>
+                  <span className="text-sm font-semibold leading-snug" style={{ color: '#2C3E50' }}>{postSnippet(featured!)}</span>
+                </a>
               </div>
-              <div className="text-right">
-                {nextPost && (
-                  <a href={`/blog/${nextPost.id}`} className="group flex flex-col gap-1 hover:opacity-70 transition items-end">
-                    <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#348981' }}>Next →</span>
-                    <span className="text-sm font-semibold leading-snug" style={{ color: '#2C3E50' }}>{postSnippet(nextPost)}</span>
-                  </a>
-                )}
-              </div>
-            </div>
-          )}
+            );
+          })()}
 
           {/* WhatsApp Channel CTA */}
           <div className="mt-14 p-8 rounded-2xl flex flex-col sm:flex-row items-center gap-6" style={{ backgroundColor: '#E8F5F3' }}>
