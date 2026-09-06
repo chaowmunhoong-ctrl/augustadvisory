@@ -138,10 +138,6 @@ export default async function BlogPost({ params }: { params: Promise<{ id: strin
       {/* Content */}
       <section className="py-14 px-6">
         <div className="max-w-3xl mx-auto">
-          <a href="/blog" className="text-sm font-semibold mb-8 inline-block" style={{ color: '#348981' }}>
-            ← Back to Blog
-          </a>
-
           <p className="text-sm font-semibold mb-6" style={{ color: '#348981' }}>
             {formatDate(post.websitePublishedAt)}
           </p>
@@ -160,17 +156,16 @@ export default async function BlogPost({ params }: { params: Promise<{ id: strin
             ))}
           </div>
 
-          {/* Prev / Next navigation */}
-          {(prevPost || nextPost) && (
-            <div className="mt-12 pt-8 flex justify-between" style={{ borderTop: '1px solid #E5E7EB' }}>
-              {prevPost ? (
-                <a href={`/blog/${prevPost.id}`} className="text-sm font-bold hover:opacity-70 transition" style={{ color: '#348981' }}>← Previous</a>
-              ) : <span />}
-              {nextPost && (
-                <a href={`/blog/${nextPost.id}`} className="text-sm font-bold hover:opacity-70 transition" style={{ color: '#348981' }}>Next →</a>
-              )}
-            </div>
-          )}
+          {/* Bottom navigation */}
+          <div className="mt-12 pt-8 flex items-center justify-between gap-3" style={{ borderTop: '1px solid #E5E7EB' }}>
+            {prevPost ? (
+              <a href={`/blog/${prevPost.id}`} className="flex items-center gap-2 px-4 py-2 rounded-full text-sm font-bold border-2 hover:opacity-80 transition" style={{ color: '#348981', borderColor: '#348981' }}>← Previous</a>
+            ) : <span />}
+            <a href="/blog" className="text-sm font-semibold hover:opacity-70 transition" style={{ color: '#5A6C7D' }}>All Posts</a>
+            {nextPost ? (
+              <a href={`/blog/${nextPost.id}`} className="flex items-center gap-2 px-4 py-2 rounded-full text-sm font-bold border-2 hover:opacity-80 transition" style={{ color: '#348981', borderColor: '#348981' }}>Next →</a>
+            ) : <span />}
+          </div>
 
           {/* WhatsApp Channel CTA */}
           <div className="mt-14 p-8 rounded-2xl flex flex-col sm:flex-row items-center gap-6" style={{ backgroundColor: '#E8F5F3' }}>
