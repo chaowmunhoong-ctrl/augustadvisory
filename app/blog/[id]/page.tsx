@@ -36,8 +36,11 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   const post = posts.find(p => String(p.id) === id);
   if (!post) return { title: 'Post Not Found | August Advisory' };
 
-  const title = post.caption.split('\n')[0].slice(0, 60) || 'Blog | August Advisory';
-  const description = post.caption.replace(/\n+/g, ' ').trim().slice(0, 160);
+  const lines = post.caption.split('\n').map(l => l.trim()).filter(Boolean);
+  const titleLine = lines[0] || 'Blog | August Advisory';
+  const title = titleLine.length > 60 ? titleLine.slice(0, titleLine.lastIndexOf(' ', 57)) + '…' : titleLine;
+  const bodyLines = lines.slice(1);
+  const description = (bodyLines.length > 0 ? bodyLines : lines).join(' ').slice(0, 160);
   const image = post.imageFileId
     ? `https://drive.google.com/thumbnail?id=${post.imageFileId}&sz=w1200`
     : undefined;
@@ -78,13 +81,15 @@ export default async function BlogPost({ params }: { params: Promise<{ id: strin
     );
   }
 
-  const paragraphs = post.caption.split(/\n\n+/).filter(Boolean);
-  const postTitle = post.caption.split('\n')[0].slice(0, 100);
-  const postDescription = post.caption.replace(/\n+/g, ' ').trim().slice(0, 160);
+  const lines = post.caption.split('\n').map(l => l.trim()).filter(Boolean);
+  const postTitle = lines[0] || '';
+  const bodyText = lines.slice(1).join('\n\n');
+  const paragraphs = (bodyText || post.caption).split(/\n\n+/).filter(Boolean);
+  const postDescription = paragraphs.join(' ').slice(0, 160);
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: postTitle,
+    headline: postTitle.slice(0, 110),
     description: postDescription,
     datePublished: post.websitePublishedAt,
     publisher: {
@@ -109,7 +114,7 @@ export default async function BlogPost({ params }: { params: Promise<{ id: strin
           <div className="w-full max-w-lg aspect-square overflow-hidden rounded-2xl">
             <img
               src={`https://drive.google.com/thumbnail?id=${post.imageFileId}&sz=w1200`}
-              alt={post.caption.split('\n')[0].slice(0, 80)}
+              alt={postTitle.slice(0, 80)}
               className="w-full h-full object-cover"
             />
           </div>
@@ -127,16 +132,18 @@ export default async function BlogPost({ params }: { params: Promise<{ id: strin
             {formatDate(post.websitePublishedAt)}
           </p>
 
+          {postTitle && (
+            <h1 className="text-2xl sm:text-3xl font-bold leading-snug mb-8" style={{ color: '#2C3E50' }}>
+              {postTitle}
+            </h1>
+          )}
+
           <div className="space-y-5">
-            {paragraphs.length > 0 ? paragraphs.map((para, i) => (
+            {paragraphs.map((para, i) => (
               <p key={i} className="text-base leading-relaxed" style={{ color: '#2C3E50', whiteSpace: 'pre-wrap' }}>
                 {para}
               </p>
-            )) : (
-              <p className="text-base leading-relaxed" style={{ color: '#2C3E50', whiteSpace: 'pre-wrap' }}>
-                {post.caption}
-              </p>
-            )}
+            ))}
           </div>
 
           {/* WhatsApp Channel CTA */}
