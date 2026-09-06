@@ -37,8 +37,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   if (!post) return { title: 'Post Not Found | August Advisory' };
 
   const lines = post.caption.split('\n').map(l => l.trim()).filter(Boolean);
-  const titleLine = lines[0] || 'Blog | August Advisory';
-  const title = titleLine.length > 60 ? titleLine.slice(0, titleLine.lastIndexOf(' ', 57)) + '…' : titleLine;
+  const title = lines[0] || 'Blog | August Advisory';
   const bodyLines = lines.slice(1);
   const description = (bodyLines.length > 0 ? bodyLines : lines).join(' ').slice(0, 160);
   const image = post.imageFileId
