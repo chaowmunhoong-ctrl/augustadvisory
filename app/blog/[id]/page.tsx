@@ -38,7 +38,8 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
 
   const lines = post.caption.split('\n').map(l => l.trim()).filter(Boolean);
   const hasTitle = lines.length > 1 && lines[0].length <= 80;
-  const title = hasTitle ? lines[0] : lines.join(' ').slice(0, 80);
+  const rawTitle = hasTitle ? lines[0] : lines.join(' ').slice(0, 80);
+  const title = rawTitle.length > 60 ? rawTitle.slice(0, rawTitle.lastIndexOf(' ', 57)) + '…' : rawTitle;
   const bodyLines = hasTitle ? lines.slice(1) : lines;
   const description = bodyLines.join(' ').slice(0, 160);
   const image = post.imageFileId
