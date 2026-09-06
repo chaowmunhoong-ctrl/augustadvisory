@@ -95,8 +95,8 @@ export default async function BlogPost({ params }: { params: Promise<{ id: strin
   const paragraphs = bodyLines.join('\n\n').split(/\n\n+/).filter(Boolean);
   const postDescription = paragraphs.join(' ').slice(0, 160);
 
-  function postSnippet(p: typeof post) {
-    const l = p.caption.split('\n').map((s: string) => s.trim()).filter(Boolean);
+  function postSnippet(p: BlogPost) {
+    const l = p.caption.split('\n').map(s => s.trim()).filter(Boolean);
     const t = l[0] || '';
     return t.length > 60 ? t.slice(0, t.lastIndexOf(' ', 57)) + '…' : t;
   }
