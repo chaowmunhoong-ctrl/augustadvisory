@@ -83,6 +83,10 @@ export default async function BlogPost({ params }: { params: Promise<{ id: strin
     );
   }
 
+  const currentIndex = posts.findIndex(p => String(p.id) === id);
+  const prevPost = posts[currentIndex + 1] ?? null; // older
+  const nextPost = posts[currentIndex - 1] ?? null; // newer
+
   const lines = post.caption.split('\n').map(l => l.trim()).filter(Boolean);
   const isNewFormat = new Date(post.websitePublishedAt) >= new Date('2026-09-06');
   const hasTitle = isNewFormat && lines.length > 1 && lines[0].length <= 80;
@@ -90,6 +94,12 @@ export default async function BlogPost({ params }: { params: Promise<{ id: strin
   const bodyLines = hasTitle ? lines.slice(1) : lines;
   const paragraphs = bodyLines.join('\n\n').split(/\n\n+/).filter(Boolean);
   const postDescription = paragraphs.join(' ').slice(0, 160);
+
+  function postSnippet(p: typeof post) {
+    const l = p.caption.split('\n').map((s: string) => s.trim()).filter(Boolean);
+    const t = l[0] || '';
+    return t.length > 60 ? t.slice(0, t.lastIndexOf(' ', 57)) + '…' : t;
+  }
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Article',
@@ -149,6 +159,28 @@ export default async function BlogPost({ params }: { params: Promise<{ id: strin
               </p>
             ))}
           </div>
+
+          {/* Prev / Next navigation */}
+          {(prevPost || nextPost) && (
+            <div className="mt-12 pt-8 grid grid-cols-2 gap-4" style={{ borderTop: '1px solid #E5E7EB' }}>
+              <div>
+                {prevPost && (
+                  <a href={`/blog/${prevPost.id}`} className="group flex flex-col gap-1 hover:opacity-70 transition">
+                    <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#348981' }}>← Previous</span>
+                    <span className="text-sm font-semibold leading-snug" style={{ color: '#2C3E50' }}>{postSnippet(prevPost)}</span>
+                  </a>
+                )}
+              </div>
+              <div className="text-right">
+                {nextPost && (
+                  <a href={`/blog/${nextPost.id}`} className="group flex flex-col gap-1 hover:opacity-70 transition items-end">
+                    <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#348981' }}>Next →</span>
+                    <span className="text-sm font-semibold leading-snug" style={{ color: '#2C3E50' }}>{postSnippet(nextPost)}</span>
+                  </a>
+                )}
+              </div>
+            </div>
+          )}
 
           {/* WhatsApp Channel CTA */}
           <div className="mt-14 p-8 rounded-2xl flex flex-col sm:flex-row items-center gap-6" style={{ backgroundColor: '#E8F5F3' }}>
