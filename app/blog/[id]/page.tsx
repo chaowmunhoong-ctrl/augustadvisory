@@ -160,21 +160,17 @@ export default async function BlogPost({ params }: { params: Promise<{ id: strin
             ))}
           </div>
 
-          {/* Next / Prev navigation — show one at a time */}
-          {(nextPost || prevPost) && (() => {
-            const featured = nextPost ?? prevPost;
-            const isNext = !!nextPost;
-            return (
-              <div className="mt-12 pt-8" style={{ borderTop: '1px solid #E5E7EB' }}>
-                <a href={`/blog/${featured!.id}`} className="group flex flex-col gap-1 hover:opacity-70 transition">
-                  <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#348981' }}>
-                    {isNext ? 'Next →' : '← Previous'}
-                  </span>
-                  <span className="text-sm font-semibold leading-snug" style={{ color: '#2C3E50' }}>{postSnippet(featured!)}</span>
-                </a>
-              </div>
-            );
-          })()}
+          {/* Prev / Next navigation */}
+          {(prevPost || nextPost) && (
+            <div className="mt-12 pt-8 flex justify-between" style={{ borderTop: '1px solid #E5E7EB' }}>
+              {prevPost ? (
+                <a href={`/blog/${prevPost.id}`} className="text-sm font-bold hover:opacity-70 transition" style={{ color: '#348981' }}>← Previous</a>
+              ) : <span />}
+              {nextPost && (
+                <a href={`/blog/${nextPost.id}`} className="text-sm font-bold hover:opacity-70 transition" style={{ color: '#348981' }}>Next →</a>
+              )}
+            </div>
+          )}
 
           {/* WhatsApp Channel CTA */}
           <div className="mt-14 p-8 rounded-2xl flex flex-col sm:flex-row items-center gap-6" style={{ backgroundColor: '#E8F5F3' }}>
