@@ -120,7 +120,7 @@ export default async function BlogPost({ params }: { params: Promise<{ id: strin
     <div className="bg-white">
       <style>{`
         .nav-pill:active { background-color: #348981 !important; color: #fff !important; transform: scale(0.95); }
-        .nav-all:active { color: #1a4f4c !important; }
+        .nav-all:active { color: #1a4f4c !important; text-decoration: underline; }
         .follow-btn:active { background-color: #256b64 !important; }
       `}</style>
       <script
