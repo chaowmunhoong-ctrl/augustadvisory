@@ -120,8 +120,8 @@ export default async function BlogPost({ params }: { params: Promise<{ id: strin
     <div className="bg-white">
       <style>{`
         .nav-pill:active { background-color: #348981 !important; color: #fff !important; transform: scale(0.95); }
-        .nav-all:active { background-color: #348981 !important; color: #fff !important; padding: 2px 10px; border-radius: 999px; transform: scale(0.95); }
-        .follow-btn:active { background-color: #256b64 !important; transform: scale(0.95); }
+        .nav-all:active { color: #1a4f4c !important; }
+        .follow-btn:active { background-color: #256b64 !important; }
       `}</style>
       <script
         type="application/ld+json"

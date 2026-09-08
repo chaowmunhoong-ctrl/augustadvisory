@@ -75,9 +75,9 @@ export default async function BlogPage({ searchParams }: { searchParams: Promise
       <section className="py-16 px-6">
         <div className="max-w-6xl mx-auto">
           <style>{`
-            .post-card:active { transform: scale(0.97); opacity: 0.85; box-shadow: none !important; }
+            .post-card:active .read-more { color: #1a4f4c !important; }
             .nav-pill:active { background-color: #348981 !important; color: #fff !important; transform: scale(0.95); }
-            .read-more:active { background-color: #348981; color: #fff !important; padding: 2px 8px; border-radius: 999px; transform: scale(0.95); }
+            .read-more:active { color: #1a4f4c !important; }
           `}</style>
           {posts.length === 0 ? (
             <div className="text-center py-20" style={{ color: '#5A6C7D' }}>
@@ -88,7 +88,7 @@ export default async function BlogPage({ searchParams }: { searchParams: Promise
               {posts.map(post => (
                 <div
                   key={post.id}
-                  className="post-card rounded-2xl overflow-hidden shadow-sm border border-gray-100 flex flex-col"
+                  className="rounded-2xl overflow-hidden shadow-sm border border-gray-100 flex flex-col"
                 >
                   {post.imageFileId && (
                     <div className="aspect-square overflow-hidden bg-gray-100">
