@@ -74,6 +74,10 @@ export default async function BlogPage({ searchParams }: { searchParams: Promise
       {/* Posts */}
       <section className="py-16 px-6">
         <div className="max-w-6xl mx-auto">
+          <style>{`
+            .post-card:active { transform: scale(0.97); opacity: 0.85; box-shadow: none !important; }
+            .read-more:active { opacity: 0.5; }
+          `}</style>
           {posts.length === 0 ? (
             <div className="text-center py-20" style={{ color: '#5A6C7D' }}>
               <p className="text-lg">No posts yet. Check back soon.</p>
@@ -83,7 +87,7 @@ export default async function BlogPage({ searchParams }: { searchParams: Promise
               {posts.map(post => (
                 <div
                   key={post.id}
-                  className="rounded-2xl overflow-hidden shadow-sm border border-gray-100 flex flex-col"
+                  className="post-card rounded-2xl overflow-hidden shadow-sm border border-gray-100 flex flex-col"
                 >
                   {post.imageFileId && (
                     <div className="aspect-square overflow-hidden bg-gray-100">
@@ -103,7 +107,7 @@ export default async function BlogPage({ searchParams }: { searchParams: Promise
                     </p>
                     <a
                       href={`/blog/${post.id}`}
-                      className="mt-4 text-sm font-semibold hover:opacity-70 transition inline-block"
+                      className="read-more mt-4 text-sm font-semibold hover:opacity-70 transition inline-block"
                       style={{ color: '#348981' }}
                     >
                       Read more →

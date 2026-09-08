@@ -118,6 +118,11 @@ export default async function BlogPost({ params }: { params: Promise<{ id: strin
 
   return (
     <div className="bg-white">
+      <style>{`
+        .nav-pill:active { background-color: #348981 !important; color: #fff !important; transform: scale(0.95); }
+        .nav-all:active { color: #2C3E50 !important; }
+        .follow-btn:active { transform: scale(0.95); opacity: 0.85; }
+      `}</style>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -159,11 +164,11 @@ export default async function BlogPost({ params }: { params: Promise<{ id: strin
           {/* Bottom navigation */}
           <div className="mt-12 pt-8 flex items-center justify-between gap-3" style={{ borderTop: '1px solid #E5E7EB' }}>
             {prevPost ? (
-              <a href={`/blog/${prevPost.id}`} className="flex items-center gap-2 px-4 py-2 rounded-full text-sm font-bold border-2 hover:opacity-80 transition" style={{ color: '#348981', borderColor: '#348981' }}>← Previous</a>
+              <a href={`/blog/${prevPost.id}`} className="nav-pill flex items-center gap-2 px-4 py-2 rounded-full text-sm font-bold border-2 hover:opacity-80 transition" style={{ color: '#348981', borderColor: '#348981' }}>← Previous</a>
             ) : <span />}
-            <a href="/blog" className="text-sm font-semibold hover:opacity-70 transition" style={{ color: '#5A6C7D' }}>All Posts</a>
+            <a href="/blog" className="nav-all text-sm font-semibold hover:opacity-70 transition" style={{ color: '#5A6C7D' }}>All Posts</a>
             {nextPost ? (
-              <a href={`/blog/${nextPost.id}`} className="flex items-center gap-2 px-4 py-2 rounded-full text-sm font-bold border-2 hover:opacity-80 transition" style={{ color: '#348981', borderColor: '#348981' }}>Next →</a>
+              <a href={`/blog/${nextPost.id}`} className="nav-pill flex items-center gap-2 px-4 py-2 rounded-full text-sm font-bold border-2 hover:opacity-80 transition" style={{ color: '#348981', borderColor: '#348981' }}>Next →</a>
             ) : <span />}
           </div>
 
@@ -178,7 +183,7 @@ export default async function BlogPost({ params }: { params: Promise<{ id: strin
               href="https://whatsapp.com/channel/0029Vb8EDWHBKfhzGpiHA90c"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex-shrink-0 px-6 py-3 rounded-full font-bold text-white hover:opacity-90 transition text-sm"
+              className="follow-btn flex-shrink-0 px-6 py-3 rounded-full font-bold text-white hover:opacity-90 transition text-sm"
               style={{ backgroundColor: '#348981' }}
               eventName="whatsapp_channel_click"
               eventParams={{ location: 'blog_post_cta' }}
