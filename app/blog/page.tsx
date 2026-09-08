@@ -76,7 +76,8 @@ export default async function BlogPage({ searchParams }: { searchParams: Promise
         <div className="max-w-6xl mx-auto">
           <style>{`
             .post-card:active { transform: scale(0.97); opacity: 0.85; box-shadow: none !important; }
-            .read-more:active { opacity: 0.5; }
+            .nav-pill:active { background-color: #348981 !important; color: #fff !important; transform: scale(0.95); }
+            .read-more:active { background-color: #348981; color: #fff !important; padding: 2px 8px; border-radius: 999px; transform: scale(0.95); }
           `}</style>
           {posts.length === 0 ? (
             <div className="text-center py-20" style={{ color: '#5A6C7D' }}>
@@ -124,7 +125,7 @@ export default async function BlogPage({ searchParams }: { searchParams: Promise
               {page > 1 && (
                 <a
                   href={`/blog?page=${page - 1}`}
-                  className="px-4 py-2 rounded-lg text-sm font-semibold border transition hover:opacity-80"
+                  className="nav-pill px-4 py-2 rounded-lg text-sm font-semibold border transition hover:opacity-80"
                   style={{ borderColor: '#348981', color: '#348981' }}
                 >
                   ← Prev
@@ -147,7 +148,7 @@ export default async function BlogPage({ searchParams }: { searchParams: Promise
               {page < totalPages && (
                 <a
                   href={`/blog?page=${page + 1}`}
-                  className="px-4 py-2 rounded-lg text-sm font-semibold border transition hover:opacity-80"
+                  className="nav-pill px-4 py-2 rounded-lg text-sm font-semibold border transition hover:opacity-80"
                   style={{ borderColor: '#348981', color: '#348981' }}
                 >
                   Next →
