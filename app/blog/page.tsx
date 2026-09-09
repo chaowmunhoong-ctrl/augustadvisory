@@ -95,6 +95,7 @@ export default async function BlogPage({ searchParams }: { searchParams: Promise
                       <img
                         src={`https://drive.google.com/thumbnail?id=${post.imageFileId}&sz=w600`}
                         alt=""
+                        loading="lazy"
                         className="w-full h-full object-cover"
                       />
                     </div>

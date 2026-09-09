@@ -134,6 +134,7 @@ export default async function BlogPost({ params }: { params: Promise<{ id: strin
             <img
               src={`https://drive.google.com/thumbnail?id=${post.imageFileId}&sz=w1200`}
               alt={postTitle.slice(0, 80)}
+              loading="eager"
               className="w-full h-full object-cover"
             />
           </div>
