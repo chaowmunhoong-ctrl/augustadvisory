@@ -6,7 +6,7 @@ async function getBlogPosts() {
   const url = process.env.BLOG_API_URL;
   if (!url) return [];
   try {
-    const res = await fetch(url, { cache: 'no-store' });
+    const res = await fetch(url, { next: { revalidate: 300 } });
     return await res.json();
   } catch {
     return [];
