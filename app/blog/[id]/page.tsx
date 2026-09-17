@@ -1,6 +1,7 @@
 export const revalidate = 300;
 
 import type { Metadata } from 'next';
+import { notFound } from 'next/navigation';
 import TrackedLink from '../../components/TrackedLink';
 
 interface BlogPost {
@@ -72,16 +73,7 @@ export default async function BlogPost({ params }: { params: Promise<{ id: strin
   const posts = await getPosts();
   const post = posts.find(p => String(p.id) === id);
 
-  if (!post) {
-    return (
-      <div className="bg-white min-h-screen flex items-center justify-center">
-        <div className="text-center py-20" style={{ color: '#5A6C7D' }}>
-          <p className="text-xl font-semibold mb-4" style={{ color: '#2C3E50' }}>Post not found</p>
-          <a href="/blog" className="text-sm font-semibold" style={{ color: '#348981' }}>← Back to Blog</a>
-        </div>
-      </div>
-    );
-  }
+  if (!post) notFound();
 
   const currentIndex = posts.findIndex(p => String(p.id) === id);
   const prevPost = posts[currentIndex + 1] ?? null; // older
