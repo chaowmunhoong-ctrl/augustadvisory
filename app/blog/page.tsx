@@ -121,42 +121,53 @@ export default async function BlogPage({ searchParams }: { searchParams: Promise
           )}
 
           {/* Pagination */}
-          {totalPages > 1 && (
-            <div className="flex justify-center items-center gap-2 mt-14">
-              {page > 1 && (
-                <a
-                  href={`/blog?page=${page - 1}`}
-                  className="nav-pill px-4 py-2 rounded-lg text-sm font-semibold border transition hover:opacity-80"
-                  style={{ borderColor: '#348981', color: '#348981' }}
-                >
-                  ← Prev
-                </a>
-              )}
-              {Array.from({ length: totalPages }, (_, i) => i + 1).map(p => (
-                <a
-                  key={p}
-                  href={`/blog?page=${p}`}
-                  className="w-9 h-9 flex items-center justify-center rounded-lg text-sm font-semibold transition"
-                  style={
-                    p === page
-                      ? { backgroundColor: '#348981', color: '#fff' }
-                      : { border: '1px solid #d1d5db', color: '#5A6C7D' }
-                  }
-                >
-                  {p}
-                </a>
-              ))}
-              {page < totalPages && (
-                <a
-                  href={`/blog?page=${page + 1}`}
-                  className="nav-pill px-4 py-2 rounded-lg text-sm font-semibold border transition hover:opacity-80"
-                  style={{ borderColor: '#348981', color: '#348981' }}
-                >
-                  Next →
-                </a>
-              )}
-            </div>
-          )}
+          {totalPages > 1 && (() => {
+            const getPageNumbers = (current: number, total: number): (number | '...')[] => {
+              if (total <= 7) return Array.from({ length: total }, (_, i) => i + 1);
+              const pages: (number | '...')[] = [1];
+              if (current > 3) pages.push('...');
+              for (let p = Math.max(2, current - 1); p <= Math.min(total - 1, current + 1); p++) pages.push(p);
+              if (current < total - 2) pages.push('...');
+              pages.push(total);
+              return pages;
+            };
+            return (
+              <div className="flex justify-center items-center gap-2 mt-14">
+                {page > 1 && (
+                  <a
+                    href={`/blog?page=${page - 1}`}
+                    className="nav-pill px-4 py-2 rounded-lg text-sm font-semibold border transition hover:opacity-80"
+                    style={{ borderColor: '#348981', color: '#348981' }}
+                  >
+                    ← Prev
+                  </a>
+                )}
+                {getPageNumbers(page, totalPages).map((p, i) =>
+                  p === '...' ? (
+                    <span key={`ellipsis-${i}`} className="w-9 h-9 flex items-center justify-center text-sm" style={{ color: '#5A6C7D' }}>…</span>
+                  ) : (
+                    <a
+                      key={p}
+                      href={`/blog?page=${p}`}
+                      className="w-9 h-9 flex items-center justify-center rounded-lg text-sm font-semibold transition"
+                      style={p === page ? { backgroundColor: '#348981', color: '#fff' } : { border: '1px solid #d1d5db', color: '#5A6C7D' }}
+                    >
+                      {p}
+                    </a>
+                  )
+                )}
+                {page < totalPages && (
+                  <a
+                    href={`/blog?page=${page + 1}`}
+                    className="nav-pill px-4 py-2 rounded-lg text-sm font-semibold border transition hover:opacity-80"
+                    style={{ borderColor: '#348981', color: '#348981' }}
+                  >
+                    Next →
+                  </a>
+                )}
+              </div>
+            );
+          })()}
         </div>
       </section>
 
