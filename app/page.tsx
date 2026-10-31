@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import FadeIn from './components/FadeIn';
+import TealLine from './components/TealLine';
 import TrackedLink from './components/TrackedLink';
 
 const serviceIconMap: Record<string, React.ReactNode> = {
@@ -218,6 +219,7 @@ export default function Home() {
       {/* Services Overview */}
       <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 bg-white">
         <div className="max-w-6xl mx-auto">
+          <FadeIn>
           <div className="text-center mb-10 sm:mb-16">
             <p className="text-lg font-bold tracking-widest uppercase mb-3" style={{ color: '#348981' }}>What We Do</p>
             <h2 className="text-2xl sm:text-3xl font-bold mb-4" style={{ color: '#2C3E50' }}>Our Services</h2>
@@ -225,14 +227,15 @@ export default function Home() {
               From day-to-day bookkeeping to strategic CFO advisory, we handle the financial side of your business so you can focus on what matters most.
             </p>
           </div>
+          </FadeIn>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {services.map((service, i) => (
               <FadeIn key={service.title} delay={(i % 6) + 1 as 1|2|3|4|5|6}>
               <div
-                className="p-4 sm:p-6 rounded-xl hover:shadow-lg hover:-translate-y-1 transition-all duration-300 border h-full"
+                className="group p-4 sm:p-6 rounded-xl hover:shadow-lg hover:-translate-y-1 transition-all duration-300 border h-full"
                 style={{ backgroundColor: '#FFFFFF', borderColor: '#E0F2F1' }}
               >
-                <div className="mb-3 sm:mb-4">{serviceIconMap[service.title]}</div>
+                <div className="mb-3 sm:mb-4 transition-transform duration-300 group-hover:scale-110 origin-left">{serviceIconMap[service.title]}</div>
                 <h3 className="text-xl font-bold mb-2" style={{ color: '#348981' }}>{service.title}</h3>
                 <p className="text-gray-600 text-sm">{service.description}</p>
               </div>
@@ -253,6 +256,7 @@ export default function Home() {
       {/* Why Choose Us */}
       <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6" style={{ backgroundColor: '#E8F5F3' }}>
         <div className="max-w-6xl mx-auto">
+          <FadeIn>
           <div className="text-center mb-10 sm:mb-16">
             <p className="text-lg font-bold tracking-widest uppercase mb-3" style={{ color: '#348981' }}>Why Choose Us</p>
             <h2 className="text-2xl sm:text-3xl font-bold mb-4" style={{ color: '#2C3E50' }}>Why August Advisory?</h2>
@@ -260,6 +264,7 @@ export default function Home() {
               We don't just crunch numbers. We help you make better decisions, stay compliant, and build a stronger business.
             </p>
           </div>
+          </FadeIn>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {features.map((feature, i) => (
               <FadeIn key={feature.title} delay={(i % 6) + 1 as 1|2|3|4|5|6}>
@@ -297,7 +302,7 @@ export default function Home() {
                 Get the latest tax, SST, e-Invoice, and regulatory updates directly on WhatsApp.
               </p>
 
-              <div className="w-10 mb-6" style={{ borderTop: '3px solid #348981' }} />
+              <TealLine />
 
               {/* Bullets */}
               <ul className="space-y-3 mb-8">
@@ -308,10 +313,12 @@ export default function Home() {
                   'Business compliance tips and reminders',
                   'Practical insights for SME owners and entrepreneurs',
                 ].map((item, i) => (
-                  <li key={item} className="flex items-start gap-3 slide-in-right" style={{ animationDelay: `${i * 0.15}s` }}>
+                  <FadeIn key={item} delay={(i + 1) as 1|2|3|4|5|6}>
+                  <li className="flex items-start gap-3">
                     <span className="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 text-white text-xs font-bold mt-0.5" style={{ backgroundColor: '#348981' }}>✓</span>
                     <span className="text-gray-700 text-sm">{item}</span>
                   </li>
+                  </FadeIn>
                 ))}
               </ul>
 
@@ -347,17 +354,19 @@ export default function Home() {
       {/* CTA Section */}
       <section className="py-12 sm:py-16 px-4 sm:px-6" style={{ backgroundColor: '#E8F5F3' }}>
         <div className="max-w-6xl mx-auto text-center">
-          <p className="text-lg font-bold tracking-widest uppercase mb-3" style={{ color: '#348981' }}>Get Started</p>
-          <h2 className="text-2xl sm:text-3xl font-bold mb-4" style={{ color: '#2C3E50' }}>Ready to Get Started?</h2>
-          <p className="mb-8 text-base sm:text-lg" style={{ color: '#5A6C7D' }}>
-            Reach out today and let's have a conversation about your business goals. We'll recommend the right approach based on where you are and where you want to go.
-          </p>
-          <Link href="/contact"
-            className="px-6 sm:px-8 py-3 rounded-full font-bold text-white hover:opacity-90 transition inline-block w-full sm:w-auto text-center"
-            style={{ backgroundColor: '#348981' }}
-          >
-            Book a Consultation
-          </Link>
+          <FadeIn>
+            <p className="text-lg font-bold tracking-widest uppercase mb-3" style={{ color: '#348981' }}>Get Started</p>
+            <h2 className="text-2xl sm:text-3xl font-bold mb-4" style={{ color: '#2C3E50' }}>Ready to Get Started?</h2>
+            <p className="mb-8 text-base sm:text-lg" style={{ color: '#5A6C7D' }}>
+              Reach out today and let's have a conversation about your business goals. We'll recommend the right approach based on where you are and where you want to go.
+            </p>
+            <Link href="/contact"
+              className="px-6 sm:px-8 py-3 rounded-full font-bold text-white hover:opacity-90 transition inline-block w-full sm:w-auto text-center"
+              style={{ backgroundColor: '#348981' }}
+            >
+              Book a Consultation
+            </Link>
+          </FadeIn>
         </div>
       </section>
     </div>
