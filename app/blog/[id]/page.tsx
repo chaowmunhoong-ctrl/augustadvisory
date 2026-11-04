@@ -2,25 +2,10 @@ export const revalidate = 300;
 
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
+import { getBlogPosts, type BlogPost as Post } from '../../lib/blog';
 import TrackedLink from '../../components/TrackedLink';
 
-interface BlogPost {
-  id: number;
-  caption: string;
-  imageFileId: string;
-  websitePublishedAt: string;
-}
-
-async function getPosts(): Promise<BlogPost[]> {
-  const url = process.env.BLOG_API_URL;
-  if (!url) return [];
-  try {
-    const res = await fetch(url, { cache: 'no-store' });
-    return await res.json();
-  } catch {
-    return [];
-  }
-}
+const getPosts = () => getBlogPosts();
 
 function formatDate(iso: string) {
   if (!iso) return '';
@@ -87,7 +72,7 @@ export default async function BlogPost({ params }: { params: Promise<{ id: strin
   const paragraphs = bodyLines.join('\n\n').split(/\n\n+/).filter(Boolean);
   const postDescription = paragraphs.join(' ').slice(0, 160);
 
-  function postSnippet(p: BlogPost) {
+  function postSnippet(p: Post) {
     const l = p.caption.split('\n').map(s => s.trim()).filter(Boolean);
     const t = l[0] || '';
     return t.length > 60 ? t.slice(0, t.lastIndexOf(' ', 57)) + '…' : t;

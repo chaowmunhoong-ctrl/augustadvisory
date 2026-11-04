@@ -1,6 +1,7 @@
 export const revalidate = 300;
 
 import type { Metadata } from 'next';
+import { getBlogPosts } from '../lib/blog';
 import TrackedLink from '../components/TrackedLink';
 
 export const metadata: Metadata = {
@@ -15,23 +16,7 @@ export const metadata: Metadata = {
   },
 };
 
-interface BlogPost {
-  id: number;
-  caption: string;
-  imageFileId: string;
-  websitePublishedAt: string;
-}
-
-async function getPosts(): Promise<BlogPost[]> {
-  const url = process.env.BLOG_API_URL;
-  if (!url) return [];
-  try {
-    const res = await fetch(url, { cache: 'no-store' });
-    return await res.json();
-  } catch {
-    return [];
-  }
-}
+const getPosts = () => getBlogPosts();
 
 function formatDate(iso: string) {
   if (!iso) return '';

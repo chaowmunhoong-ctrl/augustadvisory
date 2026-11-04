@@ -1,20 +1,11 @@
 import type { MetadataRoute } from 'next';
+import { getBlogPosts } from './lib/blog';
 
 const BASE_URL = 'https://www.augustadvisory.com.my';
 
-async function getBlogPosts() {
-  const url = process.env.BLOG_API_URL;
-  if (!url) return [];
-  try {
-    const res = await fetch(url, { next: { revalidate: 300 } });
-    return await res.json();
-  } catch {
-    return [];
-  }
-}
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const posts = await getBlogPosts();
+  const posts = await getBlogPosts({ next: { revalidate: 300 } } as RequestInit);
 
   const staticPages: MetadataRoute.Sitemap = [
     { url: BASE_URL, priority: 1.0, changeFrequency: 'monthly' },
@@ -25,7 +16,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${BASE_URL}/contact`, priority: 0.7, changeFrequency: 'monthly' },
   ];
 
-  const blogPages: MetadataRoute.Sitemap = posts.map((post: { id: number; websitePublishedAt: string }) => ({
+  const blogPages: MetadataRoute.Sitemap = posts.map((post) => ({
     url: `${BASE_URL}/blog/${post.id}`,
     lastModified: post.websitePublishedAt ? new Date(post.websitePublishedAt) : new Date(),
     priority: 0.7,
