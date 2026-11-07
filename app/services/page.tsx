@@ -194,7 +194,6 @@ const serviceDetails = [
       'e-Stamping of tenancy agreements',
       'Stamping of loan & financing agreements',
       'Employment contract stamping',
-      'Stamp duty computation & advisory',
       'Stamping of statutory & legal documents',
     ],
   },
