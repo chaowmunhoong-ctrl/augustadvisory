@@ -1,4 +1,4 @@
-import NewsletterSignup from './NewsletterSignup';
+﻿import NewsletterSignup from './NewsletterSignup';
 import LineIcon from './LineIcon';
 
 // Weekly tax & business update sign-up (replaces the WhatsApp Channel banner, Jeffrey 2026-11-22).
@@ -11,13 +11,13 @@ export default function NewsletterSection() {
         {/* Left: what it is */}
         <div>
           <p className="inline-flex items-center gap-2 text-sm font-bold tracking-[0.18em] uppercase mb-4" style={{ color: '#8FD3CB' }}>
-            <LineIcon name="mail" size={18} /> Weekly newsletter
+            <LineIcon name="mail" size={18} /> Tax &amp; business updates
           </p>
-          <h2 className="text-3xl sm:text-4xl font-bold leading-tight text-white mb-4">
-            Your weekly tax &amp; business update, every Monday at 8am
+          <h2 className="text-4xl sm:text-5xl font-bold leading-tight text-white mb-4">
+            Weekly <span style={{ color: '#8FD3CB' }}>Newsletter</span>
           </h2>
           <p className="text-base sm:text-lg leading-relaxed mb-8" style={{ color: '#C9D6DF' }}>
-            A short, plain-English email with the updates that matter to your business, each with the official source.
+            Tax and business updates that matter to your business, in plain English, each with the official source.
           </p>
 
           <ul className="space-y-4 mb-8">
@@ -50,7 +50,7 @@ export default function NewsletterSection() {
         {/* Right: form */}
         <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-2xl">
           <p className="text-xl font-bold mb-1" style={{ color: '#2C3E50' }}>Subscribe</p>
-          <p className="text-sm mb-6" style={{ color: '#5A6C7D' }}>Takes 30 seconds. Unsubscribe any time.</p>
+          <p className="text-sm mb-6" style={{ color: '#5A6C7D' }}>Get the weekly newsletter in your inbox. Unsubscribe any time.</p>
           <NewsletterSignup />
         </div>
       </div>

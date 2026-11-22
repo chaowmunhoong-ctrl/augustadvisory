@@ -68,7 +68,7 @@ export default function NewsletterSignup() {
     return (
       <div className="text-center py-10">
         <p className="text-2xl font-extrabold" style={{ color: '#348981' }}>Almost done! Check your inbox.</p>
-        <p className="mt-2" style={{ color: '#5A6C7D' }}>We sent you a confirmation email. Click the button in it and your first weekly update arrives on Monday at 8am.</p>
+        <p className="mt-2" style={{ color: '#5A6C7D' }}>We sent you a confirmation email. Click the button in it to start your weekly newsletter.</p>
       </div>
     );
   }
