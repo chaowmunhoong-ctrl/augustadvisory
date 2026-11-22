@@ -1,60 +1,58 @@
-import TealLine from './TealLine';
 import NewsletterSignup from './NewsletterSignup';
+import LineIcon from './LineIcon';
 
-// Weekly tax & business update sign-up, in the live site's style (replaces the WhatsApp Channel banner, Jeffrey 2026-11-22).
-// Wording follows the real weekly email: Monday 8am, customised by industry and role.
+// Weekly tax & business update sign-up (replaces the WhatsApp Channel banner, Jeffrey 2026-11-22).
+// Deep navy band so it stands apart from the light sections around it; compact form card on the right.
 export default function NewsletterSection() {
   return (
-    <section id="newsletter" className="py-12 sm:py-16 md:py-20 px-4 sm:px-6" style={{ backgroundColor: '#E8F5F3' }}>
-      <div className="max-w-7xl mx-auto grid lg:grid-cols-5 gap-8 lg:gap-12 items-center">
+    <section id="newsletter" className="px-4 sm:px-6 py-16 sm:py-20 md:py-24" style={{ backgroundColor: '#1F3A4D' }}>
+      <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
 
-        {/* Left: text */}
-        <div className="lg:col-span-2">
-          <div className="flex items-center gap-3 mb-6">
-            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#348981" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="4" width="20" height="16" rx="2" /><polyline points="22 6 12 13 2 6" /></svg>
-            <span className="text-sm font-bold tracking-widest uppercase px-3 py-1 rounded-full text-white" style={{ backgroundColor: '#2C3E50' }}>Weekly Newsletter</span>
-          </div>
-
-          <h2 className="text-3xl sm:text-4xl font-bold leading-tight mb-4" style={{ color: '#2C3E50' }}>
-            Stay <span style={{ color: '#348981' }}>Informed.</span><br />
-            Stay <span style={{ color: '#348981' }}>Ahead.</span>
+        {/* Left: what it is */}
+        <div>
+          <p className="inline-flex items-center gap-2 text-sm font-bold tracking-[0.18em] uppercase mb-4" style={{ color: '#8FD3CB' }}>
+            <LineIcon name="mail" size={18} /> Weekly newsletter
+          </p>
+          <h2 className="text-3xl sm:text-4xl font-bold leading-tight text-white mb-4">
+            Your weekly tax &amp; business update, every Monday at 8am
           </h2>
-
-          <p className="text-base leading-relaxed mb-6" style={{ color: '#5A6C7D' }}>
-            A <b style={{ color: '#2C3E50' }}>customised update based on your industry and role</b>, every Monday at 8am: the week&apos;s tax, SST, SSM, payroll and court updates that matter to your business, in plain English, with the official source.
+          <p className="text-base sm:text-lg leading-relaxed mb-8" style={{ color: '#C9D6DF' }}>
+            A short, plain-English email with the updates that matter to your business, each with the official source.
           </p>
 
-          <TealLine />
-
-          <ul className="space-y-3 mb-2">
+          <ul className="space-y-4 mb-8">
             {[
-              'New rules and announcements from LHDN, Customs, SSM and PERKESO',
-              'Court cases explained: what happened, what it means, what you can do',
-              'Practical tips for running your business',
-            ].map(item => (
-              <li key={item} className="flex items-start gap-3">
-                <span className="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 text-white text-xs font-bold mt-0.5" style={{ backgroundColor: '#348981' }}>✓</span>
-                <span className="text-gray-700 text-sm">{item}</span>
+              ['rules', 'New rules and announcements', 'From LHDN, Customs, SSM and PERKESO'],
+              ['court', 'Court cases explained', 'What happened, what it means, what you can do'],
+              ['tips', 'Practical tips', 'For running your business day to day'],
+            ].map(([icon, title, text]) => (
+              <li key={title} className="flex items-start gap-4">
+                <span className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style={{ backgroundColor: 'rgba(143,211,203,0.14)', color: '#8FD3CB' }}>
+                  <LineIcon name={icon} size={20} />
+                </span>
+                <span>
+                  <span className="block font-semibold text-white">{title}</span>
+                  <span className="block text-sm" style={{ color: '#AFC1CC' }}>{text}</span>
+                </span>
               </li>
             ))}
-            <li className="flex items-start gap-3">
-              <span className="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 text-white text-xs font-bold mt-0.5" style={{ backgroundColor: '#348981' }}>✓</span>
-              <span className="text-sm font-bold px-2 py-0.5 rounded" style={{ backgroundColor: '#FFF1C7', color: '#2C3E50' }}>
-                Customised to your industry and role. That&apos;s why we ask for your role and company website.
-              </span>
-            </li>
           </ul>
-        </div>
 
-        {/* Right: sign-up form */}
-        <div className="lg:col-span-3">
-          <div className="bg-white rounded-2xl shadow-xl p-6 sm:p-10 max-w-xl mx-auto">
-            <p className="text-2xl font-bold mb-1" style={{ color: '#2C3E50' }}>Sign up</p>
-            <p className="text-sm mb-6" style={{ color: '#5A6C7D' }}>Takes 30 seconds. We customise each update to your industry and role, so you only read what matters to you.</p>
-            <NewsletterSignup />
+          {/* The one point to remember: it is customised */}
+          <div className="flex items-start gap-3 rounded-xl p-4" style={{ backgroundColor: 'rgba(255,255,255,0.06)', borderLeft: '3px solid #E3B23C' }}>
+            <span style={{ color: '#E3B23C' }} className="mt-0.5"><LineIcon name="tailored" size={20} /></span>
+            <p className="text-sm leading-relaxed" style={{ color: '#E6EEF2' }}>
+              <b className="text-white">Customised to your industry and role.</b>{' '}That&apos;s why we ask for your role and company website.
+            </p>
           </div>
         </div>
 
+        {/* Right: form */}
+        <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-2xl">
+          <p className="text-xl font-bold mb-1" style={{ color: '#2C3E50' }}>Subscribe</p>
+          <p className="text-sm mb-6" style={{ color: '#5A6C7D' }}>Takes 30 seconds. Unsubscribe any time.</p>
+          <NewsletterSignup />
+        </div>
       </div>
     </section>
   );

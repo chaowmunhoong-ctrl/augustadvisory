@@ -142,3 +142,9 @@ body {
 .teal-line.visible {
   width: 2.5rem;
 }
+
+/* No movement (Jeffrey, 2026-11-22): content shows still, straight away */
+.fade-up, .fade-up.visible { opacity: 1 !important; transform: none !important; transition: none !important; }
+.phone-ring, .float-phone, .glow-pulse, .slide-in-right, .hero-bg, .hero-text-1, .hero-text-2, .hero-text-3, .hero-text-4 { animation: none !important; opacity: 1 !important; transform: none !important; }
+.teal-line { width: 2.5rem !important; transition: none !important; }
+

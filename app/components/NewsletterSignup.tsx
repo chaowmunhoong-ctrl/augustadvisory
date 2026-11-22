@@ -18,9 +18,9 @@ export function isCompanyEmail(email: string) {
   return !!domain && !PERSONAL_DOMAINS.includes(domain);
 }
 
-const field = 'w-full px-4 py-3 rounded-lg border bg-white text-base focus:outline-none focus:ring-2 focus:ring-[#348981]';
+const field = 'w-full px-3.5 py-2.5 rounded-lg border bg-white text-base focus:outline-none focus:ring-2 focus:ring-[#348981]';
 const fieldStyle = { borderColor: '#cfd8dc', color: '#2C3E50' };
-const label = 'block text-sm font-bold mb-1';
+const label = 'block text-sm font-semibold mb-1.5';
 
 export default function NewsletterSignup() {
   const [state, setState] = useState<'idle' | 'checking' | 'sending' | 'done' | 'error'>('idle');
@@ -83,16 +83,18 @@ export default function NewsletterSignup() {
           onBlur={e => setEmailError(e.target.value && !isCompanyEmail(e.target.value) ? 'Please use your company email (not Gmail, Yahoo, Hotmail or another personal email).' : '')} />
         {emailError && <p className="text-sm mt-1" style={{ color: '#a32638' }}>{emailError}</p>}
       </div>
-      <div>
+      <div className="grid sm:grid-cols-2 gap-4">
+        <div>
         <label className={label} style={{ color: '#2C3E50' }} htmlFor="nl-name">Your name *</label>
         <input id="nl-name" name="name" required className={field} style={fieldStyle} />
       </div>
-      <div>
+        <div>
         <label className={label} style={{ color: '#2C3E50' }} htmlFor="nl-role">Your role *</label>
         <select id="nl-role" name="role" required value={role} onChange={e => setRole(e.target.value)} className={field} style={fieldStyle}>
           <option value="">Choose your role</option>
           {ROLES.map(r => <option key={r}>{r}</option>)}
         </select>
+      </div>
       </div>
       {role === 'Other' && (
         <div>
@@ -120,15 +122,15 @@ export default function NewsletterSignup() {
       )}
       {/* Hidden from people; bots fill it and the script ignores them */}
       <input name="website_confirm" tabIndex={-1} autoComplete="off" aria-hidden="true" className="absolute -left-[9999px]" />
-      <button type="submit" disabled={state === 'sending' || state === 'checking'} className="w-full px-8 py-3 rounded-full font-bold text-white text-lg hover:opacity-90 transition" style={{ backgroundColor: '#348981' }}>
-        {state === 'checking' ? 'Checking your details...' : state === 'sending' ? 'Signing you up...' : 'Sign me up'}
+      <button type="submit" disabled={state === 'sending' || state === 'checking'} className="w-full px-8 py-3 rounded-full font-semibold text-white text-base hover:opacity-90 transition" style={{ backgroundColor: '#348981' }}>
+        {state === 'checking' ? 'Checking your details...' : state === 'sending' ? 'Signing you up...' : 'Subscribe'}
       </button>
       {state === 'error' && (
         <p className="text-sm" style={{ color: '#a32638' }}>
           {SIGNUP_URL ? 'Something went wrong. Please try again, or WhatsApp us at 010-246 2151.' : 'Sign-up is not connected yet (preview only).'}
         </p>
       )}
-      <p className="text-xs text-center" style={{ color: '#5A6C7D' }}>We use your details only to pick the updates relevant to you. Unsubscribe any time from any email.</p>
+      <p className="text-xs text-center" style={{ color: '#7A8A96' }}>We use your details only to pick the updates relevant to you.</p>
     </form>
   );
 }
