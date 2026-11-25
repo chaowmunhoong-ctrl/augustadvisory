@@ -1,3 +1,4 @@
+import LineIcon from '../components/LineIcon';
 export const metadata = {
   title: 'About Us - August Advisory',
   description: 'Learn about August Advisory, your trusted accounting and CFO advisory partner for Malaysian businesses.',
@@ -44,17 +45,17 @@ export default function About() {
             <h2 className="text-2xl sm:text-3xl font-bold mb-6" style={{ color: '#2C3E50' }}>Our Values</h2>
             <div className="grid md:grid-cols-3 gap-6">
               <div className="p-6 rounded-lg" style={{ backgroundColor: '#E8F5F3' }}>
-                <div className="text-4xl mb-3">🤝</div>
+                <div className="mb-3"><span className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-white" style={{ color: '#348981' }}><LineIcon name="integrity" size={24} /></span></div>
                 <h3 className="text-xl font-bold mb-2" style={{ color: '#348981' }}>Integrity</h3>
                 <p className="text-gray-600">We give honest advice, even when it's not what you want to hear. Our clients trust us because we always put their best interests first.</p>
               </div>
               <div className="p-6 rounded-lg" style={{ backgroundColor: '#E8F5F3' }}>
-                <div className="text-4xl mb-3">⭐</div>
+                <div className="mb-3"><span className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-white" style={{ color: '#348981' }}><LineIcon name="excellence" size={24} /></span></div>
                 <h3 className="text-xl font-bold mb-2" style={{ color: '#348981' }}>Excellence</h3>
                 <p className="text-gray-600">We hold ourselves to a high standard in everything we do, from the accuracy of a tax filing to the quality of a financial report.</p>
               </div>
               <div className="p-6 rounded-lg" style={{ backgroundColor: '#E8F5F3' }}>
-                <div className="text-4xl mb-3">🤲</div>
+                <div className="mb-3"><span className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-white" style={{ color: '#348981' }}><LineIcon name="collaboration" size={24} /></span></div>
                 <h3 className="text-xl font-bold mb-2" style={{ color: '#348981' }}>Collaboration</h3>
                 <p className="text-gray-600">We work alongside you, not just for you. Understanding your business deeply is how we deliver advice that actually moves the needle.</p>
               </div>
