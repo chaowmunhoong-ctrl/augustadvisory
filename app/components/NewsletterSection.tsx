@@ -17,12 +17,12 @@ export default function NewsletterSection() {
             <span style={{ color: '#8FD3CB' }}>Newsletter</span>
           </h2>
           <p className="text-base sm:text-lg leading-relaxed mb-8" style={{ color: '#C9D6DF' }}>
-            Tax and business updates that matter to your business, in plain English, each with the official source.
+            The tax and business updates that matter to your business, sent straight to your inbox.
           </p>
 
           <ul className="space-y-4">
             {[
-              ['rules', 'New rules and announcements', 'From LHDN, Customs, SSM and PERKESO'],
+              ['rules', 'New rules and announcements', 'From LHDN, Customs and SSM'],
               ['court', 'Court cases explained', 'What happened, what it means, what you can do'],
               ['tips', 'Practical tips', 'For running your business day to day'],
             ].map(([icon, title, text]) => (
