@@ -25,9 +25,6 @@ const label = 'block text-sm font-semibold mb-1.5';
 export default function NewsletterSignup() {
   const [state, setState] = useState<'idle' | 'checking' | 'sending' | 'done' | 'error'>('idle');
   const [emailError, setEmailError] = useState('');
-  const [websiteError, setWebsiteError] = useState('');
-  const [matchWarning, setMatchWarning] = useState('');
-  const [matchOk, setMatchOk] = useState(false);
   const [role, setRole] = useState('');
 
   async function submit(e: React.FormEvent<HTMLFormElement>) {
@@ -38,20 +35,21 @@ export default function NewsletterSignup() {
       setEmailError('Please use your company email (not Gmail, Yahoo, Hotmail or another personal email).');
       return;
     }
-    // Check the email domain and the website are real before sending (server side: /api/check-signup)
+    // Check the email's company domain is real before sending (server side: /api/check-signup)
     setState('checking');
     try {
-      const res = await fetch('/api/check-signup', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email, website: form.get('website') }) });
+      const res = await fetch('/api/check-signup', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email }) });
       const r = await res.json();
       setEmailError(r.errors?.email || '');
-      setWebsiteError(r.errors?.website || '');
       if (!r.ok) { setState('idle'); return; }
-      if (r.warnings?.match && !matchOk) { setMatchWarning(r.warnings.match); setState('idle'); return; }
     } catch {
       setState('idle');
-      setWebsiteError('We could not check your details right now. Please try again.');
+      setEmailError('We could not check your email right now. Please try again.');
       return;
     }
+    // No website field any more (Jeffrey, 2026-11-25): the company domain of the email is passed as the website,
+    // so the weekly-email script and the Monday profiling still work unchanged.
+    form.set('website', email.trim().toLowerCase().split('@')[1] || '');
     if (role === 'Other') form.set('role', String(form.get('role_other') || '').trim());
     form.delete('role_other');
     if (!SIGNUP_URL) { setState('error'); return; }
@@ -68,7 +66,7 @@ export default function NewsletterSignup() {
     return (
       <div className="text-center py-10">
         <p className="text-2xl font-extrabold" style={{ color: '#348981' }}>Almost done! Check your inbox.</p>
-        <p className="mt-2" style={{ color: '#5A6C7D' }}>We sent you a confirmation email. Click the button in it to start your weekly newsletter.</p>
+        <p className="mt-2" style={{ color: '#5A6C7D' }}>We sent you a confirmation email. Click the button in it to start your newsletter.</p>
       </div>
     );
   }
@@ -100,24 +98,6 @@ export default function NewsletterSignup() {
         <div>
           <label className={label} style={{ color: '#2C3E50' }} htmlFor="nl-role-other">Tell us your role *</label>
           <input id="nl-role-other" name="role_other" required placeholder="e.g. Company secretary, Operations manager" className={field} style={fieldStyle} />
-        </div>
-      )}
-      <div>
-        <label className={label} style={{ color: '#2C3E50' }} htmlFor="nl-website">Company website *</label>
-        <input id="nl-website" name="website" required placeholder="www.yourcompany.com.my" pattern="\S+\.\S+" title="Please enter your company website, e.g. www.yourcompany.com.my"
-          className={field} style={{ ...fieldStyle, borderColor: websiteError ? '#a32638' : '#cfd8dc' }}
-          onChange={() => { if (websiteError) setWebsiteError(''); if (matchWarning) { setMatchWarning(''); setMatchOk(false); } }} />
-        {websiteError
-          ? <p className="text-sm mt-1" style={{ color: '#a32638' }}>{websiteError}</p>
-          : <p className="text-xs mt-1" style={{ color: '#5A6C7D' }}>We read it to understand your business (industry, what you do), so you don&apos;t have to fill in more.</p>}
-      </div>
-      {matchWarning && (
-        <div className="rounded-lg p-4 border" style={{ backgroundColor: '#FFF7E0', borderColor: '#E3B23C', color: '#2C3E50' }}>
-          <p className="text-sm font-semibold mb-2">{matchWarning}</p>
-          <label className="flex items-center gap-2 text-sm">
-            <input type="checkbox" checked={matchOk} onChange={e => setMatchOk(e.target.checked)} className="w-4 h-4" />
-            Yes, this is my company&apos;s website
-          </label>
         </div>
       )}
       {/* Hidden from people; bots fill it and the script ignores them */}

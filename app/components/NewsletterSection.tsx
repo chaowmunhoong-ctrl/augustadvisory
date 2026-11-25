@@ -14,13 +14,13 @@ export default function NewsletterSection() {
             <LineIcon name="mail" size={18} /> Tax &amp; business updates
           </p>
           <h2 className="text-4xl sm:text-5xl font-bold leading-tight text-white mb-4">
-            Weekly <span style={{ color: '#8FD3CB' }}>Newsletter</span>
+            <span style={{ color: '#8FD3CB' }}>Newsletter</span>
           </h2>
           <p className="text-base sm:text-lg leading-relaxed mb-8" style={{ color: '#C9D6DF' }}>
             Tax and business updates that matter to your business, in plain English, each with the official source.
           </p>
 
-          <ul className="space-y-4 mb-8">
+          <ul className="space-y-4">
             {[
               ['rules', 'New rules and announcements', 'From LHDN, Customs, SSM and PERKESO'],
               ['court', 'Court cases explained', 'What happened, what it means, what you can do'],
@@ -37,20 +37,12 @@ export default function NewsletterSection() {
               </li>
             ))}
           </ul>
-
-          {/* The one point to remember: it is customised */}
-          <div className="flex items-start gap-3 rounded-xl p-4" style={{ backgroundColor: 'rgba(255,255,255,0.06)', borderLeft: '3px solid #E3B23C' }}>
-            <span style={{ color: '#E3B23C' }} className="mt-0.5"><LineIcon name="tailored" size={20} /></span>
-            <p className="text-sm leading-relaxed" style={{ color: '#E6EEF2' }}>
-              <b className="text-white">Customised to your industry and role.</b>{' '}That&apos;s why we ask for your role and company website.
-            </p>
-          </div>
         </div>
 
         {/* Right: form */}
         <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-2xl">
           <p className="text-xl font-bold mb-1" style={{ color: '#2C3E50' }}>Subscribe</p>
-          <p className="text-sm mb-6" style={{ color: '#5A6C7D' }}>Get the weekly newsletter in your inbox. Unsubscribe any time.</p>
+          <p className="text-sm mb-6" style={{ color: '#5A6C7D' }}>Get the newsletter in your inbox. Unsubscribe any time.</p>
           <NewsletterSignup />
         </div>
       </div>
