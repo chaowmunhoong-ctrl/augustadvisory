@@ -22,7 +22,7 @@ const fieldStyle = { borderColor: '#cfd8dc', color: '#2C3E50' };
 const label = 'block text-sm font-semibold mb-1.5';
 
 export default function NewsletterSignup() {
-  const [state, setState] = useState<'idle' | 'checking' | 'sending' | 'done' | 'error'>('idle');
+  const [state, setState] = useState<'idle' | 'checking' | 'sending' | 'done' | 'already' | 'error'>('idle');
   const [emailError, setEmailError] = useState('');
 
   async function submit(e: React.FormEvent<HTMLFormElement>) {
@@ -50,12 +50,25 @@ export default function NewsletterSignup() {
     form.set('website', email.trim().toLowerCase().split('@')[1] || '');
     if (!SIGNUP_URL) { setState('error'); return; }
     setState('sending');
+    // Through our own /api/signup, so we know if the person is already subscribed (Jeffrey, 2026-11-27)
     try {
-      await fetch(SIGNUP_URL, { method: 'POST', mode: 'no-cors', body: new URLSearchParams(form as unknown as Record<string, string>) });
-      setState('done');
+      const res = await fetch('/api/signup', { method: 'POST', body: new URLSearchParams(form as unknown as Record<string, string>) });
+      const r = await res.json();
+      if (r.status === 'already') setState('already');
+      else if (r.status === 'pending') setState('done');
+      else { setEmailError(r.message || ''); setState('error'); }
     } catch {
       setState('error');
     }
+  }
+
+  if (state === 'already') {
+    return (
+      <div className="text-center py-10">
+        <p className="text-2xl font-extrabold" style={{ color: '#348981' }}>You are already subscribed.</p>
+        <p className="mt-2" style={{ color: '#5A6C7D' }}>This email is already on our newsletter list. There is nothing more you need to do.</p>
+      </div>
+    );
   }
 
   if (state === 'done') {
