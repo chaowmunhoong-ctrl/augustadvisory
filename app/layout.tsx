@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Script from "next/script";
+import { Suspense } from "react";
 import SiteChrome from "./components/SiteChrome";
+import NewsletterPopup from "./components/NewsletterPopup";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -44,6 +46,7 @@ export default function RootLayout({
           `}
         </Script>
         <SiteChrome>{children}</SiteChrome>
+        <Suspense fallback={null}><NewsletterPopup /></Suspense>
       </body>
     </html>
   );
