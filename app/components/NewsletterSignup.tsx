@@ -66,7 +66,7 @@ export default function NewsletterSignup() {
     return (
       <div className="text-center py-10">
         <p className="text-2xl font-extrabold" style={{ color: '#348981' }}>You are already subscribed.</p>
-        <p className="mt-2" style={{ color: '#5A6C7D' }}>This email is already on our newsletter list. There is nothing more you need to do.</p>
+        <p className="mt-2" style={{ color: '#5A6C7D' }}>This email address is already on our newsletter list. Thank you for your continued interest in August Advisory.</p>
       </div>
     );
   }
