@@ -41,9 +41,8 @@ export default function NewsletterSection() {
           <p className="text-sm mt-6" style={{ color: '#AFC1CC' }}>Sent on working days, only when there is news. Official sources only.</p>
           <p className="text-sm mt-2" style={{ color: '#AFC1CC' }}>
             For court cases, tips and all our other posts, follow us on{' '}
-            <a href="https://www.facebook.com/augustadvisory" target="_blank" rel="noopener noreferrer" className="underline" style={{ color: '#8FD3CB' }}>Facebook</a>,{' '}
-            <a href="https://www.linkedin.com/company/august-advisory-sdn-bhd/" target="_blank" rel="noopener noreferrer" className="underline" style={{ color: '#8FD3CB' }}>LinkedIn</a> and{' '}
-            <a href="https://instagram.com/august_advisory_sdn_bhd/" target="_blank" rel="noopener noreferrer" className="underline" style={{ color: '#8FD3CB' }}>Instagram</a>.
+            <a href="https://www.facebook.com/augustadvisory" target="_blank" rel="noopener noreferrer" className="underline" style={{ color: '#8FD3CB' }}>Facebook</a> and{' '}
+            <a href="https://www.linkedin.com/company/august-advisory-sdn-bhd/" target="_blank" rel="noopener noreferrer" className="underline" style={{ color: '#8FD3CB' }}>LinkedIn</a>.
           </p>
         </div>
 
