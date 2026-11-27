@@ -8,7 +8,6 @@ import { useState } from 'react';
 // Set NEXT_PUBLIC_NEWSLETTER_URL to the web app's public /exec address once it is deployed for "Anyone".
 const SIGNUP_URL = process.env.NEXT_PUBLIC_NEWSLETTER_URL || '';
 
-const ROLES = ['Owner / Director', 'Finance / Accounts', 'HR / Admin', 'Other'];
 
 // Company emails only (Jeffrey, 2026-11-22). Keep this list the same as PERSONAL_DOMAINS in august-apps/weekly-email/Main.js.
 const PERSONAL_DOMAINS = ['gmail.com', 'googlemail.com', 'yahoo.com', 'yahoo.com.my', 'ymail.com', 'rocketmail.com', 'hotmail.com', 'hotmail.my', 'outlook.com', 'outlook.my', 'live.com', 'live.com.my', 'msn.com', 'icloud.com', 'me.com', 'mac.com', 'aol.com', 'proton.me', 'protonmail.com', 'gmx.com', 'mail.com', 'qq.com', '163.com', '126.com', 'yandex.com', 'zoho.com', 'tutanota.com'];
@@ -25,7 +24,6 @@ const label = 'block text-sm font-semibold mb-1.5';
 export default function NewsletterSignup() {
   const [state, setState] = useState<'idle' | 'checking' | 'sending' | 'done' | 'error'>('idle');
   const [emailError, setEmailError] = useState('');
-  const [role, setRole] = useState('');
 
   async function submit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -50,8 +48,6 @@ export default function NewsletterSignup() {
     // No website field any more (Jeffrey, 2026-11-25): the company domain of the email is passed as the website,
     // so the weekly-email script and the Monday profiling still work unchanged.
     form.set('website', email.trim().toLowerCase().split('@')[1] || '');
-    if (role === 'Other') form.set('role', String(form.get('role_other') || '').trim());
-    form.delete('role_other');
     if (!SIGNUP_URL) { setState('error'); return; }
     setState('sending');
     try {
@@ -81,25 +77,11 @@ export default function NewsletterSignup() {
           onBlur={e => setEmailError(e.target.value && !isCompanyEmail(e.target.value) ? 'Please use your company email (not Gmail, Yahoo, Hotmail or another personal email).' : '')} />
         {emailError && <p className="text-sm mt-1" style={{ color: '#a32638' }}>{emailError}</p>}
       </div>
-      <div className="grid sm:grid-cols-2 gap-4">
-        <div>
+      {/* Email and name only (Jeffrey, 2026-11-27: role question removed, everyone gets the same updates) */}
+      <div>
         <label className={label} style={{ color: '#2C3E50' }} htmlFor="nl-name">Your name *</label>
         <input id="nl-name" name="name" required className={field} style={fieldStyle} />
       </div>
-        <div>
-        <label className={label} style={{ color: '#2C3E50' }} htmlFor="nl-role">Your role *</label>
-        <select id="nl-role" name="role" required value={role} onChange={e => setRole(e.target.value)} className={field} style={fieldStyle}>
-          <option value="">Choose your role</option>
-          {ROLES.map(r => <option key={r}>{r}</option>)}
-        </select>
-      </div>
-      </div>
-      {role === 'Other' && (
-        <div>
-          <label className={label} style={{ color: '#2C3E50' }} htmlFor="nl-role-other">Tell us your role *</label>
-          <input id="nl-role-other" name="role_other" required placeholder="e.g. Company secretary, Operations manager" className={field} style={fieldStyle} />
-        </div>
-      )}
       {/* Hidden from people; bots fill it and the script ignores them */}
       <input name="website_confirm" tabIndex={-1} autoComplete="off" aria-hidden="true" className="absolute -left-[9999px]" />
       <button type="submit" disabled={state === 'sending' || state === 'checking'} className="w-full px-8 py-3 rounded-full font-semibold text-white text-base hover:opacity-90 transition" style={{ backgroundColor: '#348981' }}>
@@ -110,7 +92,7 @@ export default function NewsletterSignup() {
           {SIGNUP_URL ? 'Something went wrong. Please try again, or WhatsApp us at 010-246 2151.' : 'Sign-up is not connected yet (preview only).'}
         </p>
       )}
-      <p className="text-xs text-center" style={{ color: '#7A8A96' }}>We use your details only to pick the updates relevant to you.</p>
+      <p className="text-xs text-center" style={{ color: '#7A8A96' }}>We use your email only to send you the newsletter.</p>
     </form>
   );
 }
