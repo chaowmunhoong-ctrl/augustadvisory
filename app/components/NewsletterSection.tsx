@@ -17,14 +17,15 @@ export default function NewsletterSection() {
             <span style={{ color: '#8FD3CB' }}>Newsletter</span>
           </h2>
           <p className="text-base sm:text-lg leading-relaxed mb-8" style={{ color: '#C9D6DF' }}>
-            The tax and business updates that matter to your business, sent straight to your inbox.
+            Official LHDN, Customs and SSM updates that matter to your business, sent straight to your inbox.
           </p>
 
+          {/* LHDN, Customs and SSM news only, sent on working days (Jeffrey, 2026-11-27) */}
           <ul className="space-y-4">
             {[
-              ['rules', 'New rules and announcements', 'From LHDN, Customs and SSM'],
-              ['court', 'Court cases explained', 'What happened, what it means, what you can do'],
-              ['tips', 'Practical tips', 'For running your business day to day'],
+              ['taxation', 'LHDN updates', 'Tax rules, deadlines, e-Invoice'],
+              ['rules', 'Customs updates', 'SST rates, scope and announcements'],
+              ['secretarial', 'SSM updates', 'Company filing rules and deadlines'],
             ].map(([icon, title, text]) => (
               <li key={title} className="flex items-start gap-4">
                 <span className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style={{ backgroundColor: 'rgba(143,211,203,0.14)', color: '#8FD3CB' }}>
@@ -37,6 +38,7 @@ export default function NewsletterSection() {
               </li>
             ))}
           </ul>
+          <p className="text-sm mt-6" style={{ color: '#AFC1CC' }}>Sent on working days, only when there is news. Official sources only.</p>
         </div>
 
         {/* Right: form */}
